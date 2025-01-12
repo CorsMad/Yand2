@@ -3,3 +3,5 @@
 
 image_speed = 0;
 win = 0;
+rect_alpha = 0;
+obj_alpha = 0;

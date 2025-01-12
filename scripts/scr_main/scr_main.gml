@@ -28,3 +28,38 @@ function scr_button_arrays_double(){
     }
     lox2 = array_shuffle(lox);    
 }
+
+function scr_button_turn(_onoff){
+    for (var i = 0; i < instance_number(obj_button); ++i;)
+    {
+        enemy[i] = instance_find(obj_button,i);
+    }        
+    for (var i = 0; i < array_length(enemy); i++) {
+        enemy[i].isworking = _onoff
+    }
+}
+
+function scr_button_t2_max(){
+    var buttons;
+    var buttons_num = [];
+    for (var i = 0; i < instance_number(obj_button); ++i;)
+    {
+        buttons[i] = instance_find(obj_button,i);
+    }     
+    for (var i = 0; i < array_length(buttons); i++) {
+        array_push(buttons_num,buttons[i].b_number);
+    }
+    
+    array_sort(buttons_num, function(elm1, elm2)
+    {
+        return elm1 - elm2;
+    });
+    
+    for (var i = 0; i < array_length(buttons); ++i;)
+    {
+        if buttons[i].b_number = array_last(buttons_num) buttons[i].t2_end = 1;
+    }
+
+
+    show_debug_message(buttons_num);
+}
