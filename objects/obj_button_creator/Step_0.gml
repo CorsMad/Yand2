@@ -35,36 +35,55 @@ switch (t) {
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
             case 7:
                 var xoffset;
                 var yglobal = 581;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     var div_count_y = i div 4;
                     counter++;  
                     if i mod 4 = 0 counter = 0;
                     if i < 4 {xoffset = -90} else xoffset = -20
                     var k = instance_create_depth(room_width/2+counter*140-120+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
             case 9:
                 var yglobal = 511;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     var div_count_y = i div 3;
                     counter++;  
                     if i mod 3 = 0 counter = 0;
                     var k = instance_create_depth(room_width/2+counter*140-140,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
@@ -72,12 +91,11 @@ switch (t) {
                 var yglobal = 511;
                 var xoffset=0;
                 var div_count_y=0;
-                var _buttons = [];// массив кнопок по очереди
-                scr_button_arrays_double();
-                for (var i = 0; i < array_length(button_array); i++) {
-                    if button_array[i] = 1 array_push(_buttons,i);
-                }
-                var _button_sh = array_shuffle(_buttons);
+                    var buttons2 = []; // создать массив с хорошими кнопками T2
+                    for (var i = 0; i < array_length(button_array); i++) {
+                        if button_array[i] = 1 array_push(buttons2,i);
+                    }
+                    var buttons2shuffeled = array_shuffle(buttons2);
             
                 for (var i = 0; i < array_length(button_array); i++) {
                     if i < 4 {
@@ -96,12 +114,14 @@ switch (t) {
                     counter++;  
                     if i mod 4 = 0 counter = 0;
                     var k = instance_create_depth(room_width/2+counter*140-80+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
-                        k.b_number = array_get_index(_button_sh,i);
-                        k.b_number_duo = lox2[i];
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
@@ -109,6 +129,11 @@ switch (t) {
                 var xoffset=0;
                 var yglobal = 511;
                 var div_count_y=0;
+                    var buttons2 = []; // создать массив с хорошими кнопками T2
+                    for (var i = 0; i < array_length(button_array); i++) {
+                        if button_array[i] = 1 array_push(buttons2,i);
+                    }
+                    var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     if i < 4 {
                         div_count_y = 0;
@@ -125,24 +150,37 @@ switch (t) {
                     counter++;  
                     if i = 4 || i = 8 counter = 0
                     var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
             case 15:
                 var yglobal = 511;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     var div_count_y = i div 5;
                     counter++;  
                     if i mod 5 = 0 counter = 0;
                     var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;
@@ -150,6 +188,11 @@ switch (t) {
                 var yglobal = 441;
                 var xoffset=-210;
                 var div_count_y=0;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     switch(i){
                         case 4: div_count_y = 1;break;
@@ -158,10 +201,14 @@ switch (t) {
                     } 
                     if i mod 4 = 0  && i < 13 counter = 0;
                     var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                     counter++; 
                 }
@@ -170,6 +217,11 @@ switch (t) {
                 var yglobal = 441;
                 var xoffset=-210;
                 var div_count_y=0;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     switch(i){
                         case 4: div_count_y = 1;xoffset = -280;break;
@@ -182,10 +234,14 @@ switch (t) {
                         case 14: counter = 0;break;
                     }
                     var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                     counter++; 
                 }
@@ -194,6 +250,11 @@ switch (t) {
                 var yglobal = 371;
                 var xoffset=-210;
                 var div_count_y=0;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     switch(i){
                         case 4: div_count_y = 1;break;
@@ -208,10 +269,14 @@ switch (t) {
                         case 16: counter = 0;break;
                     }
                     var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                     counter++; 
                 }
@@ -220,7 +285,11 @@ switch (t) {
                 var yglobal = 371;
                 var xoffset=-210;
                 var div_count_y=0;
-                
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     switch(i){
                         case 4:div_count_y = 4;break;
@@ -235,25 +304,38 @@ switch (t) {
                         case 18: counter = 0;break;
                     }
                     var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                     counter++; 
                 }
                 break;
             case 25:
                 var yglobal = 371;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
                 for (var i = 0; i < array_length(button_array); i++) {
                     var div_count_y = i div 5;
                     counter++;  
                     if i mod 5 = 0 counter = 0;
                     var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,obj_button);
-                    if button_array[i] = 1{
+                    if button_array[i] = 1 {
                         k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
                     }
                 }
                 break;

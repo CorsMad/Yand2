@@ -3,74 +3,95 @@
 
 switch(button_tier){
     case 0:
+        alpha = 0;
             t++;
-            
-            y_offset+=spd;
-            if t < 650 y_offset = lerp(y_offset,0,0.05);
-            
-            if t < 10 && alpha < 1 alpha+=0.1
-            if t = 15 {
-                add_r1 = 0.7;
-                add_g1 = 0.7;
-            }    
-            if t = 15+t_offset {
-                add_r2 = 0.7;
-                add_g2 = 0.7;
-            }
-            if t = 15+t_offset*2 {
-                add_g3 = 1.0;
+            if t = 50 {
                 if instance_exists(obj_level_progression) scr_button_turn(1);
+                obj_level_progression.work = 1;  
             }
-            if t = 15+t_offset*2+35 {
-                if instance_exists(obj_level_progression) {
-                    obj_level_progression.work = 1;  
-                } 
-            }
-            if t > 15+t_offset*2+35 {
-                alpha-=0.05;
-                spd-=0.5;
-            }
-            if alpha <=0 && t > 50 instance_destroy();
             break;
     case 2:
             if alpha < 1 alpha+=0.1
+                // Найти все кнопки //
+            var _buttons=[];
+            for (var i = 0; i < instance_number(obj_button); ++i;)
+            {
+                _buttons[i] = instance_find(obj_button,i);
+            } 
+                //                  //
             if t2_work = 1 {
                 t++;
-                y_offset+=spd;
-                if t < 650 y_offset = lerp(y_offset,0,0.05);
-                
-                //if t < 10 && 
-                if t = 15 {
-                    add_r1 = 0.0;
-                    add_g1 = 0.0;
-                    add_r2 = 0.0;
-                    add_g2 = 0.0;
-                    add_r3 = 0.0;
-                    add_g3 = 0.0;
-                }    
-                if t = 15+t_offset {
-                    add_g1 = 1.0;
-                    add_g2 = 1.0;
-                    add_g3 = 1.0;
+                if t = 30 {
+                    for (var i = 0; i < array_length(_buttons); i++) {
+                        _buttons[i].add_r = 0.7
+                        _buttons[i].add_g = 0.7
+                        _buttons[i].add_b = 0.0
+                    }
+                }
+                if t = 30+t_offset {
+                    for (var i = 0; i < array_length(_buttons); i++) {
+                        _buttons[i].add_r = 0.15
+                        _buttons[i].add_g = 0.15
+                        _buttons[i].add_b = 0.15
+                    }
                     if instance_exists(obj_level_progression) scr_button_turn(1);
+                    obj_level_progression.work = 1;  
+                    scr_button_turn(1);
+                    instance_destroy();
                 }
-                //if t = 15+t_offset*2 {
-                //    add_g1 = 1.0;
-                //    add_g2 = 1.0;
-                //    add_g3 = 1.0;
-                //    
-                //}
-                if t = 15+t_offset+35 {
-                    if instance_exists(obj_level_progression) {
-                        obj_level_progression.work = 1;  
-                    } 
-                }
-                if t > 15+t_offset+35 {
-                    alpha-=0.05;
-                    spd-=0.5;
-                }
-                if alpha <=0 && t > 50 instance_destroy();
-            }
+            }        
         break;
+    case 3: 
+        var _buttons=[];
+        var _buttons_n=[];
+        for (var i = 0; i < instance_number(obj_button); ++i;)
+        {
+            _buttons[i] = instance_find(obj_button,i);
+        } 
+        
+        t++;
+        if t = 1 {
+            for (var i = 0; i < array_length(_buttons); i++) {
+                if _buttons[i].tier = 3 _buttons[i].add_r = 0.8;
+                if _buttons[i].tier = 3 _buttons[i].add_g = 0.8;
+                if _buttons[i].tier = 3 _buttons[i].add_b = 0.8;
+            }
+        }
+    
+        if t > (40 + t_offset*2) && t < (40 + t_offset*4){
+            for (var i = 0; i < array_length(_buttons); i++) {
+                if _buttons[i].tier = 3 {
+                    if _buttons[i].add_r > 0.0 {
+                       _buttons[i].add_r -= 0.025;
+                       _buttons[i].add_g -= 0.025;
+                       _buttons[i].add_b -= 0.025;
+                    } else {
+                       _buttons[i].add_r = 0.0;
+                       _buttons[i].add_g = 0.0;
+                       _buttons[i].add_b = 0.0;
+                    }
+                }
+            }
+        }
+    
+        if t = 50 + t_offset*4 {
+            for (var i = 0; i < array_length(_buttons); i++) {
+                _buttons[i].add_r = 0.15;
+                _buttons[i].add_g = 0.15;
+                _buttons[i].add_b = 0.15;
+            }
+            if instance_exists(obj_level_progression) scr_button_turn(1);
+            obj_level_progression.work = 1;  
+            scr_button_turn(1);
+            instance_destroy()
+        }
+        break;
+    case 4:
+            t++;
+            if t = 50 {
+                if instance_exists(obj_level_progression) scr_button_turn(1);
+                obj_level_progression.work = 1;  
+            }
+            break;
 }
 

@@ -4,6 +4,7 @@ t =0 ;
 t_offset = 40;
 
 t2_work = 0;
+t3_work = 0;
 
 alpha = 0;
 //alpha = 1;

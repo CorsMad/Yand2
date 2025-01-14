@@ -23,25 +23,16 @@ if collision_point(mouse_x,mouse_y,self,true,false) {
                     instance_create_depth(0,0,0,obj_fade_screen)
                     obj_global_controller.page = 3;
                 }
-                break; 
+                break;
+            case 3:
+                if pg4 = 9 {
+                    instance_create_depth(0,0,0,obj_fade_screen)
+                    obj_global_controller.page = 4;
+                }
+                break;  
         
         }
     }
-    //if mouse_check_button_pressed(mb_left) {
-    //    // Перемещение
-    //    if (pg1 = 9 && obj_global_controller.page = 0) {
-    //        instance_create_depth(0,0,0,obj_fade_screen)
-    //        obj_global_controller.page = 1;
-    //    }
-    //    if (pg2 = 9 && obj_global_controller.page = 1) {
-    //        instance_create_depth(0,0,0,obj_fade_screen)
-    //        obj_global_controller.page = 2;
-    //    }
-    //    if (pg3 = 9 && obj_global_controller.page = 2) {
-    //        instance_create_depth(0,0,0,obj_fade_screen)
-    //        obj_global_controller.page = 3;
-    //    }
-    //}
 }
 //Graph
 

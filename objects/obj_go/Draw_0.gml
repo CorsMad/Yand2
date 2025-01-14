@@ -1,6 +1,6 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
-
+        /*
 
         draw_sprite_ext(spr_go1,0,x+x_offset,y+y_offset,3,2.75,0,c_white,alpha);
         

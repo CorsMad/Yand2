@@ -58,7 +58,18 @@ if room = LevelSelect {
             case 24: k.level_part_max = 5; break;
             case 25: k.level_part_max = 5; break;
             case 26: k.level_part_max = 6; break; 
-                            
+            // ЧЕТВЕРТАЯ СТРАНИЦА
+            case 27: k.level_part_max = 2; break;
+            case 28: k.level_part_max = 2; break;
+            case 29: k.level_part_max = 3; break;
+            case 30: k.level_part_max = 3; break;
+            case 31: k.level_part_max = 4; break;
+            case 32: k.level_part_max = 4; break;
+            case 33: k.level_part_max = 5; break;
+            case 34: k.level_part_max = 5; break;
+            case 35: k.level_part_max = 6; break; 
+                
+                 
             default: k.level_part_max = 6; break;
         }
     }

@@ -8,8 +8,8 @@ switch (t) {
             // ПЕРВАЯ СТРАНИЦА
             case 1:
                 _b.count = 5;
-                _b.exclude = 1;
-                _b.button_tier = 2; //0
+                _b.exclude = 3; //2
+                _b.button_tier = 4; //0
                 break;
             case 2:
                 _b.count = 5;
@@ -143,7 +143,12 @@ switch (t) {
                 _b.exclude = 7;
                 _b.button_tier = 3;
                 break;            
-            // ДОБАВИТЬ ОСТАЛЬНЫЕ
+            // 4 СТРАНИЦА
+            case 28:
+                _b.count = 17
+                _b.exclude = 16;
+                _b.button_tier = 4;
+                break;
             
         }
             

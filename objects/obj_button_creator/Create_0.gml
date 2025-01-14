@@ -16,4 +16,3 @@ counter = 0; // счет горизонтальной отрисовки
 #endregion
 
 b_number = 0;
-
