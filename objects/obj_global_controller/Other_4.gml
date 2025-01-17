@@ -6,8 +6,6 @@ if room = LevelSelect {
     
     //
     
-    
-    
     var l = 0;
     var m = 0;
     var xoffset = 0;
@@ -68,7 +66,17 @@ if room = LevelSelect {
             case 33: k.level_part_max = 5; break;
             case 34: k.level_part_max = 5; break;
             case 35: k.level_part_max = 6; break; 
-                
+            // ПЯТАЯ СТРАНИЦА   
+            case 36: k.level_part_max = 2; k.level_timer = 60*5; k.level_bonus = 60*2; break; 
+            case 37: k.level_part_max = 2; k.level_timer = 60*10; break; 
+            case 38: k.level_part_max = 3; k.level_timer = 60*10; break; 
+            case 39: k.level_part_max = 3; k.level_timer = 60*10; break; 
+            case 40: k.level_part_max = 4; k.level_timer = 60*10; break; 
+            case 41: k.level_part_max = 4; k.level_timer = 60*10; break; 
+            case 42: k.level_part_max = 5; k.level_timer = 60*10; break; 
+            case 43: k.level_part_max = 5; k.level_timer = 60*10; break; 
+            case 44: k.level_part_max = 6; k.level_timer = 60*10; break; 
+            case 45: k.level_part_max = 6; k.level_timer = 60*10; break; 
                  
             default: k.level_part_max = 6; break;
         }

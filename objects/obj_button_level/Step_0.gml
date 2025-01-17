@@ -11,5 +11,7 @@ if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_presse
             obj_global_controller.level_current = level;
             obj_global_controller.level_part_current = level_part_current;
             obj_global_controller.level_part_max = level_part_max;
+            obj_global_controller.level_timer = level_timer;
+            obj_global_controller.level_bonus = level_bonus;
             room_goto(GameRoom);
         }

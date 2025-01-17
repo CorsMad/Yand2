@@ -6,8 +6,14 @@ switch(tier){
     case 0: // Нормальные\
         // Графика
     
-        if t < 50 t++;
+        if t < 50 {
+            t++;
+            add_r = 0.35;
+            add_g = 0.05;
+            add_b = 0.05;
+        }
         if t = 50 {
+            
             image_index = pressed;
             if pressed = 0 {
                 add_r = 0.9;
@@ -18,7 +24,8 @@ switch(tier){
                 add_g = 0.0;
                 add_b = 0.0;    
             } 
-        }
+            
+        } 
         // Вза1модействие
         if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
             && bad = 0 && pressed = 0{
@@ -163,16 +170,22 @@ switch(tier){
         break;
     case 4:
         
-    image_index = pressed;
-    if pressed = 0 {
-        add_r = 0.9;
-        add_g = 0.9;
-        add_b = 0.9;
+    if isworking {
+        image_index = pressed;
+        if pressed = 0 {
+            add_r = 0.9;
+            add_g = 0.9;
+            add_b = 0.9;
+        } else {
+            add_r = 0.0;
+            add_g = 0.0;
+            add_b = 0.0;    
+        } 
     } else {
-        add_r = 0.0;
-        add_g = 0.0;
-        add_b = 0.0;    
-    } 
+        add_r = 0.35;
+        add_g = 0.05;
+        add_b = 0.05;
+    }
         
         // Вза1модействие
     if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
@@ -214,49 +227,5 @@ switch(tier){
             
         }
         
-            //obj_global_controller.level_button_current++; 
-            //if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-            //
-            //// Проверка подуровня
-            //if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
-            //    var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-            //    lev_end.win = 2;
-            //    lev_end.image_index= 2;
-            //    obj_global_controller.level_part_current = 20;
-            //} else {
-            //    var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-            //    lev_end.win = 1;
-            //    lev_end.image_index= 1;
-            //    obj_global_controller.level_part_current++
-            //}
-            //
-            //// ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
-            //scr_button_turn(0)
-            //}
-    
-        
-    
-    
-    
-       //if t2< 182 t2++;
-       //if t2 = 181 obj_global_controller.button_exist_t4=1;
-       //add_r = 0.7;
-       //add_g = 0.0;
-       //add_b = 0.0;
-       //if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-       //    && bad = 0 && pressed = 0{
-       //    image_index = 1;
-       //    //pressed = 1;
-       //    var lev_end = instance_create_depth(384,1088,0,obj_level_end);
-       //    lev_end.win = 0;
-       //    lev_end.image_index= 0;
-       //    for (var i = 0; i < instance_number(obj_button); ++i;)
-       //    {
-       //        enemy[i] = instance_find(obj_button,i);
-       //    }        
-       //    for (var i = 0; i < array_length(enemy); i++) {
-       //        enemy[i].isworking = 0;
-       //    }
-       //}
         break;
 }

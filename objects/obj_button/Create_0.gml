@@ -24,11 +24,10 @@ image_xscale = 1.5;
 image_yscale = 1.5;
 
 
-t =0 ;
-//t2=180;
-t2=0;
-t2_s=0;
-b_number=0;
+t            = 0;
+t2           = 0;
+t2_s         = 0;
+b_number     = 0;
 b_number_duo = 0;
 
 

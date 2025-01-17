@@ -87,11 +87,12 @@ switch(button_tier){
         }
         break;
     case 4:
-            t++;
-            if t = 50 {
-                if instance_exists(obj_level_progression) scr_button_turn(1);
-                obj_level_progression.work = 1;  
-            }
+        alpha = 0;
+        t++;
+        if t = 50 {
+            if instance_exists(obj_level_progression) scr_button_turn(1);
+            obj_level_progression.work = 1;  
+        }
+                  
             break;
 }
-

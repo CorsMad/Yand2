@@ -6,3 +6,4 @@ win = 0;
 rect_alpha = 0;
 obj_alpha = 0;
 t = 0;
+obj_global_controller.level_timer+=obj_global_controller.level_bonus;

@@ -9,5 +9,7 @@ xoffset = x;
 level_part_current  = 0;
 level_part_max      = 3;
 
+level_timer = 200;
+level_bonus = 0;
 image_xscale = 1.5;
 image_yscale = 1.5;
