@@ -1,7 +1,7 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
 
-if page>3 {
+if page>3 && room = GameRoom{
     var inst = instance_find(obj_button, irandom(instance_number(obj_button) - 1));
     if inst!=noone{
         if inst.isworking = 1{

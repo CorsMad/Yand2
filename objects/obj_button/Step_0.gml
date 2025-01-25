@@ -43,7 +43,8 @@ switch(tier){
                        var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
                        lev_end.win = 1;
                        lev_end.image_index= 1;
-                       obj_global_controller.level_part_current++
+                        if room = GameRoom obj_global_controller.level_part_current++
+                       
                    }
                
                    // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
@@ -61,7 +62,8 @@ switch(tier){
                 add_b = 0.15;
             }
         } else {
-            add_r = 0.35;
+            //add_r = 0.35;
+            add_r = 0.7;
             add_g = 0.05;
             add_b = 0.05;
         }
@@ -168,7 +170,7 @@ switch(tier){
                 }
         }
         break;
-    case 4:
+    case 4: // включающиеся по очереди, с каждым нажатием открывается новая
         
     if isworking {
         image_index = pressed;

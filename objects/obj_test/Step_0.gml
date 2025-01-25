@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 if keyboard_check_pressed(vk_enter) {
-    start = 1;
+    room_goto(GameRoomLadder);   
 }
-if start = 1 && lox < 120 lox++;

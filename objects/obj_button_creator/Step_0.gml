@@ -27,7 +27,7 @@ switch (t) {
                 var buttons2shuffeled = array_shuffle(buttons2);
                 
                 for (var i = 0; i < array_length(button_array); i++) {
-                    var k = instance_create_depth(room_width/2+i*140-280,32+80+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+i*140-280,32+80+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -52,7 +52,7 @@ switch (t) {
                     counter++;  
                     if i mod 4 = 0 counter = 0;
                     if i < 4 {xoffset = -90} else xoffset = -20
-                    var k = instance_create_depth(room_width/2+counter*140-120+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140-120+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -75,7 +75,7 @@ switch (t) {
                     var div_count_y = i div 3;
                     counter++;  
                     if i mod 3 = 0 counter = 0;
-                    var k = instance_create_depth(room_width/2+counter*140-140,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140-140,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -113,7 +113,7 @@ switch (t) {
                     
                     counter++;  
                     if i mod 4 = 0 counter = 0;
-                    var k = instance_create_depth(room_width/2+counter*140-80+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140-80+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -149,7 +149,7 @@ switch (t) {
                     }
                     counter++;  
                     if i = 4 || i = 8 counter = 0
-                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -172,7 +172,7 @@ switch (t) {
                     var div_count_y = i div 5;
                     counter++;  
                     if i mod 5 = 0 counter = 0;
-                    var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -200,7 +200,7 @@ switch (t) {
                         case 12:div_count_y = 3;xoffset = -280;break;
                     } 
                     if i mod 4 = 0  && i < 13 counter = 0;
-                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -233,7 +233,7 @@ switch (t) {
                         case 9: counter = 0;break;
                         case 14: counter = 0;break;
                     }
-                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -268,7 +268,7 @@ switch (t) {
                         case 12: counter = 0;break;
                         case 16: counter = 0;break;
                     }
-                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -303,7 +303,7 @@ switch (t) {
                         case 13: counter = 0;break;
                         case 18: counter = 0;break;
                     }
-                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140+xoffset,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -327,7 +327,7 @@ switch (t) {
                     var div_count_y = i div 5;
                     counter++;  
                     if i mod 5 = 0 counter = 0;
-                    var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,obj_button);
+                    var k = instance_create_depth(room_width/2+counter*140-280,32+140*div_count_y+yglobal,0,button_object);
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
@@ -351,14 +351,21 @@ switch (t) {
     
             var _go = instance_create_depth(room_width/2,170,-10,obj_go);
             _go.button_tier = button_tier;
-            switch(obj_global_controller.level_part_current){
-                case 0: _go.t_offset = 30;break;
-                case 1: _go.t_offset = 27;break;
-                case 2: _go.t_offset = 24;break;
-                case 3: _go.t_offset = 21;break;
-                case 4: _go.t_offset = 18;break;
-                case 5: _go.t_offset = 15;break;
-                case 6: _go.t_offset = 10;break;
+            if room= GameRoom{
+                switch(obj_global_controller.level_part_current){
+                    case 0: _go.t_offset = 30;break;
+                    case 1: _go.t_offset = 27;break;
+                    case 2: _go.t_offset = 24;break;
+                    case 3: _go.t_offset = 21;break;
+                    case 4: _go.t_offset = 18;break;
+                    case 5: _go.t_offset = 15;break;
+                    case 6: _go.t_offset = 10;break;
+                }
+            } else {
+                _go.t_offset = obj_global_controller.t_offset;
+                with(obj_global_controller){
+                    if t_offset > 0 t_offset--;
+                }
             }
             instance_destroy();
         break;

@@ -63,3 +63,10 @@ function scr_button_t2_max(){
 
     show_debug_message(buttons_num);
 }
+
+function scr_ladder_create(){
+    var ins = instance_create_depth(-64,0,0,obj_game_controller_ladder);
+    ins.count       = 0;
+    ins.exclude     = 0;
+    ins.button_tier = 0;
+}

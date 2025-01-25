@@ -36,7 +36,7 @@ function draw_progress(progress_alpha){
                 draw_sprite(spr_progress_icon,_im1,96, 160);
                 draw_sprite(spr_progress_icon,_im2,240,160);
                 draw_sprite(spr_progress_icon,_im3,384,160);
-                draw_sprite(spr_progress_icon,_im4,512,160);
+                draw_sprite(spr_progress_icon,_im4,528,160);
                 draw_sprite(spr_progress_icon,_im5,672,160);
                 break;
             case 5:

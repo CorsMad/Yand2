@@ -3,7 +3,7 @@
 
 for (var i = 0; i < 72; i++) {
     //level_array[i] = 0;
-    level_array[i] = 1;
+    level_array[i] = 0;
 }
 
 level_current = 0;
@@ -21,3 +21,7 @@ button_exist_t4 = 0;
 
 level_timer = 0;
 level_bonus = 0;
+
+level_ladder = 0;
+
+t_offset = 30;

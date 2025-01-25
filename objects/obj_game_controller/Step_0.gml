@@ -235,6 +235,10 @@ switch (t) {
                 _b.exclude = 14;
                 _b.button_tier = 0;
                 break;
+            case 999:
+                _b.count = count;
+                _b.exclude = exclude;
+                _b.button_tier = button_tier;
 
         }
             

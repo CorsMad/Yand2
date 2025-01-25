@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-if room = LevelSelect {
+if room = GameRoomLadder { // РЕЙТИНГ
+    level_part_max = -1;
+    scr_ladder_list();
+}
+
+
+if room = LevelSelect { // ОБЫЧНАЯ
     
     // Скалькулировать страницы
     
