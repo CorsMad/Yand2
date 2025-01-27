@@ -66,9 +66,9 @@ switch(button_tier){
                        _buttons[i].add_g -= 0.025;
                        _buttons[i].add_b -= 0.025;
                     } else {
-                       _buttons[i].add_r = 0.0;
-                       _buttons[i].add_g = 0.0;
-                       _buttons[i].add_b = 0.0;
+                       _buttons[i].add_r = -1;
+                       _buttons[i].add_g = -1;
+                       _buttons[i].add_b = -1;
                     }
                 }
             }

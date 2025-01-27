@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-for (var i = 0; i < 72; i++) {
+for (var i = 0; i < 36; i++) {
     //level_array[i] = 0;
-    level_array[i] = 0;
+    level_array[i] = 1;
 }
 
 level_current = 0;
@@ -17,7 +17,6 @@ page = 0;
 
 b_number = 0;
 button_exist_t4 = 0;
-
 
 level_timer = 0;
 level_bonus = 0;

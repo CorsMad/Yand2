@@ -27,15 +27,18 @@ for (var i = 18; i < 27; i++) {
 for (var i = 27; i < 36; i++) {
     if obj_global_controller.level_array[i] = 1 pg4++;
 }
-for (var i = 36; i < 45; i++) {
-    if obj_global_controller.level_array[i] = 1 pg5++;
-}
-for (var i = 45; i < 54; i++) {
-    if obj_global_controller.level_array[i] = 1 pg6++;
-}
-for (var i = 54; i < 63; i++) {
-    if obj_global_controller.level_array[i] = 1 pg7++;
-}
-for (var i = 63; i < 72; i++) {
-    if obj_global_controller.level_array[i] = 1 pg8++;
-}
+//for (var i = 27; i < 36; i++) {
+//    if obj_global_controller.level_array[i] = 1 pg4++;
+//}
+//for (var i = 36; i < 45; i++) {
+//    if obj_global_controller.level_array[i] = 1 pg5++;
+//}
+//for (var i = 45; i < 54; i++) {
+//    if obj_global_controller.level_array[i] = 1 pg6++;
+//}
+//for (var i = 54; i < 63; i++) {
+//    if obj_global_controller.level_array[i] = 1 pg7++;
+//}
+//for (var i = 63; i < 72; i++) {
+//    if obj_global_controller.level_array[i] = 1 pg8++;
+//}

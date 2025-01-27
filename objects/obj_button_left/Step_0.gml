@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if collision_point(mouse_x,mouse_y,self,true,false) {
-    if mouse_check_button_pressed(mb_left) {
+    if mouse_check_button_pressed(mb_left) && !instance_exists(obj_fade_screen){
         if obj_global_controller.page > 0 {
             instance_create_depth(0,0,0,obj_fade_screen);
             obj_global_controller.page --;

@@ -8,9 +8,9 @@ switch(tier){
     
         if t < 50 {
             t++;
-            add_r = 0.35;
-            add_g = 0.05;
-            add_b = 0.05;
+            add_r = 0.4;
+            add_g = -1;
+            add_b = -1;
         }
         if t = 50 {
             
@@ -57,16 +57,28 @@ switch(tier){
 
         if t2_exists || t3_exists {
             if isworking{
+                if !pressed{
                 add_r = 0.15;
                 add_g = 0.15;
                 add_b = 0.15;
+                } else {
+                    add_r = 0.1;
+                    add_g = -1;
+                    add_b = -1;
+                }
             }
         } else {
             //add_r = 0.35;
-            add_r = 0.7;
-            add_g = 0.05;
-            add_b = 0.05;
-        }
+            if image_index = 0{
+            add_r = 0.4;
+            add_g = -1;
+            add_b = -1;
+            } else {
+                add_r = 0.1;
+                add_g = -1;
+                add_b = -1; 
+            }
+        }            
         if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
             && bad = 0 && pressed = 0{
             image_index = 1;
@@ -126,10 +138,10 @@ switch(tier){
                     lev_end.win = 0;
                     lev_end.image_index= 0;
                     scr_button_turn(0)
-                    add_r = 0.7;
-                    add_g = 0.0;
-                    add_b = 0.0
-                }
+                    add_r = 0.1;
+                    add_g = -1;
+                    add_b = -1;
+             }
         }
         // СПРАЙТ
         image_index = pressed; 
@@ -184,9 +196,9 @@ switch(tier){
             add_b = 0.0;    
         } 
     } else {
-        add_r = 0.35;
-        add_g = 0.05;
-        add_b = 0.05;
+        add_r = 0.4;
+        add_g = -1;
+        add_b = -1;
     }
         
         // Вза1модействие
