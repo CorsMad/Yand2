@@ -4,7 +4,7 @@
 
 
 if collision_point(mouse_x,mouse_y,self,true,false) {
-    if mouse_check_button_pressed(mb_left) && !instance_exists(obj_fade_screen){
+    if mouse_check_button_pressed(mb_left) && !instance_exists(obj_fade_screen) && !instance_exists(obj_faq_parent){
         switch(obj_global_controller.page) {
             case 0:
                 if pg1 = 9 {
