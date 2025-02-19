@@ -8,6 +8,8 @@ switch(button_tier){
             if t = 50 {
                 if instance_exists(obj_level_progression) scr_button_turn(1);
                 obj_level_progression.work = 1;  
+				if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
+				instance_destroy();
             }
             break;
     case 2:
@@ -23,9 +25,9 @@ switch(button_tier){
                 t++;
                 if t = 30 {
                     for (var i = 0; i < array_length(_buttons); i++) {
-                        _buttons[i].add_r = 0.7
-                        _buttons[i].add_g = 0.7
-                        _buttons[i].add_b = 0.0
+                        _buttons[i].add_r = 0.9
+                        _buttons[i].add_g = 0.9
+                        _buttons[i].add_b = 0.9
                     }
                 }
                 if t = 30+t_offset {
@@ -37,6 +39,7 @@ switch(button_tier){
                     if instance_exists(obj_level_progression) scr_button_turn(1);
                     obj_level_progression.work = 1;  
                     scr_button_turn(1);
+					if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
                     instance_destroy();
                 }
             }        
@@ -58,7 +61,7 @@ switch(button_tier){
             }
         }
     
-        if t > (40 + t_offset*2) && t < (40 + t_offset*4){
+        if t > (40 + t_offset) && t < (40 + t_offset*3){
             for (var i = 0; i < array_length(_buttons); i++) {
                 if _buttons[i].tier = 3 {
                     if _buttons[i].add_r > 0.0 {
@@ -74,7 +77,7 @@ switch(button_tier){
             }
         }
     
-        if t = 50 + t_offset*4 {
+        if t = 50 + t_offset*3 {
             for (var i = 0; i < array_length(_buttons); i++) {
                 _buttons[i].add_r = 0.15;
                 _buttons[i].add_g = 0.15;
@@ -83,6 +86,7 @@ switch(button_tier){
             if instance_exists(obj_level_progression) scr_button_turn(1);
             obj_level_progression.work = 1;  
             scr_button_turn(1);
+			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
             instance_destroy()
         }
         break;
@@ -92,6 +96,7 @@ switch(button_tier){
         if t = 50 {
             if instance_exists(obj_level_progression) scr_button_turn(1);
             obj_level_progression.work = 1;  
+			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
         }
                   
             break;

@@ -13,3 +13,6 @@ level_timer = 200;
 level_bonus = 0;
 image_xscale = 1.25;
 image_yscale = 1.25;
+
+free_difficulty = 0;
+free_button_tier = 0;

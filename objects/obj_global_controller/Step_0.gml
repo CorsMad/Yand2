@@ -15,3 +15,9 @@ if page>3 && room = GameRoom{
         }
     }
 }
+
+
+if timer_ladder_work
+{
+	if timer_ladder > 0 timer_ladder--;
+}

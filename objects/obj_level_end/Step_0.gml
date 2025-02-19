@@ -13,13 +13,25 @@ switch(win){
             mouse_check_button_pressed(mb_left){
                 obj_global_controller.level_button_current = 0;
                 obj_global_controller.b_number=0;
+                if room = GameRoomLadder {
+                    with(obj_global_controller){
+                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                    }
+                }
                 room_restart();
             }
         // на главную
         if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
                 mouse_check_button_pressed(mb_left){
                     obj_global_controller.level_button_current = 0;
-                    room_goto(LevelSelect);
+                    if room = GameRoomLadder {
+                        with(obj_global_controller){
+                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                        }
+                        room_goto(LadderLevelPrepare)
+                    }
+                    if room = GameRoomFree room_goto(FreeLevelSelect);
+                    if room = GameRoom room_goto(LevelSelect);
                 }
         break;
         
@@ -38,6 +50,11 @@ switch(win){
                 if rect_alpha>=1 {
                     obj_global_controller.level_button_current = 0;
                     obj_global_controller.b_number=0;
+                    if room = GameRoomLadder {
+                        with(obj_global_controller){
+                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                        }
+                    }
                     room_restart();
                 }
             }    
@@ -47,6 +64,24 @@ switch(win){
             if rect_alpha>=1 {
                 obj_global_controller.level_button_current = 0;
                 obj_global_controller.level_ladder++;
+                if room = GameRoomLadder {
+                    with(obj_global_controller){
+                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                    }
+                }
+                room_restart();
+            }
+        }
+        if room = GameRoomFree{
+            rect_alpha+=0.05;
+            if rect_alpha>=1 {
+                obj_global_controller.level_button_current = 0;
+                obj_global_controller.level_part_current++;
+                if room = GameRoomLadder {
+                    with(obj_global_controller){
+                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                    }
+                }
                 room_restart();
             }
         }
@@ -73,5 +108,141 @@ switch(win){
                 room_goto(LevelSelect);
         }
         break;
-    
+    case 3:
+        // ПРОДОЛЖИТЬ + НА ГЛАВНУЮ
+        image_index = 1;
+        if t < 170 t++;
+        switch(t){
+            case 1:
+                scr_free_score_add();
+                var star = instance_create_depth(room_width/2-256,room_height/2,-16000,obj_star_big);
+                star.state = 2;
+                switch(obj_global_controller.free_button_tier){
+                    case 0: star.image_b = c_lime; break;
+                    case 1: star.image_b = c_fuchsia; break;
+                    case 2: star.image_b = c_aqua; break;
+                    case 3: star.image_b = c_yellow; break;
+                }
+                break;
+            case 30:
+                if obj_global_controller.free_difficulty = 2 {
+                    var star = instance_create_depth(room_width/2-256,room_height/2,-16001,obj_star_big);
+                    star.state = 2;
+                    star.xscale_max = 5;
+                    star.yscale_max = 5;
+                    switch(obj_global_controller.free_button_tier){
+                        case 0: star.image_b = c_lime; break;
+                        case 1: star.image_b = c_fuchsia; break;
+                        case 2: star.image_b = c_aqua; break;
+                        case 3: star.image_b = c_yellow; break;
+                    }
+                }
+                break;
+            case 60:
+                if obj_global_controller.free_difficulty = 3 {
+                    var star = instance_create_depth(room_width/2-256,room_height/2,-16002,obj_star_big);
+                    star.state = 2;
+                    star.xscale_max = 4;
+                    star.yscale_max = 4;
+                    switch(obj_global_controller.free_button_tier){
+                        case 0: star.image_b = c_lime; break;
+                        case 1: star.image_b = c_fuchsia; break;
+                        case 2: star.image_b = c_aqua; break;
+                        case 3: star.image_b = c_yellow; break;
+                    }
+                }
+                break;
+            case 90:
+                if obj_global_controller.free_difficulty = 3 {
+                    var star = instance_create_depth(room_width/2-256,room_height/2,-16003,obj_star_big);
+                    star.state = 2;
+                    star.xscale_max = 3;
+                    star.yscale_max = 3;
+                    switch(obj_global_controller.free_button_tier){
+                        case 0: star.image_b = c_lime; break;
+                        case 1: star.image_b = c_fuchsia; break;
+                        case 2: star.image_b = c_aqua; break;
+                        case 3: star.image_b = c_yellow; break;
+                    }
+                }
+                break;
+            case 120:
+                if obj_global_controller.free_difficulty = 3 {
+                    var star = instance_create_depth(room_width/2-256,room_height/2,-16004,obj_star_big);
+                    star.state = 2;
+                    star.xscale_max = 2;
+                    star.yscale_max = 2;
+                    switch(obj_global_controller.free_button_tier){
+                        case 0: star.image_b = c_lime; break;
+                        case 1: star.image_b = c_fuchsia; break;
+                        case 2: star.image_b = c_aqua; break;
+                        case 3: star.image_b = c_yellow; break;
+                    }
+                }
+                break;
+        }
+        
+
+        if obj_alpha < 1 obj_alpha+=0.05;
+        if rect_alpha < 0.8 rect_alpha+=0.025;
+            
+        // ПРОДОЛЖИТЬ
+            if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
+                mouse_check_button_pressed(mb_left){
+                    //obj_global_controller.level_button_current = 0;
+                    obj_global_controller.b_number=0;
+                    obj_global_controller.level_button_current = 0;
+                    obj_global_controller.level_current = 0;
+                    obj_global_controller.level_part_current = 0;
+                    if room = GameRoomLadder {
+                        with(obj_global_controller){
+                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                        }
+                    }
+                    room_restart();
+                }
+            // на главную
+            if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
+                    mouse_check_button_pressed(mb_left){
+                        obj_global_controller.level_button_current = 0;
+                        if room = GameRoomLadder {
+                            with(obj_global_controller){
+                                if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                            }
+                            room_goto(LadderLevelPrepare);
+                        }
+                        if room = GameRoomFree room_goto(FreeLevelSelect);
+                    }
+        break;
+        case 4:
+            if obj_alpha < 1 obj_alpha+=0.05;
+            if rect_alpha < 0.8 rect_alpha+=0.025;
+            image_index = 1;        
+                // ПРОДОЛЖИТЬ
+                    if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
+                        mouse_check_button_pressed(mb_left){
+                            //obj_global_controller.level_button_current = 0;
+                            obj_global_controller.b_number=0;
+                            obj_global_controller.level_button_current = 0;
+                            obj_global_controller.level_current = 0;
+                            obj_global_controller.level_part_current = 0;
+                            if room = GameRoomLadder {
+                                with(obj_global_controller){
+                                    if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                                }
+                            }
+                            room_restart();
+                        }
+                    // на главную
+                    if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
+                            mouse_check_button_pressed(mb_left){
+                                obj_global_controller.level_button_current = 0;
+                                if room = GameRoomLadder {
+                                    with(obj_global_controller){
+                                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                                    }
+                                }
+                                room_goto(LadderLevelPrepare);
+                            }
+            break;
 }

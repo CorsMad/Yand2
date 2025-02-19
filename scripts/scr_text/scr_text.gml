@@ -17,3 +17,21 @@ function scr_text(_x,_y,_txt,_xs,_ys,_a){
     draw_text_transformed(_x,_y,_txt,_xs,_ys,0);
     draw_set_alpha(1);
 }
+
+function scr_text_lime(_x,_y,_txt,_xs,_ys,_a){
+    draw_set_font(fnt_font);
+    draw_set_color(c_black);
+    draw_set_alpha(_a)
+    draw_text_transformed(_x-1,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x-1,_y-1,_txt,_xs,_ys,0)
+    draw_text_transformed(_x,_y-1,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+1,_y-1,_txt,_xs,_ys,0)
+    draw_text_transformed(_x+1,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+1,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+1,_y+1,_txt,_xs,_ys,0)
+    draw_text_transformed(_x,_y+1,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x-1,_y+1,_txt,_xs,_ys,0)
+    draw_set_color(c_lime);
+    draw_text_transformed(_x,_y,_txt,_xs,_ys,0);
+    draw_set_alpha(1);
+}

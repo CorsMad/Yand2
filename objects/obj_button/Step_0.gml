@@ -32,18 +32,30 @@ switch(tier){
                 pressed = 1;
                 obj_global_controller.level_button_current++; 
                 if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-                   
+                   if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                    // Проверка подуровня
                    if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
                        var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-                       lev_end.win = 2;
-                       lev_end.image_index= 2;
+                       
+                        if room = GameRoomFree {
+                            lev_end.win = 3;
+                        } 
+                        if room = GameRoom  {
+                            lev_end.image_index= 2;
+                            lev_end.win = 2;
+                        }
+                        if room = GameRoomLadder{
+                            lev_end.win = 4;
+                            obj_global_controller.level_ladder++;
+                            
+                        }
                        obj_global_controller.level_part_current = 20;
                    } else {
                        var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
                        lev_end.win = 1;
                        lev_end.image_index= 1;
-                        if room = GameRoom obj_global_controller.level_part_current++
+                       if room = GameRoom obj_global_controller.level_part_current++
+                       if room = GameRoomLadder obj_global_controller.level_part_current++
                        
                    }
                
@@ -93,9 +105,9 @@ switch(tier){
     case 2: // включающиеся по очереди на память (сначала показать как нажимать) 
         if t2 < t2_s+61 t2++;
         if t2 = t2_s+30 {
-            add_b = 0.8;
-            add_r = 0.8;
-            add_g = 0.8;
+            add_b = 0.3//0.8;
+            add_r = 0.8//0.8;
+            add_g = 0.8//0.8;
         }
         if t2 = t2_s+60 {
             add_b = 0.15;
@@ -115,18 +127,32 @@ switch(tier){
                     pressed = 1;
                     obj_global_controller.level_button_current++; 
                     if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-                    
+                    if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                     // Проверка подуровня
                     if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
                         var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-                        lev_end.win = 2;
-                        lev_end.image_index= 2;
+                        if room = GameRoomFree {
+                            lev_end.win = 3;
+                        } 
+                        if room = GameRoom  {
+                            lev_end.image_index= 2;
+                            lev_end.win = 2;
+                        }
+                        if room = GameRoomLadder{
+                            lev_end.win = 4;
+                            obj_global_controller.level_ladder++;
+                            
+                        }
+                        //var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
+                        //lev_end.win = 2;
+                        //lev_end.image_index= 2;
                         obj_global_controller.level_part_current = 20;
                     } else {
                         var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
                         lev_end.win = 1;
                         lev_end.image_index= 1;
-                        obj_global_controller.level_part_current++
+                        if room = GameRoom obj_global_controller.level_part_current++
+                        if room = GameRoomLadder obj_global_controller.level_part_current++
                     }
                 
                     // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
@@ -163,18 +189,29 @@ switch(tier){
                 pressed = 1;
                 obj_global_controller.level_button_current++; 
                 if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-                
+                if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                 // Проверка подуровня
                 if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
                     var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-                    lev_end.win = 2;
-                    lev_end.image_index= 2;
+                    if room = GameRoomFree {
+                        lev_end.win = 3;
+                    } 
+                    if room = GameRoom  {
+                        lev_end.image_index= 2;
+                        lev_end.win = 2;
+                    }
+                    if room = GameRoomLadder{
+                        lev_end.win = 4;
+                        obj_global_controller.level_ladder++;
+                        
+                    }
                     obj_global_controller.level_part_current = 20;
                 } else {
                     var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
                     lev_end.win = 1;
                     lev_end.image_index= 1;
-                    obj_global_controller.level_part_current++
+                    if room = GameRoom obj_global_controller.level_part_current++
+                    if room = GameRoomLadder obj_global_controller.level_part_current++
                 }
                 
                 // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
@@ -187,9 +224,9 @@ switch(tier){
     if isworking {
         image_index = pressed;
         if pressed = 0 {
-            add_r = 0.9;
-            add_g = 0.9;
-            add_b = 0.9;
+            add_r = 0.3//0.9;
+            add_g = 0.9//0.9;
+            add_b = 0.9//0.9;
         } else {
             add_r = 0.0;
             add_g = 0.0;
@@ -221,18 +258,29 @@ switch(tier){
             // конец игры
                 
                 if obj_global_controller.level_button_current = array_length(buttons) {
-                
+                if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                 // Проверка подуровня
                 if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
                     var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
-                    lev_end.win = 2;
-                    lev_end.image_index= 2;
+                    if room = GameRoomFree {
+                        lev_end.win = 3;
+                    } 
+                    if room = GameRoom  {
+                        lev_end.image_index= 2;
+                        lev_end.win = 2;
+                    }
+                    if room = GameRoomLadder{
+                        lev_end.win = 4;
+                        obj_global_controller.level_ladder++;
+                        
+                    }
                     obj_global_controller.level_part_current = 20;
                 } else {
                     var lev_end = instance_create_depth(384,1024,-15999,obj_level_end);
                     lev_end.win = 1;
                     lev_end.image_index= 1;
-                    obj_global_controller.level_part_current++
+                    if room = GameRoom obj_global_controller.level_part_current++
+                    if room = GameRoomLadder obj_global_controller.level_part_current++
                 }
             
                 // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК

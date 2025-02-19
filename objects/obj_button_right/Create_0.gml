@@ -7,26 +7,28 @@ pg1 = 0;
 pg2 = 0;
 pg3 = 0;
 pg4 = 0;
-pg5 = 0;
-pg6 = 0;
-pg7 = 0;
-pg8 = 0;
+
 image_xscale = 1.5;
 image_yscale = 1.5;
 
 
-for (var i = 0; i < 9; i++) {
+for (var i = 0; i < 6; i++) {
     if obj_global_controller.level_array[i] = 1 pg1++;
 }
-for (var i = 9; i < 18; i++) {
+for (var i = 6; i < 12; i++) {
     if obj_global_controller.level_array[i] = 1 pg2++;
 }
-for (var i = 18; i < 27; i++) {
+for (var i = 12; i < 18; i++) {
     if obj_global_controller.level_array[i] = 1 pg3++;
 }
-for (var i = 27; i < 36; i++) {
+for (var i = 18; i < 24; i++) {
     if obj_global_controller.level_array[i] = 1 pg4++;
 }
+
+if pg1 = 6 pg1_on = 1; else pg1_on = 0;
+if pg2 = 6 pg2_on = 1; else pg2_on = 0;
+if pg3 = 6 pg3_on = 1; else pg3_on = 0;
+if pg4 = 6 pg4_on = 1; else pg4_on = 0;
 //for (var i = 27; i < 36; i++) {
 //    if obj_global_controller.level_array[i] = 1 pg4++;
 //}
