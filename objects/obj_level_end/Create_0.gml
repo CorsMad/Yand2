@@ -13,4 +13,19 @@ if room = GameRoomLadder
 {
 	obj_global_controller.timer_ladder_work	= 0;	
 }
-timer_add_alpha = 1;
+
+
+
+// ТАЙМЕР ДОБАВ
+
+y_timer_add     = room_height/2;
+x_timer_add     = room_width/2
+timer_add_alpha = 0;
+str_timer_ladder_add = "+" + string(floor((obj_global_controller.timer_ladder_add)/60)); 
+
+// ТАЙМЕР ОБЩИЙ
+
+x_timer = 520
+y_timer = 260
+x_timer_scale = 2;
+y_timer_scale = 2;

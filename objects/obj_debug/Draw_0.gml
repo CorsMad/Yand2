@@ -5,7 +5,9 @@ draw_set_color(c_white)
 draw_text(48,32,string(obj_global_controller.level_ladder));
 if instance_exists(obj_go) {
 draw_text(48,64,string(obj_go.t_offset));
+
 }
+draw_text(48,360,string(obj_global_controller.timer_ladder_add));
 
 //draw_text(mouse_x,mouse_y,mouse_x);
 //draw_text(mouse_x+160,mouse_y,mouse_y);

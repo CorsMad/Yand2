@@ -4,28 +4,24 @@
 
 switch(tier){
     case 0: // Нормальные\
-        // Графика
-    
-        if t < 50 {
-            t++;
-            add_r = 0.4;
-            add_g = -1;
-            add_b = -1;
-        }
-        if t = 50 {
-            
-            image_index = pressed;
-            if pressed = 0 {
-                add_r = 0.9;
-                add_g = 0.9;
-                add_b = 0.9;
-            } else {
-                add_r = 0.0;
-                add_g = 0.0;
-                add_b = 0.0;    
-            } 
-            
+
+		if isworking {
+        image_index = pressed;
+        if pressed = 0 {
+            add_r = 0.9//0.9;
+            add_g = 0.9//0.9;
+            add_b = 0.9//0.9;
+        } else {
+            add_r = 0.0;
+            add_g = 0.0;
+            add_b = 0.0;    
         } 
+		} else {
+	        add_r = 0.4;
+	        add_g = -1;
+	        add_b = -1;
+		}
+
         // Вза1модействие
         if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
             && bad = 0 && pressed = 0{

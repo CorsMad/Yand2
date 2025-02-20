@@ -382,10 +382,10 @@ switch (t) {
                 case 23: _go.t_offset = 19;break;
                 case 24: _go.t_offset = 19;break;
 				
-				case 25: _go.t_offset = 17;break;
-                case 26: _go.t_offset = 17;break;
-                case 27: _go.t_offset = 17;break;
-                case 28: _go.t_offset = 17;break;
+				//case 25: _go.t_offset = 17;break;
+                //case 26: _go.t_offset = 17;break;
+                //case 27: _go.t_offset = 17;break;
+                //case 28: _go.t_offset = 17;break;
 				
 				default : _go.t_offset = 15;break;
             }

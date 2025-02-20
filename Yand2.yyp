@@ -81,6 +81,7 @@
     {"id":{"name":"obj_options","path":"objects/obj_options/obj_options.yy",},},
     {"id":{"name":"obj_star_big","path":"objects/obj_star_big/obj_star_big.yy",},},
     {"id":{"name":"obj_star","path":"objects/obj_star/obj_star.yy",},},
+    {"id":{"name":"obj_start_round","path":"objects/obj_start_round/obj_start_round.yy",},},
     {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},},
     {"id":{"name":"FreeLevelSelect","path":"rooms/FreeLevelSelect/FreeLevelSelect.yy",},},
     {"id":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
@@ -136,8 +137,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"GameStart","path":"rooms/GameStart/GameStart.yy",},},
-    {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"TESTROOM","path":"rooms/TESTROOM/TESTROOM.yy",},},
+    {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"roomId":{"name":"LevelSelect","path":"rooms/LevelSelect/LevelSelect.yy",},},
     {"roomId":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
     {"roomId":{"name":"LadderLevelPrepare","path":"rooms/LadderLevelPrepare/LadderLevelPrepare.yy",},},

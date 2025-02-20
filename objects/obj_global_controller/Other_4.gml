@@ -7,9 +7,10 @@ if room = GameRoomFree{
 
 if room = GameRoomLadder { // РЕЙТИНГ
     //level_part_max = -1;
-    scr_ladder_list();
+    
     obj_global_controller.level_part_max = 3;
 	timer_ladder_add = 0;
+	scr_ladder_list();
 }
 
 
