@@ -8,8 +8,8 @@ pg2 = 0;
 pg3 = 0;
 pg4 = 0;
 
-image_xscale = 1.5;
-image_yscale = 1.5;
+image_xscale = 3;
+image_yscale = 3;
 
 
 for (var i = 0; i < 6; i++) {

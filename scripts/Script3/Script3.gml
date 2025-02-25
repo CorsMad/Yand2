@@ -3,24 +3,28 @@ function scr_ladder_list(){
         switch (level_ladder) {
 			#region 1-9
 				case 1:
-	                _b.count = 9;
+	                _b.count = 8;
 	                _b.exclude = 4; //2
 					_b.button_tier = 0; //0
+					obj_global_controller.star_col = c_lime;
                 break;
 	            case 2:
-	                _b.count = 9;
+	                _b.count = 8;
 	                _b.exclude = 4; //2
 	                _b.button_tier = 4; //0
+					obj_global_controller.star_col = c_fuchsia;
 	                break;
 	            case 3:
-	                _b.count = 9;
+	                _b.count = 8;
 	                _b.exclude = 5; //2
 	                _b.button_tier = 3; //0
+					obj_global_controller.star_col = c_aqua;
 	                break;
 	            case 4:
-	                _b.count = 9;
+	                _b.count = 8;
 	                _b.exclude = 6; //2
 	                _b.button_tier = 2; //0
+					obj_global_controller.star_col = c_yellow;
 					obj_global_controller.timer_ladder_add = 330;
                 break;
 			#endregion

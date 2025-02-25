@@ -16,11 +16,11 @@ draw_sprite(spr_button_bgr,0,room_width/2-192,room_height/2);
 draw_sprite(spr_button_bgr,0,room_width/2+192,room_height/2);
 
 
-draw_sprite_ext(spr_button_faq,b2,room_width/2,room_height/2,1,1,0,c_white,1);
-draw_sprite_ext(spr_button_faq,0,room_width/2-96,room_height/2,1,1,0,c_red,1);
-draw_sprite_ext(spr_button_faq,0,room_width/2+96,room_height/2,1,1,0,c_red,1);
-draw_sprite_ext(spr_button_faq,b1,room_width/2-192,room_height/2,1,1,0,c_white,1);
-draw_sprite_ext(spr_button_faq,b3,room_width/2+192,room_height/2,1,1,0,c_white,1);
+draw_sprite_ext(spr_button_faq,b2,room_width/2,room_height/2,1,1,0,c_lime,1);
+draw_sprite_ext(spr_button_faq,0,room_width/2-96,room_height/2,1,1,0,c_maroon,1);
+draw_sprite_ext(spr_button_faq,0,room_width/2+96,room_height/2,1,1,0,c_maroon,1);
+draw_sprite_ext(spr_button_faq,b1,room_width/2-192,room_height/2,1,1,0,c_lime,1);
+draw_sprite_ext(spr_button_faq,b3,room_width/2+192,room_height/2,1,1,0,c_lime,1);
 
  
 draw_sprite_ext(spr_hand,hi,hx,hy,1,1,0,c_white,ha);

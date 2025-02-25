@@ -5,7 +5,7 @@ switch(button_tier){
     case 0:
         alpha = 0;
             t++;
-            if t = 70+t_offset {
+            if t = 50 {
                 if instance_exists(obj_level_progression) scr_button_turn(1);
                 obj_level_progression.work = 1;  
 				if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
@@ -33,9 +33,9 @@ switch(button_tier){
                 }
                 if t = 30+t_offset {
                     for (var i = 0; i < array_length(_buttons); i++) {
-                        _buttons[i].add_r = 0.15
-                        _buttons[i].add_g = 0.15
-                        _buttons[i].add_b = 0.15
+                        _buttons[i].add_r = 0.05
+                        _buttons[i].add_g = 0.05
+                        _buttons[i].add_b = 0.05
                     }
                     if instance_exists(obj_level_progression) scr_button_turn(1);
                     obj_level_progression.work = 1;  
@@ -57,16 +57,16 @@ switch(button_tier){
         t++;
         if t = 1 {
             for (var i = 0; i < array_length(_buttons); i++) {
-                if _buttons[i].tier = 3 _buttons[i].add_r = 0.8;
-                if _buttons[i].tier = 3 _buttons[i].add_g = 0.8;
-                if _buttons[i].tier = 3 _buttons[i].add_b = 0.8;
+                if _buttons[i].tier = 3 _buttons[i].add_r = 0.1;
+                if _buttons[i].tier = 3 _buttons[i].add_g = 0.7;
+                if _buttons[i].tier = 3 _buttons[i].add_b = 0.7;
             }
         }
     
         if t > (40 + t_offset) && t < (40 + t_offset*3){
             for (var i = 0; i < array_length(_buttons); i++) {
                 if _buttons[i].tier = 3 {
-                    if _buttons[i].add_r > 0.0 {
+                    if _buttons[i].add_b > 0.0 {
                        _buttons[i].add_r -= 0.025;
                        _buttons[i].add_g -= 0.025;
                        _buttons[i].add_b -= 0.025;
@@ -81,9 +81,9 @@ switch(button_tier){
     
         if t = 50 + t_offset*3 {
             for (var i = 0; i < array_length(_buttons); i++) {
-                _buttons[i].add_r = 0.15;
-                _buttons[i].add_g = 0.15;
-                _buttons[i].add_b = 0.15;
+                _buttons[i].add_r = 0.05;
+                _buttons[i].add_g = 0.05;
+                _buttons[i].add_b = 0.05;
             }
             if instance_exists(obj_level_progression) scr_button_turn(1);
             obj_level_progression.work = 1;  

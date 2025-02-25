@@ -1,14 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_sprite_ext(spr_button_bgr,0,x-7,y-7,1.5,1.5,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x+7,y-7,1.5,1.5,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x+7,y+7,1.5,1.5,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x-7,y+7,1.5,1.5,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x-4,y-4,1.5,1.5,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x+4,y-4,1.5,1.5,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x+4,y+4,1.5,1.5,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x-4,y+4,1.5,1.5,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x,y,1.5,1.5,0,c_white,1);
+draw_sprite_ext(spr_button_bgr,0,x-7,y-7,2.75,2.75,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+7,y-7,2.75,2.75,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+7,y+7,2.75,2.75,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-7,y+7,2.75,2.75,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-4,y-4,2.75,2.75,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+4,y-4,2.75,2.75,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+4,y+4,2.75,2.75,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x-4,y+4,2.75,2.75,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x,y,    2.75,2.75,0,c_white,1);
 
 
 

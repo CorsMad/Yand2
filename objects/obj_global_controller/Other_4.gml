@@ -11,14 +11,13 @@ if room = GameRoomLadder { // РЕЙТИНГ
     obj_global_controller.level_part_max = 3;
 	timer_ladder_add = 0;
 	scr_ladder_list();
+	obj_fade_screen.col = star_col;
 }
 
 
 if room = LevelSelect { // ОБЫЧНАЯ
     
     // Скалькулировать страницы
-    
-    //
     
     var l = 0;
     var m = 0;
@@ -34,7 +33,7 @@ if room = LevelSelect { // ОБЫЧНАЯ
             l = 0;
             m++;
         } else l++;
-        var k = instance_create_depth(768*xoffset+192+192*l,280+198*m,0,obj_button_level);
+        var k = instance_create_depth(1080*xoffset+212+328*l,320+328*m,0,obj_button_level);
         k.level = i+1;
         k.completed = level_array[i];
         // МАКСИМАЛЬНОЕ КОЛИЧЕСТВО ЧАСТЕЙ (будет +1)
@@ -48,16 +47,16 @@ if room = LevelSelect { // ОБЫЧНАЯ
             case 4: k.level_part_max = 3; break;
             case 5: k.level_part_max = 3; break;
             // ВТОРАЯ СТРАНИЦА   
-            case 6: k.level_part_max =  2; break;
-            case 7: k.level_part_max =  2; break;
-            case 8: k.level_part_max =  2; break;
+            case 6: k.level_part_max =  3; break;
+            case 7: k.level_part_max =  3; break;
+            case 8: k.level_part_max =  3; break;
             case 9:  k.level_part_max = 3; break;
             case 10: k.level_part_max = 3; break;
             case 11: k.level_part_max = 3; break;
             // ТРЕТЬЯ СТРАНИЦА 
-            case 12: k.level_part_max = 2; break;
-            case 13: k.level_part_max = 2; break;
-            case 14: k.level_part_max = 2; break;
+            case 12: k.level_part_max = 3; break;
+            case 13: k.level_part_max = 3; break;
+            case 14: k.level_part_max = 3; break;
             case 15: k.level_part_max = 3; break;
             case 16: k.level_part_max = 3; break;
             case 17: k.level_part_max = 3; break;  

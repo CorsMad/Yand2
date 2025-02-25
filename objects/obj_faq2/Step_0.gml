@@ -4,32 +4,32 @@ t++;
 
 switch(t){
     case 100:
-        c1 = c_white;
+        c1 = c_yellow;
         t1a = 1;
         break;
     case 150:
         c1 = c_dkgray;
         break;
     case 200:
-        c2 = c_white;
+        c2 = c_yellow;
         t2a = 1;
         break;
     case 250:
         c2 = c_dkgray;
         break;
     case 300:
-        c3 = c_white;
+        c3 = c_yellow;
         t3a = 1;
         break;
     case 350:
         c3 = c_dkgray;
         break;
     case 400:
-        c1 = c_yellow;
-        c2 = c_yellow;
-        c3 = c_yellow;
-        c4 = c_yellow;
-        c5 = c_yellow;
+        c1 = c_white;
+        c2 = c_white;
+        c3 = c_white;
+        c4 = c_white;
+        c5 = c_white;
         break;
     case 450:
         c1 = c_dkgray;
@@ -106,26 +106,6 @@ if t > 1050 {
     ha-=0.1;
 }
 
-//if t > 150 && t < 200 {
-//    hx = room_width/2;
-//    if ha < 1 ha+=0.1;
-//}   
-//if t = 200 hi = 1;
-//if t = 210 hi = 0;
-//if t > 220 && t < 240 ha-=0.1;
-//if t > 250 && t < 300 {
-//    hx = room_width/2+192;
-//    if ha < 1 ha+=0.1;
-//    }            
-//if t = 300 hi = 1;
-//if t = 310 hi = 0;
-//if t > 350 && t < 400 {
-//    if sa<1 sa+=0.1;    
-//}        
-//if t > 550 {
-//    sa-=0.1;
-//    ha-=0.1;
-//}
 
 if mouse_check_button_pressed(mb_left) {
     instance_destroy();

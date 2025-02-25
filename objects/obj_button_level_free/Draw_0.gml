@@ -1,29 +1,29 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_sprite_ext(spr_go1,0,x-5,y,  1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x-5,y-5,1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x,  y-5,1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x+5,y-5,1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x+5,y,  1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x+5,y+5,1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x,y+3,  1.25,1.25,0,c_black,1);
-draw_sprite_ext(spr_go1,0,x-5,y+5,1.25,1.25,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x-5,y,  2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x-5,y-5,2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x,  y-5,2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x+5,y-5,2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x+5,y,  2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x+5,y+5,2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x,y+3,  2,2,0,c_black,1);
+draw_sprite_ext(spr_go1,0,x-5,y+5,2,2,0,c_black,1);
 
 
 draw_self();
 switch(diff){
     case 1:
-        draw_sprite_ext(spr_free_star,0,x,y-2,2,2,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x,y-2,4,4,0,c_white,1);
         break;
     case 2:
-        draw_sprite_ext(spr_free_star,0,x-32,y-2,2,2,0,c_white,1);
-        draw_sprite_ext(spr_free_star,0,x+32,y-2,2,2,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x-48,y-2,4,4,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x+48,y-2,4,4,0,c_white,1);
         break;
     case 3:
-        draw_sprite_ext(spr_free_star,0,x-48,y-2,2,2,0,c_white,1);
-        draw_sprite_ext(spr_free_star,0,x,y-2,2,2,0,c_white,1);
-        draw_sprite_ext(spr_free_star,0,x+48,y-2,2,2,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x-90,y-2,4,4,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x,y-2,   4,4,0,c_white,1);
+        draw_sprite_ext(spr_free_star,0,x+90,y-2,4,4,0,c_white,1);
         break;
 }
 draw_set_halign(fa_center);

@@ -61,6 +61,7 @@ switch(win){
         }
         if room = GameRoomLadder{
             rect_alpha+=0.05;
+			w1 = lerp(w1,room_width+128,0.1);
             if rect_alpha>=1 {
                 obj_global_controller.level_button_current = 0;
                 obj_global_controller.level_ladder++;
@@ -223,18 +224,18 @@ switch(win){
 			if t > 50  
 			{
 				if timer_add_alpha < 1 timer_add_alpha+=0.05;
-				y_timer_add = lerp(y_timer_add,room_height/2+128,0.05);
+				y_timer_add = lerp(y_timer_add,room_height/2,0.05);
 			}
 			if t > 100 && t < 150
 			{
 				x_timer = lerp(x_timer,room_width/2,0.1);
-				y_timer = lerp(y_timer,room_height/2-128,0.1);
+				y_timer = lerp(y_timer,room_height/2-256,0.1);
 			}
 			
 			if t > 150 
 			{	
-				y_timer =     lerp(y_timer    ,room_height/2-64,0.25);
-				y_timer_add = lerp(y_timer_add,room_height/2-64,0.25);
+				y_timer =     lerp(y_timer    ,room_height/2-128,0.25);
+				y_timer_add = lerp(y_timer_add,room_height/2-128,0.25);
 				
 			}
 			if t = 165 

@@ -25,14 +25,14 @@ switch(t){
 
 
 if t = 50 {
-    add_r1 = 1.0;
-    add_g1 = 1.0;
-    add_b1 = 1.0;
+    add_r1 = 0.1;
+    add_g1 = 0.7;
+    add_b1 = 0.7;
     
 }
 
 if t > 100 && t < 200 {
-    if add_r1 > -1 {
+    if add_b1 > -1 {
         add_r1 -= 0.025;
         add_g1 -= 0.025;
         add_b1 -= 0.025;

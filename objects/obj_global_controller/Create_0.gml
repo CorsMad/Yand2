@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+star_col = c_white;
 for (var i = 0; i < 24; i++) {
     //level_array[i] = 0;
-    level_array[i] = 0;
+    level_array[i] = 1;
 }
 
 level_current = 0;

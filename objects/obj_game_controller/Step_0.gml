@@ -7,33 +7,33 @@ switch (t) {
         switch(obj_global_controller.level_current) {
             // ПЕРВАЯ СТРАНИЦА
             case 1:
-                _b.count = 5;
+                _b.count = 6;//5
                 _b.exclude = 3; //2
                 _b.button_tier = 0; //0
                 break;
             case 2:
-                _b.count = 5;
+                _b.count = 6;
                 _b.exclude = 2;
                 _b.button_tier = 0;
                 break;
             case 3:
-                _b.count = 7;
+                _b.count = 8;
                 _b.exclude = 4;
                 _b.button_tier = 0;
                 break;
             case 4:
-                _b.count = 7;
+                _b.count = 8;
                 _b.exclude = 3;
                 _b.button_tier = 0;
                 break;
             case 5:
-                _b.count = 9;
-                _b.exclude = 4;
+                _b.count = 10;
+                _b.exclude = 5;
                 _b.button_tier = 0;
                 break;
             case 6:
-                _b.count = 9
-                _b.exclude = 3;
+                _b.count = 10
+                _b.exclude = 4;
                 _b.button_tier = 0;
                 break;
             // ВТОРАЯ СТРАНИЦА

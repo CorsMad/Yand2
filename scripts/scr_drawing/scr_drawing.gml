@@ -17,19 +17,19 @@ function draw_progress(progress_alpha){
     
     if room = GameRoom || room = GameRoomLadder{
         draw_set_alpha(progress_alpha);
-        draw_sprite(spr_progress_bar,0,384,134);
-        draw_sprite_ext(spr_progress_bar,0,384,134,1.25,1,0,c_white,progress_alpha);
+        //draw_sprite(spr_progress_bar,0,room_width/2,134);
+        draw_sprite_ext(spr_progress_bar,0,room_width/2,110,1.8,2,0,c_white,progress_alpha);
         switch(obj_global_controller.level_part_max){
             case 2:
-                draw_sprite(spr_progress_icon,_im1,96, 160);
-                draw_sprite(spr_progress_icon,_im2,384,160);
-                draw_sprite(spr_progress_icon,_im3,672,160);
+                draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im2,room_width/2    ,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im3,room_width/2+400,160,2,2,0,c_white,1);
                 break;
             case 3:
-                draw_sprite(spr_progress_icon,_im1,96, 160);
-                draw_sprite(spr_progress_icon,_im2,288,160);
-                draw_sprite(spr_progress_icon,_im3,480,160);
-                draw_sprite(spr_progress_icon,_im4,672,160);
+                draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im2,room_width/2-130,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im3,room_width/2+130,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im4,room_width/2+400,160,2,2,0,c_white,1);
                 break;
             case 4:
                 draw_sprite(spr_progress_icon,_im1,96, 160);
@@ -47,13 +47,13 @@ function draw_progress(progress_alpha){
                 draw_sprite(spr_progress_icon,_im6,672,160);
                 break;
             case 6:                                      
-                draw_sprite(spr_progress_icon,_im1,96, 160);
-                draw_sprite(spr_progress_icon,_im2,192,160);
-                draw_sprite(spr_progress_icon,_im3,288,160);
-                draw_sprite(spr_progress_icon,_im4,384,160);
-                draw_sprite(spr_progress_icon,_im5,480,160);
-                draw_sprite(spr_progress_icon,_im6,576,160);
-                draw_sprite(spr_progress_icon,_im7,672,160);
+                draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im2,room_width/2-230,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im3,room_width/2-110,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im4,room_width/2,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im5,room_width/2-110,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im6,room_width/2+230,160,2,2,0,c_white,1);
+                draw_sprite_ext(spr_progress_icon,_im4,room_width/2+400,160,2,2,0,c_white,1);
                 break;
         }
         draw_set_alpha(1);
@@ -61,26 +61,26 @@ function draw_progress(progress_alpha){
     
     if room = GameRoomFree {
             draw_set_alpha(progress_alpha);
-            draw_sprite(spr_progress_bar,0,384,134);
-            draw_sprite_ext(spr_progress_bar,0,384,134,1.25,1,0,c_white,progress_alpha);
+            //draw_sprite(spr_progress_bar,0,384,134);
+            draw_sprite_ext(spr_progress_bar,0,room_width/2,110,1.8,2,0,c_white,progress_alpha);
             switch(obj_global_controller.level_part_max){
                 case 2:
-                    draw_sprite(spr_progress_icon,_im1,96, 160);
-                    draw_sprite(spr_progress_icon,_im2,384,160);
-                    draw_sprite(spr_progress_icon,_im3,672,160);
+                    draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im2,room_width/2    ,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im3,room_width/2+400,160,2,2,0,c_white,1);
                     break;
                 case 3:
-                    draw_sprite(spr_progress_icon,_im1,96, 160);
-                    draw_sprite(spr_progress_icon,_im2,288,160);
-                    draw_sprite(spr_progress_icon,_im3,480,160);
-                    draw_sprite(spr_progress_icon,_im4,672,160);
+                    draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im2,room_width/2-130,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im3,room_width/2+130,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im4,room_width/2+400,160,2,2,0,c_white,1);
                     break;
                 case 4:
-                    draw_sprite(spr_progress_icon,_im1,96, 160);
-                    draw_sprite(spr_progress_icon,_im2,240,160);
-                    draw_sprite(spr_progress_icon,_im3,384,160);
-                    draw_sprite(spr_progress_icon,_im4,528,160);
-                    draw_sprite(spr_progress_icon,_im5,672,160);
+                    draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160,2,2,0,c_white,1);
+                    draw_sprite_ext(spr_progress_icon,_im2,room_width/2-200,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im3,room_width/2    ,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im4,room_width/2+200,160,2,2,0,c_white,1);
+	                draw_sprite_ext(spr_progress_icon,_im5,room_width/2+400,160,2,2,0,c_white,1);
                     break;
                 case 5:
                     draw_sprite(spr_progress_icon,_im1,96, 160);

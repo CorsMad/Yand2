@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-add_r = 0.15;
-add_g = 0.15;
-add_b = 0.15;
+add_r = 0.05;
+add_g = 0.05;
+add_b = 0.05;
 uni_add_r = shader_get_uniform(sh_button,"add_r");
 uni_add_g = shader_get_uniform(sh_button,"add_g");
 uni_add_b = shader_get_uniform(sh_button,"add_b");
@@ -20,8 +20,8 @@ tier = 0;
 t2_end = 0;
 t2_exists = 0;
 t3_exists = 0;
-image_xscale = 1.5;
-image_yscale = 1.5;
+image_xscale = 2.75;
+image_yscale = 2.75;
 
 sprite_index = spr_button;
 

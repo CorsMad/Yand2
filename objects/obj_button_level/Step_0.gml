@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = xoffset-obj_global_controller.page*768;
+x = xoffset-obj_global_controller.page*1080;
 
 image_index = completed;
 if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) &&

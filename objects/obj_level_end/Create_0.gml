@@ -14,7 +14,8 @@ if room = GameRoomLadder
 	obj_global_controller.timer_ladder_work	= 0;	
 }
 
-
+image_xscale = 3;
+image_yscale = 3;
 
 // ТАЙМЕР ДОБАВ
 
@@ -29,3 +30,5 @@ x_timer = 520
 y_timer = 260
 x_timer_scale = 2;
 y_timer_scale = 2;
+
+w1 = 0;
