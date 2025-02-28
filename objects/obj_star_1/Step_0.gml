@@ -1,5 +1,11 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
-work=1;
-image_xscale = 2;
-image_yscale = 2;
+x+=hspd;
+y+=vspd;
+image_angle-=angle;
+vspd+=v_acc;
+t++;
+if t > t_max {
+    image_alpha-=0.05;
+}
+if image_alpha<=0 instance_destroy();

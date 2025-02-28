@@ -221,41 +221,32 @@ switch(win){
             image_index = 1;      
 			
 			if t < 200 t++;
-			if t > 50  
-			{
-				if timer_add_alpha < 1 timer_add_alpha+=0.05;
-				y_timer_add = lerp(y_timer_add,room_height/2,0.05);
-			}
-			if t > 100 && t < 150
+			if t > 50  && t < 100
 			{
 				x_timer = lerp(x_timer,room_width/2,0.1);
 				y_timer = lerp(y_timer,room_height/2-256,0.1);
+				if timer_add_alpha < 1 timer_add_alpha+=0.1;
+				//if timer_add_alpha < 1 timer_add_alpha+=0.05;
+				//y_timer_add = lerp(y_timer_add,room_height/2,0.05);
+			}
+			if t = 130 
+			{
+				obj_global_controller.timer_ladder+=obj_global_controller.timer_ladder_add;	
 			}
 			
-			if t > 150 
-			{	
-				y_timer =     lerp(y_timer    ,room_height/2-128,0.25);
-				y_timer_add = lerp(y_timer_add,room_height/2-128,0.25);
-				
-			}
-			if t = 165 
-			{
-				str_timer_ladder_add = "";
-				obj_global_controller.timer_ladder+=obj_global_controller.timer_ladder_add;
-			}
-			if t > 170 && t < 180
+			if t > 120 && t < 130
 			{
 				x_timer_scale +=0.25;
 				y_timer_scale +=0.25;	
 				obj_alpha+=0.1;
 			}
-			if t > 180 
+			if t > 130 
 			{
 				x_timer_scale = lerp(x_timer_scale,3,0.1);
 				y_timer_scale = lerp(y_timer_scale,3,0.1);		
 			}
 			
-			if t > 165 && t < 250 
+			if t > 130 && t < 250 
 			{
                 // ПРОДОЛЖИТЬ
                     if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
