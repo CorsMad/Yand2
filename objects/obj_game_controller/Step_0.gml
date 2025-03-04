@@ -38,22 +38,22 @@ switch (t) {
                 break;
             // ВТОРАЯ СТРАНИЦА
             case 7:
-                _b.count = 7
+                _b.count = 6
                 _b.exclude = 4;
                 _b.button_tier = 4;
                 break;
             case 8:
-                _b.count = 7
+                _b.count = 6
                 _b.exclude = 5;
                 _b.button_tier = 4;
                 break;
             case 9:
-                _b.count = 9
+                _b.count = 8
                 _b.exclude = 5;
                 _b.button_tier = 4;
                 break;
             case 10:
-                _b.count = 9
+                _b.count = 8
                 _b.exclude = 6;
                 _b.button_tier = 4;
                 break;

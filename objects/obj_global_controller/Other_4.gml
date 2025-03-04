@@ -61,9 +61,9 @@ if room = LevelSelect { // ОБЫЧНАЯ
             case 16: k.level_part_max = 3; break;
             case 17: k.level_part_max = 3; break;  
             // ЧЕТВЕРТАЯ СТРАНИЦА 
-            case 18: k.level_part_max = 2; break;
-            case 19: k.level_part_max = 2; break;
-            case 20: k.level_part_max = 2; break;
+            case 18: k.level_part_max = 3; break;
+            case 19: k.level_part_max = 3; break;
+            case 20: k.level_part_max = 3; break;
             case 21: k.level_part_max = 3; break;
             case 22: k.level_part_max = 3; break;
             case 23: k.level_part_max = 3; break;

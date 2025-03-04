@@ -16,6 +16,21 @@ if page>3 && room = GameRoom{
     }
 }
 
+if room = LevelSelect
+{
+	if instance_exists(obj_faq)
+	{
+		switch(page)
+		{
+			case 0: obj_faq.state = 0; break;
+			case 1: obj_faq.state = 3; break;
+			case 2: obj_faq.state = 2; break;
+			case 3: obj_faq.state = 1; break;
+		}
+	}
+}
+
+
 if timer_ladder_work
 {
 	if timer_ladder > 0 timer_ladder--;

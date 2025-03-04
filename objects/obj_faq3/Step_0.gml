@@ -1,18 +1,44 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
+
+#region ВКЛ ВЫКЛ
+if pos = 0 // ВКЛ
+{
+	main_alpha+=0.05;
+	if main_alpha >= 0.95
+	{
+		main_alpha = 0.95;
+		pos = 1;
+	}
+}
+
+if pos = 2 // ВЫКЛ 
+{
+	main_alpha-=0.05;
+	if main_alpha<=0
+	{
+		instance_destroy()	
+	}
+}
+#endregion
+
+
+if pos = 1
+{
+
 t++;
 
 switch(t){
-    case 300:
+    case 270:
         b1=1;
         break;
-    case 400:
+    case 340:
         b2=1;
         break;
-    case 500:
+    case 410:
         b3=1;
         break;
-    case 800:
+    case 600:
         b1 = 0;
         b2 = 0;
         b3 = 0;
@@ -46,43 +72,39 @@ if t = 200 {
 
 
 
-if t > 250 && t < 300 {
-    hx = room_width/2-96;
+if t > 250 && t < 270 {
+    hx = room_width/2-172;
     if ha < 1 ha+=0.1;
 }   
-if t = 300 hi = 1;
-if t = 310 hi = 0;
-if t > 320 && t < 340 ha-=0.1;
+if t = 270 hi = 1;
+if t = 280 hi = 0;
+if t > 290 && t < 310 ha-=0.1;
     
-if t > 350 && t < 400 {
-    hx = room_width/2-192;
+if t > 320 && t < 340 {
+    hx = room_width/2-344;
     if ha < 1 ha+=0.1;
     }            
-if t = 400 hi = 1;
-if t = 410 hi = 0;
-if t > 420 && t < 440 ha-=0.1;  
+if t = 340 hi = 1;
+if t = 350 hi = 0;
+if t > 360 && t < 380 ha-=0.1;  
 
-if t > 450 && t < 500 {
-    hx = room_width/2+192;
+if t > 390 && t < 410 {
+    hx = room_width/2+344;
     if ha < 1 ha+=0.1;
     }            
-if t = 500 hi = 1;
-if t = 510 hi = 0;
-if t > 520 && t < 540 {
-    if sa<1 sa+=0.1;    
-}  
-
-
-
-if t > 600 && t < 700 {
+if t = 410 hi = 1;
+if t = 420 hi = 0;
+if t > 460 && t < 470 {
     if sa<1 sa+=0.1;    
 }  
     
-if t > 750 {
-    sa-=0.1;
-    ha-=0.1;
+if t > 550 {
+    if sa > 0 sa-=0.1;
+    if ha > 0 ha-=0.1;
+}
 }
 
-if mouse_check_button_pressed(mb_left) {
-    instance_destroy();
+if mouse_check_button_pressed(mb_left) && 
+	point_in_rectangle(mouse_x,mouse_y,544-105,1376-105,544+105,1376+105) && pos = 1{
+   pos = 2;
 }

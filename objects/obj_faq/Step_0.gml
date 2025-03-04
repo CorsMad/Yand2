@@ -1,6 +1,7 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
-if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && !instance_exists(obj_faq_parent) {
+if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) &&
+!instance_exists(obj_faq_parent) && !instance_exists(obj_options_fade) {
     switch(state){
         case 0:
             instance_create_depth(0,0,-16000,obj_faq1);

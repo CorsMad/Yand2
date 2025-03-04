@@ -22,6 +22,9 @@ draw_self()
 shader_reset();
 
 draw_set_color(c_white);
+
+draw_sprite_ext(spr_button_graph1,pressed,x,y,2,2,0,c_white,1)
+
 //draw_text(x,y,string(b_number+1));
 
 /*

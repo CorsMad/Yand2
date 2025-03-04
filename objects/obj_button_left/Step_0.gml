@@ -10,4 +10,4 @@ if collision_point(mouse_x,mouse_y,self,true,false) {
     }
 }
 
-if obj_global_controller.page > 0 image_index = 0 else image_index = 2;
+if obj_global_controller.page > 0 image_index = 0 else image_index = 1;

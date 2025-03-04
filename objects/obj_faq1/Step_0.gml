@@ -1,5 +1,31 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
+#region ВКЛ ВЫКЛ
+if pos = 0 // ВКЛ
+{
+	main_alpha+=0.05;
+	if main_alpha >= 0.95
+	{
+		main_alpha = 0.95;
+		pos = 1;
+	}
+}
+
+if pos = 2 // ВЫКЛ 
+{
+	main_alpha-=0.05;
+	if main_alpha<=0
+	{
+		instance_destroy()	
+	}
+}
+#endregion
+
+#region ГРАФИКА
+
+if pos = 1
+{
+
 t++;
 
 switch(t){
@@ -52,35 +78,11 @@ if t > 350 {
 
 #endregion
 
-//if t > 50 && t < 100 {
-//    hx = room_width/2-344;
-//    
-//    if ha < 1 ha+=0.1;
-//}
-//if t = 100 hi=1;
-//if t = 110 hi=0;
-//if t > 120 && t < 140 ha-=0.1;
-//if t > 150 && t < 200 {
-//    hx = room_width/2;
-//    if ha < 1 ha+=0.1;
-//}   
-//if t = 200 hi = 1;
-//if t = 210 hi = 0;
-//if t > 220 && t < 240 ha-=0.1;
-//if t > 250 && t < 300 {
-//    hx = room_width/2+344;
-//    if ha < 1 ha+=0.1;
-//    }            
-//if t = 300 hi = 1;
-//if t = 310 hi = 0;
-//if t > 350 && t < 400 {
-//    if sa<1 sa+=0.1;    
-//}        
-//if t > 550 {
-//    sa-=0.1;
-//    ha-=0.1;
-//}
+}
 
-if mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x,mouse_y,544-105,1376-105,544+105,1376+105) {
-    instance_destroy();
+#endregion
+
+if mouse_check_button_pressed(mb_left) && 
+	point_in_rectangle(mouse_x,mouse_y,544-105,1376-105,544+105,1376+105) && pos = 1{
+   pos = 2;
 }

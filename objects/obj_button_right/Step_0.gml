@@ -33,9 +33,5 @@ switch(obj_global_controller.page){
     case 0: if pg1 = 6 image_index = 0 else image_index = 2;break;
     case 1: if pg2 = 6 image_index = 0 else image_index = 2;break;
     case 2: if pg3 = 6 image_index = 0 else image_index = 2;break;
-    case 3: image_index = 1;break;
-    //case 4: if pg5 = 9 image_index = 0 else image_index = 1;break;
-    //case 5: if pg6 = 9 image_index = 0 else image_index = 1;break;    
-    //case 6: if pg7 = 9 image_index = 0 else image_index = 1;break;    
-    //case 7: image_index = 1;break;    
+    case 3: image_index = 1;break;  
 }   

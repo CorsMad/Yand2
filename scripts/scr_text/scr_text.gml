@@ -4,7 +4,7 @@ function scr_text(_x,_y,_txt,_xs,_ys,_a){
     draw_set_font(fnt_font);
     draw_set_color(c_black);
     draw_set_alpha(_a)
-	var _offset = 5
+	var _offset = 7
     draw_text_transformed(_x-_offset,_y,_txt  ,_xs,_ys,0)
     draw_text_transformed(_x-_offset,_y-_offset,_txt,_xs,_ys,0)
     draw_text_transformed(_x,_y-_offset,_txt  ,_xs,_ys,0)
