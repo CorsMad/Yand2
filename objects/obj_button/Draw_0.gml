@@ -23,7 +23,18 @@ shader_reset();
 
 draw_set_color(c_white);
 
-draw_sprite_ext(spr_button_graph1,pressed,x,y,2,2,0,c_white,1)
+switch(obj_global_controller.but_graph)
+{
+	case 0:
+		break;
+	case 1: draw_sprite_ext(spr_button_graph1,pressed,x,y-24,0.3,0.3,0,c_white,0.2)		
+		break;
+	case 2: draw_sprite_ext(spr_button_graph2,pressed,x,y-24,0.3,0.3,0,c_white,0.5)		
+		break;
+	case 3: draw_sprite_ext(spr_button_graph3_1,pressed,x,y-24,0.4,0.4,0,c_white,0.5)		
+		break;
+}
+
 
 //draw_text(x,y,string(b_number+1));
 

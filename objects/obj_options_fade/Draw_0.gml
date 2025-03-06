@@ -155,6 +155,7 @@ switch(page)
 		{
 			   draw_sprite_ext(spr_button_bgr,0,544,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
 			   draw_sprite_ext(spr_button    ,0,544,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
+			   draw_sprite_ext(spr_button_graph1,0,544,544 +but_y_offset-24,0.3,0.3,0,c_white,rect_alpha)		
 		} else 
 			{ 
 				draw_sprite_ext(spr_options_bgr,0,544,544 +but_y_offset,but_scale,but_scale,0,c_white,rect_alpha);
@@ -166,6 +167,7 @@ switch(page)
 		{
 			draw_sprite_ext(spr_button_bgr,0,832,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
 			draw_sprite_ext(spr_button    ,0,832,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
+			draw_sprite_ext(spr_button_graph2,0,832,544+but_y_offset-20,0.4,0.4,0,c_white,rect_alpha)		
 		} else 
 			{
 				draw_sprite_ext(spr_options_bgr,0,832,544 +but_y_offset,but_scale,but_scale,0,c_white,rect_alpha);
@@ -177,6 +179,7 @@ switch(page)
 		{
 			draw_sprite_ext(spr_button_bgr,0,256,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
 			draw_sprite_ext(spr_button,	   0,256,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
+			draw_sprite_ext(spr_button_graph3_1,0,256,832 +but_y_offset-22, 0.45,0.45,0,c_white,rect_alpha);
 		} else 
 			{
 				draw_sprite_ext(spr_options_bgr,0,256,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);	

@@ -2,7 +2,8 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	if i < 6 level_array[i] = 1; else level_array[i] = 0;
+	level_array[i] = 1;
+	//if i < 6 level_array[i] = 1; else level_array[i] = 0;
     
 }
 

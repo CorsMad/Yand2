@@ -27,6 +27,26 @@ switch(tier){
             && bad = 0 && pressed = 0{
                 pressed = 1;
                 obj_global_controller.level_button_current++; 
+				
+				#region Graph
+				switch(obj_global_controller.but_graph)
+				{
+					case 1:
+						for (var i = 0; i < 4; i++) {
+						    instance_create_depth(x,y,depth-1,obj_but_graph_star1);
+						}
+						break;
+					case 2:
+						instance_create_depth(x,y-24,depth-1,obj_but_graph_rocket2);
+						break;
+					case 3:
+						for (var i = 0; i < 6; i++) {
+						    instance_create_depth(x+random_range(-64,64),y+random_range(-64,64),depth-1,obj_but_grap_flower);
+						}
+						break;
+				}
+				#endregion
+				
                 if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
                    if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                    // Проверка подуровня
