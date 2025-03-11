@@ -5,9 +5,9 @@
 if pos = 0 // ВКЛ
 {
 	main_alpha+=0.05;
-	if main_alpha >= 0.95
+	if main_alpha >= 1
 	{
-		main_alpha = 0.95;
+		main_alpha = 1;
 		pos = 1;
 	}
 }
@@ -118,6 +118,6 @@ if t > 510 {
 }
 
 if mouse_check_button_pressed(mb_left) && 
-	point_in_rectangle(mouse_x,mouse_y,544-105,1376-105,544+105,1376+105) && pos = 1{
+	point_in_rectangle(mouse_x,mouse_y,544-196,1376-84,544+196,1376+84) && pos = 1{
    pos = 2;
 }

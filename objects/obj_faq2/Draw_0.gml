@@ -38,5 +38,5 @@ draw_sprite_ext(spr_star,0,room_width/2,room_height/2-296,3,3,0,c_lime,sa);
 
 draw_sprite_stretched(spr_line,0,room_width/2-470,room_height/2+150,t*936/900,60);
 
-draw_sprite_ext(spr_back,0,544,1376,2.5,2.5,0,c_white,1);
+draw_sprite_ext(spr_ok,0,544,1376,2,2,0,c_white,1);
 }

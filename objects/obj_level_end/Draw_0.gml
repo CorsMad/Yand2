@@ -55,3 +55,8 @@ if win = 4 {
 	} else scr_text(x_timer,y_timer,string(ceil((obj_global_controller.timer_ladder)/60)),x_timer_scale,y_timer_scale,timer_add_alpha);
 	draw_sprite_ext(spr_go2,0,x_timer,y_timer-32,3,3,0,c_white,timer_add_alpha)
 }
+	
+	
+#region Настройки
+
+#endregion

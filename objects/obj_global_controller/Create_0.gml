@@ -2,9 +2,8 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	level_array[i] = 1;
-	//if i < 6 level_array[i] = 1; else level_array[i] = 0;
-    
+	level_array[i] = 0;
+	//if i < 6 level_array[i] = 1; else level_array[i] = 0;   
 }
 
 level_current = 0;
@@ -51,7 +50,30 @@ timer_ladder_add = 0;
 // 5 - pt
 // 6 - tr
 
-lang = 0;
+
+/////////////////////////////СОХРАНЕНИЕ///////////////////////
+
+// ЯЗЫК
+
+lang = 1;
 
 // ГРАФИКА КНОПОК
+but_graph_show = 1;
 but_graph = 0;
+
+// Показывать оповещение о наградах
+
+for (var i = 0; i < 8; i++) {
+    collection_alert[i] = 0;
+}
+
+// FAQ по наградам
+col_faq = 0;
+
+// Просмотр FAQ
+
+faq1_watch = 0;
+faq2_watch = 0;
+faq3_watch = 0;
+faq4_watch = 0;
+faq5_watch = 0;

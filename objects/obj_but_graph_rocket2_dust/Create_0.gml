@@ -1,7 +1,8 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
-rad = random_range(5,25)
-rad_max = rad+random_range(10,15);
-t = 0;
-t_max = irandom_range(20,25)
-alpha = 0.6;
+image_angle = irandom(360);
+image_xscale = 3;
+image_yscale = 3;
+image_speed = 4;
+image_alpha = random_range(0.7,0.9);
+t=0;

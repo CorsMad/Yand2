@@ -23,62 +23,79 @@ switch(tier){
 		}
 
         // Вза1модействие
-        if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-            && bad = 0 && pressed = 0{
-                pressed = 1;
-                obj_global_controller.level_button_current++; 
-				
-				#region Graph
-				switch(obj_global_controller.but_graph)
+		
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button(q,mb_any)
 				{
-					case 1:
-						for (var i = 0; i < 4; i++) {
-						    instance_create_depth(x,y,depth-1,obj_but_graph_star1);
-						}
-						break;
-					case 2:
-						instance_create_depth(x,y-24,depth-1,obj_but_graph_rocket2);
-						break;
-					case 3:
-						for (var i = 0; i < 6; i++) {
-						    instance_create_depth(x+random_range(-64,64),y+random_range(-64,64),depth-1,obj_but_grap_flower);
-						}
-						break;
-				}
-				#endregion
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						if isworking  && bad = 0 && pressed = 0           
+						{
+							#region КОД НАЖАТИЯ
+							pressed = 1;
+				            obj_global_controller.level_button_current++; 
 				
-                if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-                   if room = GameRoomLadder obj_global_controller.score_ladder+=1;
-                   // Проверка подуровня
-                   if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
-                       var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+							#region Graph
+							instance_create_depth(x,y,depth-1,obj_button_dust)
+							scr_button_graph();
+							#endregion
+				
+				            if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
+				                if room = GameRoomLadder obj_global_controller.score_ladder+=1;
+				                // Проверка подуровня
+				                if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
+					   
+									instance_create_depth(192,160,depth-17000,obj_options);	
+									instance_create_depth(544,160,depth-17000,obj_collection);	
+
+						
+									var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
                        
-                        if room = GameRoomFree {
-                            lev_end.win = 3;
-                        } 
-                        if room = GameRoom  {
-                            lev_end.image_index= 2;
-                            lev_end.win = 2;
-                        }
-                        if room = GameRoomLadder{
-                            lev_end.win = 4;
-                            obj_global_controller.level_ladder++;
+				                    if room = GameRoomFree {
+				                        lev_end.win = 3;
+				                    } 
+				                    if room = GameRoom  {
+				                        lev_end.image_index= 2;
+				                        lev_end.win = 2;
+										with(obj_global_controller){
+						                    level_array[level_current-1] = 1;
+											scr_alert();
+						                }
+				                    }
+				                    if room = GameRoomLadder{
+				                        lev_end.win = 4;
+				                        obj_global_controller.level_ladder++;
                             
-                        }
-                       obj_global_controller.level_part_current = 20;
-                   } else {
-                       var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
-                       lev_end.win = 1;
-                       lev_end.image_index= 1;
-                       if room = GameRoom obj_global_controller.level_part_current++
-                       if room = GameRoomLadder obj_global_controller.level_part_current++
+				                    }
+				                    obj_global_controller.level_part_current = 20;
+				                } else {
+				                    var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+				                    lev_end.win = 1;
+				                    lev_end.image_index= 1;
+				                    if room = GameRoom obj_global_controller.level_part_current++
+				                    if room = GameRoomLadder obj_global_controller.level_part_current++
                        
-                   }
+				                }
                
-                   // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
-                   scr_button_turn(0)
-                }
-        }
+				                // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
+				                scr_button_turn(0)
+				            }
+							#endregion               
+						}
+					}
+				}
+			}
+		} else 
+			{
+				if device_mouse_check_button_released(my_touch,mb_any)
+				{
+					my_touch = -1;	
+				}
+			}	
+		
     break;
     
     case 1: // Обычные красные
@@ -106,16 +123,42 @@ switch(tier){
                 add_g = -1;
                 add_b = -1; 
             }
-        }            
-        if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-            && bad = 0 && pressed = 0{
-            image_index = 1;
-            //pressed = 1;
-            var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
-            lev_end.win = 0;
-            lev_end.image_index= 0;
-            scr_button_turn(0)
-        }
+        }           
+		
+		
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button(q,mb_any)
+				{
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						if isworking  && bad = 0 && pressed = 0           
+						{
+							#region ВЗАИМОДЕЙСТВИЕ
+				
+							instance_create_depth(192,160,depth-17000,obj_options);	
+							instance_create_depth(544,160,depth-17000,obj_collection);	
+							instance_create_depth(x,y,depth-1,obj_button_dust)
+
+				            image_index = 1;            
+				            var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+				            lev_end.win = 0;
+				            lev_end.image_index= 0;
+				            scr_button_turn(0)
+							#endregion
+						}
+					}
+				}
+			}
+		} else 
+			{
+				if device_mouse_check_button_released(my_touch,mb_any)
+				{
+					my_touch = -1;	
+				}
+			}			       
     break;
     
     case 2: // включающиеся по очереди на память (сначала показать как нажимать) 
@@ -132,62 +175,93 @@ switch(tier){
             if t2_end = 1 obj_go.t2_work =1 ;
         }
         
-        // Вза1модействие
-        if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-            && bad = 0 && pressed = 0 {
-                
-                if (obj_global_controller.level_button_current = b_number) {
-                    add_r = -0.1;
-                    add_g = -0.1;
-                    add_b = -0.1;
-                    pressed = 1;
-                    obj_global_controller.level_button_current++; 
-                    if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
-                    if room = GameRoomLadder obj_global_controller.score_ladder+=1;
-                    // Проверка подуровня
-                    if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
-                        var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
-                        if room = GameRoomFree {
-                            lev_end.win = 3;
-                        } 
-                        if room = GameRoom  {
-                            lev_end.image_index= 2;
-                            lev_end.win = 2;
-                        }
-                        if room = GameRoomLadder{
-                            lev_end.win = 4;
-                            obj_global_controller.level_ladder++;
+		
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button(q,mb_any)
+				{
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						if isworking  && bad = 0 && pressed = 0           
+						{
+							#region ВЗАИМОДЕЙСТВИЕ
+				
+		                if (obj_global_controller.level_button_current = b_number) {
+		                    add_r = -0.1;
+		                    add_g = -0.1;
+		                    add_b = -0.1;
+		                    pressed = 1;
+							scr_button_graph();
+							instance_create_depth(x,y,depth-1,obj_button_dust)
+		                    obj_global_controller.level_button_current++; 
+		                    if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
+		                    if room = GameRoomLadder obj_global_controller.score_ladder+=1;
+		                    // Проверка подуровня
+		                    if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
+								instance_create_depth(192,160,depth-17000,obj_options);	
+								instance_create_depth(544,160,depth-17000,obj_collection);	
+
+		                        var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+		                        if room = GameRoomFree {
+		                            lev_end.win = 3;
+		                        } 
+		                        if room = GameRoom  {
+		                            lev_end.image_index= 2;
+		                            lev_end.win = 2;
+									with(obj_global_controller){
+				                        level_array[level_current-1] = 1;
+										scr_alert();
+				                    }
+		                        }
+		                        if room = GameRoomLadder{
+		                            lev_end.win = 4;
+		                            obj_global_controller.level_ladder++;
                             
-                        }
+		                        }
                         
-                        //lev_end.win = 2;
-                        //lev_end.image_index= 2;
-                        obj_global_controller.level_part_current = 20;
-                    } else {
-                        var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
-                        lev_end.win = 1;
-                        lev_end.image_index= 1;
-                        if room = GameRoom obj_global_controller.level_part_current++
-                        if room = GameRoomLadder obj_global_controller.level_part_current++
-                    }
+		                        //lev_end.win = 2;
+		                        //lev_end.image_index= 2;
+		                        obj_global_controller.level_part_current = 20;
+		                    } else {
+		                        var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+		                        lev_end.win = 1;
+		                        lev_end.image_index= 1;
+		                        if room = GameRoom obj_global_controller.level_part_current++
+		                        if room = GameRoomLadder obj_global_controller.level_part_current++
+		                    }
                 
-                    // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
-                    scr_button_turn(0)
-                    }
-                } else { // ПОРАЖЕНИЕ
-                    var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
-                    pressed = 1;
-                    lev_end.win = 0;
-                    lev_end.image_index= 0;
-                    scr_button_turn(0)
-                    //add_r = 0.1;
-                    //add_g = -1;
-                    //add_b = -1;
-                    add_r = -0.1;
-                    add_g = -0.1;
-                    add_b = -0.1;
-             }
-        }
+		                    // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
+		                    scr_button_turn(0)
+		                    }
+		                } else { // ПОРАЖЕНИЕ
+		                    var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+		                    pressed = 1;
+		                    lev_end.win = 0;
+		                    lev_end.image_index= 0;
+		                    scr_button_turn(0)
+		                    //add_r = 0.1;
+		                    //add_g = -1;
+		                    //add_b = -1;
+		                    add_r = -0.1;
+		                    add_g = -0.1;
+		                    add_b = -0.1;
+						}
+	        
+			#endregion
+						}
+					}
+				}
+			}
+		} else 
+			{
+				if device_mouse_check_button_released(my_touch,mb_any)
+				{
+					my_touch = -1;	
+				}
+			}	
+              
         // СПРАЙТ
         image_index = pressed; 
     
@@ -201,16 +275,32 @@ switch(tier){
             add_b = -0.1;
         } 
     
-    
-        // Вза1модействие
-        if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-            && bad = 0 && pressed = 0{
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button(q,mb_any)
+				{
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						if isworking  && bad = 0 && pressed = 0           
+						{
+							#region ВЗАИМОДЕЙСТВИЕ
+				
                 pressed = 1;
+				scr_button_graph();
+				instance_create_depth(x,y,depth-1,obj_button_dust)
+				
+				
                 obj_global_controller.level_button_current++; 
                 if obj_global_controller.level_button_current = obj_global_controller.level_button_goal {
                 if room = GameRoomLadder obj_global_controller.score_ladder+=1;
+				
                 // Проверка подуровня
                 if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
+					instance_create_depth(192,160,depth-17000,obj_options);	
+					instance_create_depth(544,160,depth-17000,obj_collection);	
+						
                     var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
                     if room = GameRoomFree {
                         lev_end.win = 3;
@@ -218,6 +308,10 @@ switch(tier){
                     if room = GameRoom  {
                         lev_end.image_index= 2;
                         lev_end.win = 2;
+						with(obj_global_controller){
+		                        level_array[level_current-1] = 1;
+								scr_alert();
+		                    }
                     }
                     if room = GameRoomLadder{
                         lev_end.win = 4;
@@ -236,7 +330,19 @@ switch(tier){
                 // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
                 scr_button_turn(0)
                 }
-        }
+				#endregion
+						}
+					}
+				}
+			}
+		} else 
+			{
+				if device_mouse_check_button_released(my_touch,mb_any)
+				{
+					my_touch = -1;	
+				}
+			}	
+		          
         break;
     case 4: // включающиеся по очереди, с каждым нажатием открывается новая
         
@@ -260,9 +366,18 @@ switch(tier){
         add_b = -1;
     }
         
-        // Вза1модействие
-    if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) && isworking
-        && bad = 0 && pressed = 0{
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button(q,mb_any)
+				{
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						if isworking  && bad = 0 && pressed = 0           
+						{
+							#region ВЗАИМОДЕЙСТВИЕ
+			
             pressed = 1;
             obj_global_controller.level_button_current++;
             var buttons;
@@ -278,11 +393,15 @@ switch(tier){
             if array_length(buttons1_sh)!=0 buttons1_sh[0].tier = 4; 
                 
             // конец игры
-                
+			instance_create_depth(x,y,depth-1,obj_button_dust)
+                scr_button_graph();
                 if obj_global_controller.level_button_current = array_length(buttons) {
                 if room = GameRoomLadder obj_global_controller.score_ladder+=1;
                 // Проверка подуровня
                 if obj_global_controller.level_part_current = obj_global_controller.level_part_max{
+					instance_create_depth(192,160,depth-17000,obj_options);	
+					instance_create_depth(544,160,depth-17000,obj_collection);	
+
                     var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
                     if room = GameRoomFree {
                         lev_end.win = 3;
@@ -290,6 +409,10 @@ switch(tier){
                     if room = GameRoom  {
                         lev_end.image_index= 2;
                         lev_end.win = 2;
+						with(obj_global_controller){
+		                        level_array[level_current-1] = 1;
+								scr_alert();
+		                    }
                     }
                     if room = GameRoomLadder{
                         lev_end.win = 4;
@@ -308,8 +431,17 @@ switch(tier){
                 // ВЫКЛЮЧЕНИЕ ВСЕХ КНОПОК
                 scr_button_turn(0)
                 }
-            
-        }
-        
+            #endregion
+						}
+					}
+				}
+			}
+		} else 
+			{
+				if device_mouse_check_button_released(my_touch,mb_any)
+				{
+					my_touch = -1;	
+				}
+			}					             
         break;
 }

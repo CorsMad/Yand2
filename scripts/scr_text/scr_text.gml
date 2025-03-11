@@ -36,3 +36,22 @@ function scr_text_lime(_x,_y,_txt,_xs,_ys,_a){
     draw_text_transformed(_x,_y,_txt,_xs,_ys,0);
     draw_set_alpha(1);
 }
+
+function scr_text_alert(_x,_y,_txt,_xs,_ys,_a){
+    draw_set_font(fnt_font);
+    draw_set_color(c_black);
+	var offset = 4;
+    draw_set_alpha(_a)
+    draw_text_transformed(_x-offset,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x-offset,_y-offset,_txt,_xs,_ys,0)
+    draw_text_transformed(_x,_y-offset,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+offset,_y-offset,_txt,_xs,_ys,0)
+    draw_text_transformed(_x+offset,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+offset,_y,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x+offset,_y+offset,_txt,_xs,_ys,0)
+    draw_text_transformed(_x,_y+offset,_txt  ,_xs,_ys,0)
+    draw_text_transformed(_x-offset,_y+offset,_txt,_xs,_ys,0)
+    draw_set_color(c_fuchsia);
+    draw_text_transformed(_x,_y,_txt,_xs,_ys,0);
+    draw_set_alpha(1);
+}

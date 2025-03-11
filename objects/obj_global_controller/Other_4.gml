@@ -33,7 +33,8 @@ if room = LevelSelect { // ОБЫЧНАЯ
             l = 0;
             m++;
         } else l++;
-        var k = instance_create_depth(1080*xoffset+212+328*l,320+328*m,0,obj_button_level);
+        //var k = instance_create_depth(1080*xoffset+212+328*l,320+328*m,0,obj_button_level);
+        var k = instance_create_depth(1080*xoffset+212+328*l,600+328*m,0,obj_button_level);
         k.level = i+1;
         k.completed = level_array[i];
         // МАКСИМАЛЬНОЕ КОЛИЧЕСТВО ЧАСТЕЙ (будет +1)

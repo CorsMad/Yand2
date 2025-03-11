@@ -1,4 +1,4 @@
-image_xscale = 2;
-image_yscale = 2;
-graph = 6;
+image_xscale = 2.5;
+image_yscale = 2.5;
+graph = 4;
 state = 4;
