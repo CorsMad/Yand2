@@ -27,7 +27,7 @@ switch(tier){
 		if my_touch == -1 
 		{
 			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button(q,mb_any)
+			    if device_mouse_check_button_pressed(q,mb_any)
 				{
 					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
 					{
@@ -40,6 +40,7 @@ switch(tier){
 				
 							#region Graph
 							instance_create_depth(x,y,depth-1,obj_button_dust)
+							scr_snd_menu(snd_button_click1);
 							scr_button_graph();
 							#endregion
 				
@@ -75,7 +76,7 @@ switch(tier){
 				                    var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
 				                    lev_end.win = 1;
 				                    lev_end.image_index= 1;
-				                    if room = GameRoom obj_global_controller.level_part_current++
+				                    if room = GameRoom		 obj_global_controller.level_part_current++
 				                    if room = GameRoomLadder obj_global_controller.level_part_current++
                        
 				                }
@@ -129,7 +130,7 @@ switch(tier){
 		if my_touch == -1 
 		{
 			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button(q,mb_any)
+			    if device_mouse_check_button_pressed(q,mb_any)
 				{
 					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
 					{
@@ -141,7 +142,7 @@ switch(tier){
 							instance_create_depth(192,160,depth-17000,obj_options);	
 							instance_create_depth(544,160,depth-17000,obj_collection);	
 							instance_create_depth(x,y,depth-1,obj_button_dust)
-
+							scr_snd_menu(snd_button_click1);
 				            image_index = 1;            
 				            var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
 				            lev_end.win = 0;
@@ -164,6 +165,7 @@ switch(tier){
     case 2: // включающиеся по очереди на память (сначала показать как нажимать) 
         if t2 < t2_s+61 t2++;
         if t2 = t2_s+30 {
+			scr_snd_menu(snd_button2_reveal_1);
             add_b = 0.3//0.8;
             add_r = 0.8//0.8;
             add_g = 0.8//0.8;
@@ -179,7 +181,7 @@ switch(tier){
 		if my_touch == -1 
 		{
 			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button(q,mb_any)
+			    if device_mouse_check_button_pressed(q,mb_any)
 				{
 					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
 					{
@@ -187,7 +189,7 @@ switch(tier){
 						if isworking  && bad = 0 && pressed = 0           
 						{
 							#region ВЗАИМОДЕЙСТВИЕ
-				
+						scr_snd_menu(snd_button_click1);
 		                if (obj_global_controller.level_button_current = b_number) {
 		                    add_r = -0.1;
 		                    add_g = -0.1;
@@ -278,7 +280,7 @@ switch(tier){
 		if my_touch == -1 
 		{
 			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button(q,mb_any)
+			    if device_mouse_check_button_pressed(q,mb_any)
 				{
 					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
 					{
@@ -286,7 +288,7 @@ switch(tier){
 						if isworking  && bad = 0 && pressed = 0           
 						{
 							#region ВЗАИМОДЕЙСТВИЕ
-				
+				scr_snd_menu(snd_button_click1);
                 pressed = 1;
 				scr_button_graph();
 				instance_create_depth(x,y,depth-1,obj_button_dust)
@@ -369,7 +371,7 @@ switch(tier){
 		if my_touch == -1 
 		{
 			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button(q,mb_any)
+			    if device_mouse_check_button_pressed(q,mb_any)
 				{
 					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
 					{
@@ -377,7 +379,7 @@ switch(tier){
 						if isworking  && bad = 0 && pressed = 0           
 						{
 							#region ВЗАИМОДЕЙСТВИЕ
-			
+			scr_snd_menu(snd_button_click1);
             pressed = 1;
             obj_global_controller.level_button_current++;
             var buttons;

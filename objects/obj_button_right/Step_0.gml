@@ -10,18 +10,21 @@ if collision_point(mouse_x,mouse_y,self,true,false) {
                 if pg1 = 6 {
                     instance_create_depth(0,0,0,obj_fade_screen)
                     obj_global_controller.page = 1;
+					scr_snd_menu(snd_menu_click_choose)
                 }
                 break;    
             case 1:
                 if pg2 = 6 {
                     instance_create_depth(0,0,0,obj_fade_screen)
                     obj_global_controller.page = 2;
+					scr_snd_menu(snd_menu_click_choose)
                 }
                 break; 
             case 2:
                 if pg3 = 6 {
                     instance_create_depth(0,0,0,obj_fade_screen)
                     obj_global_controller.page = 3;
+					scr_snd_menu(snd_menu_click_choose)
                 }
                 break; 
         }

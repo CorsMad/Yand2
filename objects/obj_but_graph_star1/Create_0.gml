@@ -13,3 +13,5 @@ t_max = irandom_range(30,50)
 image_xscale = scale;
 image_yscale = scale;
 image_speed = 0;
+
+scr_snd_menu(snd_graph_star)

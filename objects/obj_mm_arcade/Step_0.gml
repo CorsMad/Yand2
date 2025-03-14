@@ -3,6 +3,7 @@
 if collision_point(mouse_x,mouse_y,self,true,false) && 
     mouse_check_button_pressed(mb_left) && can_press && !instance_exists(obj_fade_screen){
     can_press=0;
+	scr_snd_menu(snd_menu_click);
     //instance_create_depth(0,0,0,obj_global_controller);
     room_goto(LevelSelect);
 }

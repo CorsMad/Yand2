@@ -4,6 +4,7 @@ if work = 1 && collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_b
 	!instance_exists(obj_fade_screen) && !instance_exists(obj_faq_parent)
 {
 	work = 0;
+	scr_snd_menu(snd_menu_click);
 	instance_create_depth(0,0,depth-1,obj_collection_fade);
 }
 

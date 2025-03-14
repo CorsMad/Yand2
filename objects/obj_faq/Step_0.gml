@@ -2,6 +2,7 @@
 // Вы можете записать свой код в этом редакторе
 if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) &&
 !instance_exists(obj_faq_parent) && !instance_exists(obj_options_fade) && !instance_exists(obj_collection_fade) {
+	scr_snd_menu(snd_menu_click)
     switch(state){
         case 0:
 			if obj_global_controller.faq1_watch = 0 obj_global_controller.faq1_watch = 1

@@ -7,7 +7,7 @@ image_index = irandom(9)
 image_yscale = 2;
 t = 0;
 t_max = irandom_range(30,60);
-
+scr_snd_menu(snd_graph_butterfly);
 /*
 image_xscale = choose(-2,2);
 

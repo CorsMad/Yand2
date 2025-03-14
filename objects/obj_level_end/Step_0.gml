@@ -6,12 +6,16 @@
 
 switch(win){
     case 0:
+	if obj_alpha = 0.05 scr_snd_menu(snd_lose);
         if obj_alpha < 1 obj_alpha+=0.05;
-        if rect_alpha < 1 rect_alpha+=0.025;
+        if rect_alpha < 0.9 rect_alpha+=0.025;
+		rect_gameroom_width1 = room_width
+		
         // рестарт
         if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
             mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 			!instance_exists(obj_collection_fade) {
+				scr_snd_menu(snd_menu_click_choose);
                 obj_global_controller.level_button_current = 0;
                 obj_global_controller.b_number=0;
                 if room = GameRoomLadder {
@@ -25,43 +29,37 @@ switch(win){
         if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
                 mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 				!instance_exists(obj_collection_fade){
+					scr_snd_menu(snd_menu_click_back);
                     obj_global_controller.level_button_current = 0;
                     if room = GameRoomLadder {
                         with(obj_global_controller){
                             if score_ladder > score_ladder_total score_ladder_total = score_ladder;
                         }
                         room_goto(LadderLevelPrepare)
-                    }
+                    }					
                     if room = GameRoomFree room_goto(FreeLevelSelect);
                     if room = GameRoom room_goto(LevelSelect);
                 }
         break;
         
-    case 1: 
-        t++;
+    case 1:         
         if room = GameRoom{
-            if t = 2 instance_create_depth(room_width/2-256,room_height/2,-16000,obj_star_big);
-            if t < 50 {
-                if rect_alpha < 0.9 rect_alpha+=0.025;
-            }
-            if t = 100 {
-                instance_create_depth(0,0,-16001,obj_fade_out);
-            }
-            if t > 150 {
-                rect_alpha+=0.025;
-                if rect_alpha>=1 {
-                    obj_global_controller.level_button_current = 0;
-                    obj_global_controller.b_number=0;
-                    if room = GameRoomLadder {
-                        with(obj_global_controller){
-                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                        }
-                    }
-                    room_restart();
-                }
-            }    
+			rect_gameroom_width1 = lerp(rect_gameroom_width1,room_width/2+8,0.1);
+			rect_gameroom_width2 = lerp(rect_gameroom_width2,room_width/2-8,0.1);
+			rect_alpha+=0.025;
+			if rect_alpha>=1 {
+			    obj_global_controller.level_button_current = 0;
+			    obj_global_controller.b_number=0;
+			    if room = GameRoomLadder {
+			        with(obj_global_controller){
+			            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+			        }
+			    }
+			    room_restart();
+			}   
         }
         if room = GameRoomLadder{
+			rect_gameroom_width1 = lerp(rect_gameroom_width1,room_width+128,0.1);
             rect_alpha+=0.05;
 			w1 = lerp(w1,room_width+128,0.1);
             if rect_alpha>=1 {
@@ -76,6 +74,7 @@ switch(win){
             }
         }
         if room = GameRoomFree{
+			
             rect_alpha+=0.05;
             if rect_alpha>=1 {
                 obj_global_controller.level_button_current = 0;
@@ -88,6 +87,7 @@ switch(win){
                 room_restart();
             }
         }
+		if rect_alpha = 0.05 scr_snd_menu(snd_win);
         break;
     case 2:
         // на главную
@@ -99,17 +99,18 @@ switch(win){
             var s = instance_create_depth(room_width/2,room_height/2+64,-16000,obj_star_big)
             s.state = 1;
         }
+		rect_gameroom_width1 = room_width;
+		rect_gameroom_width2 = 0;
+		if obj_alpha = 0.05 scr_snd_menu(snd_win_big);
+		
         if obj_alpha < 1 obj_alpha+=0.05;
-        if rect_alpha < 1 rect_alpha+=0.025;
+        if rect_alpha < 0.6 rect_alpha+=0.025;
                 
         if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
             mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 			!instance_exists(obj_collection_fade){
                 obj_global_controller.level_button_current = 0;
-                //with(obj_global_controller){
-                //        level_array[level_current-1] = 1;
-				//		scr_alert();
-                //    }
+                scr_snd_menu(snd_menu_click_back);
                 room_goto(LevelSelect);
         }
         break;
@@ -187,14 +188,15 @@ switch(win){
                 break;
         }
         
-
+		if obj_alpha = 0.05 scr_snd_menu(snd_win_big);
         if obj_alpha < 1 obj_alpha+=0.05;
-        if rect_alpha < 1 rect_alpha+=0.025;
+        if rect_alpha < 0.8 rect_alpha+=0.025;
             
         // ПРОДОЛЖИТЬ
-            if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
+            if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
                 mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 			!instance_exists(obj_collection_fade){
+				scr_snd_menu(snd_menu_click_choose);
                     //obj_global_controller.level_button_current = 0;
                     obj_global_controller.b_number=0;
                     obj_global_controller.level_button_current = 0;
@@ -208,9 +210,10 @@ switch(win){
                     room_restart();
                 }
             // на главную
-            if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
+            if point_in_rectangle(mouse_x,mouse_y,896-126,160-126,896+126,160+126) &&
                     mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 			!instance_exists(obj_collection_fade){
+						scr_snd_menu(snd_menu_click_back);
                         obj_global_controller.level_button_current = 0;
                         if room = GameRoomLadder {
                             with(obj_global_controller){
@@ -223,7 +226,9 @@ switch(win){
         break;
         case 4:
             //if obj_alpha < 1 obj_alpha+=0.05;
-            if rect_alpha < 1 rect_alpha+=0.025;
+            if rect_alpha < 0.9 rect_alpha+=0.025;
+			rect_gameroom_width1 = room_width;
+			if rect_alpha = 0.025 scr_snd_menu(snd_win_big)
             image_index = 1;      
 			
 			if t < 200 t++;
@@ -255,9 +260,10 @@ switch(win){
 			if t > 130 && t < 250 
 			{
                 // ПРОДОЛЖИТЬ
-                    if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
+                    if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
                         mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 							!instance_exists(obj_collection_fade){
+								scr_snd_menu(snd_menu_click_choose);
                             //obj_global_controller.level_button_current = 0;
                             obj_global_controller.b_number=0;
                             obj_global_controller.level_button_current = 0;
@@ -272,9 +278,10 @@ switch(win){
                             room_restart();
                         }
                     // на главную
-                    if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
+                    if point_in_rectangle(mouse_x,mouse_y,896-126,160-126,896+126,160+126) &&
                             mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 								!instance_exists(obj_collection_fade){
+									scr_snd_menu(snd_menu_click_back);
                                 obj_global_controller.level_button_current = 0;
                                 if room = GameRoomLadder {
                                     with(obj_global_controller){

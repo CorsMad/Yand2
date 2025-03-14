@@ -15,7 +15,7 @@ vspd = random_range(-14,-8);
 state = 0;
 pos = choose(-1,1);
 
-
+scr_snd_menu(snd_graph_flower);
 ypos = 0;
 xpos = 1;
 xpos_t = 0;

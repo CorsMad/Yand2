@@ -9,7 +9,8 @@ switch(button_tier){
                 if instance_exists(obj_level_progression) scr_button_turn(1);
                 obj_level_progression.work = 1;  
 				if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
-				instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+				var sr =instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+				sr.tier = button_tier;
 				instance_destroy();
             }
             break;
@@ -25,6 +26,7 @@ switch(button_tier){
             if t2_work = 1 {
                 t++;
                 if t = 30 {
+					scr_snd_menu(snd_button2_reveal_2);
                     for (var i = 0; i < array_length(_buttons); i++) {
                         _buttons[i].add_r = 0.9
                         _buttons[i].add_g = 0.9
@@ -41,7 +43,8 @@ switch(button_tier){
                     obj_level_progression.work = 1;  
                     scr_button_turn(1);
 					if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
-					instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+					var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+					sr.tier = button_tier;
                     instance_destroy();
                 }
             }        
@@ -63,6 +66,7 @@ switch(button_tier){
             }
         }
     
+		if t = 35 + t_offset scr_snd_menu(snd_button3_reveal);
         if t > (40 + t_offset) && t < (40 + t_offset*3){
             for (var i = 0; i < array_length(_buttons); i++) {
                 if _buttons[i].tier = 3 {
@@ -89,7 +93,8 @@ switch(button_tier){
             obj_level_progression.work = 1;  
             scr_button_turn(1);
 			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
-			instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+			var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+			sr.tier = button_tier;
             instance_destroy()
         }
         break;
@@ -100,7 +105,8 @@ switch(button_tier){
             if instance_exists(obj_level_progression) scr_button_turn(1);
             obj_level_progression.work = 1;  
 			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
-			instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+			var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
+			sr.tier = button_tier;
 			instance_destroy()
         }
                   

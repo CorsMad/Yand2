@@ -5,3 +5,4 @@ image_xscale = 7;
 image_yscale = 7;
 image_speed = 6;
 image_alpha = random_range(0.7,0.9)
+scr_snd_menu(snd_graph_fireworks_2);

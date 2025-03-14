@@ -15,7 +15,7 @@ switch(page)
 		//draw_sprite_ext(spr_extra,0,888,160,2,2,0,c_white,rect_alpha);
 
 		draw_sprite_ext(spr_sound_onoff,msc,  384,600,2.5,2.5,0,c_white,rect_alpha);
-		draw_sprite_ext(spr_sound_onoff,snd+2,704,600,2.5,2.5,0,c_white,rect_alpha);
+		draw_sprite_ext(spr_sound_onoff,obj_global_controller.sound_vol+2,704,600,2.5,2.5,0,c_white,rect_alpha);
 
 		#region LANG
 		var offset = 4;

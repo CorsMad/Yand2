@@ -53,6 +53,7 @@ function scr_button_graph(){
 			i2.rot = 90;
 			break;
 		case 8:
+			scr_snd_menu(choose(snd_graph_music1,snd_graph_music2,snd_graph_music3,snd_graph_music4,snd_graph_music5,snd_graph_music6))
 			for (var i = 0; i < 4; i++) {
 			    instance_create_depth(x,y-20,depth-1,obj_but_graph_music);
 			}

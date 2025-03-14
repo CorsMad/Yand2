@@ -16,6 +16,7 @@ if room != GameRoomLadder{
 			x_offset = lerp(x_offset,room_width/2,0.075);	
 			rotat = lerp(rotat,0,0.075);
 		}
+		if t = 30 scr_snd_menu(snd_start_ladder)
 		if t > 60 
 		{
 			x_offset += x_offset_acc

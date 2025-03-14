@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_lose",
+  "audioGroupId":{
+    "name":"ag_snd",
+    "path":"audiogroups/ag_snd",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.824,
+  "name":"snd_lose",
+  "parent":{
+    "name":"snd",
+    "path":"folders/Sounds/snd.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_lose.mp3",
+  "type":0,
+  "volume":0.3,
+}

@@ -13,6 +13,7 @@ switch(state)
 		if mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x,mouse_y,room_width/2-196,1700-84,room_width/2+196,1700+84)
 		{
 			state = 2;
+			scr_snd_menu(snd_menu_click_choose);
 		}
 		break;
 	case 2:

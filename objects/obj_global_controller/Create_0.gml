@@ -2,7 +2,7 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	level_array[i] = 0;
+	level_array[i] = 1;
 	//if i < 6 level_array[i] = 1; else level_array[i] = 0;   
 }
 
@@ -77,3 +77,10 @@ faq2_watch = 0;
 faq3_watch = 0;
 faq4_watch = 0;
 faq5_watch = 0;
+
+// ЗВУК МУЗЫКА
+
+sound_vol = 1;
+music_vol = 1;
+
+audio_group_set_gain(ag_snd,sound_vol,0);

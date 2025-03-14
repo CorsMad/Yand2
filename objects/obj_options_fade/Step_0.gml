@@ -19,6 +19,7 @@ switch(work)
 		#region Назад
 		if point_in_rectangle(mouse_x,mouse_y,106,76,276,242) && mouse_check_button(mb_left)
 		{
+			scr_snd_menu(snd_menu_click_back);
 			work = 2;	
 		}
 		#endregion
@@ -37,10 +38,15 @@ switch(work)
 					if mouse_check_button_pressed(mb_left) && 
 						point_in_rectangle(mouse_x,mouse_y,384-84,600-84,384+84,600+84) {
 						if msc = 0 msc = 1 else msc = 0
+						
+						scr_snd_menu(snd_menu_click_choose);
 					}
 					if mouse_check_button_pressed(mb_left) && 
 						point_in_rectangle(mouse_x,mouse_y,704-84,600-84,704+84,600+84) {
-						if snd = 0 snd = 1 else snd = 0
+						if obj_global_controller.sound_vol = 0 obj_global_controller.sound_vol = 1 else obj_global_controller.sound_vol = 0
+						scr_volume_snd();
+						scr_snd_menu(snd_menu_click_choose);
+						
 					}
 				#endregion
 		
@@ -49,13 +55,14 @@ switch(work)
 					var _yoffset = 92;
 					if mouse_check_button_pressed(mb_left)
 					{
-						if point_in_rectangle(mouse_x,mouse_y,256-_xoffset,896-_yoffset,256+_xoffset,896+_yoffset) obj_global_controller.lang = 0;	
-						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,896-_yoffset,544+_xoffset,896+_yoffset) obj_global_controller.lang = 1;	
-						if point_in_rectangle(mouse_x,mouse_y,832-_xoffset,896-_yoffset,832+_xoffset,896+_yoffset) obj_global_controller.lang = 2;	
-						if point_in_rectangle(mouse_x,mouse_y,256-_xoffset,1120-_yoffset,256+_xoffset,1120+_yoffset) obj_global_controller.lang = 3;	
-						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,1120-_yoffset,544+_xoffset,1120+_yoffset) obj_global_controller.lang = 4;	
-						if point_in_rectangle(mouse_x,mouse_y,832-_xoffset,1120-_yoffset,832+_xoffset,1120+_yoffset) obj_global_controller.lang = 5;	
-						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,1344-_yoffset,544+_xoffset,1344+_yoffset) obj_global_controller.lang = 6;	
+						if point_in_rectangle(mouse_x,mouse_y,256-_xoffset,896-_yoffset,256+_xoffset,896+_yoffset)   {if obj_global_controller.lang != 0 {obj_global_controller.lang = 0;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,896-_yoffset,544+_xoffset,896+_yoffset)   {if obj_global_controller.lang != 1 {obj_global_controller.lang = 1;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,832-_xoffset,896-_yoffset,832+_xoffset,896+_yoffset)   {if obj_global_controller.lang != 2 {obj_global_controller.lang = 2;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,256-_xoffset,1120-_yoffset,256+_xoffset,1120+_yoffset) {if obj_global_controller.lang != 3 {obj_global_controller.lang = 3;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,1120-_yoffset,544+_xoffset,1120+_yoffset) {if obj_global_controller.lang != 4 {obj_global_controller.lang = 4;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,832-_xoffset,1120-_yoffset,832+_xoffset,1120+_yoffset) {if obj_global_controller.lang != 5 {obj_global_controller.lang = 5;scr_snd_menu(snd_menu_click_choose);}}	
+						if point_in_rectangle(mouse_x,mouse_y,544-_xoffset,1344-_yoffset,544+_xoffset,1344+_yoffset) {if obj_global_controller.lang != 6 {obj_global_controller.lang = 6;scr_snd_menu(snd_menu_click_choose);}}	
+						
 					}
 				#endregion
 				break;
@@ -63,6 +70,7 @@ switch(work)
 				#region Переключение страницы
 				if point_in_rectangle(mouse_x,mouse_y,888-84,160-84,888+84,160+84) && mouse_check_button_pressed(mb_left)
 				{
+					scr_snd_menu(snd_menu_click);
 					page = 0;	
 				}
 			

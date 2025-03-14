@@ -3,5 +3,5 @@
 if collision_point(mouse_x,mouse_y,self,true,false) &&  
     mouse_check_button_pressed(mb_left) && work && !instance_exists(obj_fade_screen) && !instance_exists(obj_faq_parent){
     room_goto(MainMenu);
-    //instance_destroy(obj_global_controller);
+    scr_snd_menu(snd_menu_click_back);
 }

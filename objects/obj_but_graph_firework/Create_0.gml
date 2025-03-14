@@ -8,3 +8,5 @@ image_xscale = 0.4;
 image_yscale = 0.4;
 t = 0;
 t_max = irandom_range(20,40)
+
+scr_snd_menu(snd_graph_fireworks_1);

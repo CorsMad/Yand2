@@ -6,6 +6,7 @@
 image_index = completed;
 if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_pressed(mb_left) &&
         pressed = 0 && !instance_exists(obj_fade_screen) && !instance_exists(obj_faq_parent){
+			scr_snd_menu(snd_menu_click_choose);
             pressed = 1;
             obj_global_controller.level_button_current = 0;
             obj_global_controller.level_current = level;

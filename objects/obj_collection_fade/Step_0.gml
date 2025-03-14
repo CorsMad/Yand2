@@ -18,6 +18,7 @@ switch(work)
 		if mouse_check_button_pressed(mb_left) && point_in_rectangle(mouse_x,mouse_y,room_width/2-196,1600-84,room_width/2+196,1600+84)
 		{
 			work = 0.75;
+			scr_snd_menu(snd_menu_click_choose);
 			obj_global_controller.col_faq =1;
 		}
 		break;
@@ -46,6 +47,7 @@ switch(work)
 				if point_in_rectangle(mouse_x,mouse_y,106,76,276,242) && mouse_check_button(mb_left)
 				{
 					work = 2;	
+					scr_snd_menu(snd_menu_click_back)
 				}
 				#endregion
 			
@@ -61,7 +63,7 @@ switch(work)
 		{
 			if point_in_rectangle(mouse_x,mouse_y,256-_offset,544+32-_offset,256+_offset,544+32+_offset)
 			{
-				obj_global_controller.but_graph = 0;
+				if obj_global_controller.but_graph != 0 {obj_global_controller.but_graph = 0;scr_snd_menu(snd_button_click1);;	}				
 			}
 			if point_in_rectangle(mouse_x,mouse_y,544-_offset,544+32-_offset,544+_offset,544+32+_offset) && finished_count >=3
 			{
@@ -69,6 +71,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[0] = 1 obj_global_controller.collection_alert[0] = 2;
 					obj_global_controller.but_graph = 1;
+					scr_snd_menu(snd_button_click1);
 					for (var i = 0; i < 4; i++) {
 						instance_create_depth(544,544,depth-1,obj_but_graph_star1);
 					}
@@ -80,6 +83,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[1] = 1 obj_global_controller.collection_alert[1] = 2;
 					obj_global_controller.but_graph = 2
+					scr_snd_menu(snd_button_click1);
 					instance_create_depth(832,544-24,depth-1,obj_but_graph_rocket2);
 				}
 			}
@@ -89,6 +93,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[2] = 1 obj_global_controller.collection_alert[2] = 2;
 					obj_global_controller.but_graph = 3;
+					scr_snd_menu(snd_button_click1);
 					for (var i = 0; i < 6; i++) {
 						instance_create_depth(256+random_range(-64,64),832+random_range(-64,64),depth-1,obj_but_grap_flower);
 					}
@@ -100,6 +105,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[3] = 1 obj_global_controller.collection_alert[3] = 2;
 					obj_global_controller.but_graph = 4;	
+					scr_snd_menu(snd_button_click1);
 					var i_cr = instance_create_depth(0,0,depth-1,obj_but_graph_light);
 					i_cr.x_cr = mouse_x;
 					i_cr.y_cr = mouse_y;
@@ -112,6 +118,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[4] = 1 obj_global_controller.collection_alert[4] = 2;
 					obj_global_controller.but_graph = 5;	
+					scr_snd_menu(snd_button_click1);
 					instance_create_depth(832,832-24,depth-1,obj_but_graph_firework);
 				}
 			}
@@ -120,7 +127,8 @@ switch(work)
 				if obj_global_controller.but_graph != 6
 				{
 					if obj_global_controller.collection_alert[5] = 1 obj_global_controller.collection_alert[5] = 2;
-					obj_global_controller.but_graph = 6;	
+					obj_global_controller.but_graph = 6;
+					scr_snd_menu(snd_button_click1);
 					#region graph
 					var inst1 = instance_create_depth(256-random_range(0,16),1120+random_range(0,16),depth-1,obj_but_graph_buttefrly)	
 					inst1.image_xscale = 2;
@@ -151,6 +159,7 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[6] = 1 obj_global_controller.collection_alert[6] = 2;
 					obj_global_controller.but_graph = 7;	
+					scr_snd_menu(snd_button_click1);
 					var i1 = instance_create_depth(544,1120,depth-1,obj_but_graph_laser);
 					var i2 = instance_create_depth(544,1120,depth-1,obj_but_graph_laser);
 					i1.rot = 0;
@@ -163,6 +172,8 @@ switch(work)
 				{
 					if obj_global_controller.collection_alert[7] = 1 obj_global_controller.collection_alert[7] = 2;
 					obj_global_controller.but_graph = 8;	
+					scr_snd_menu(snd_button_click1);
+					scr_snd_menu(choose(snd_graph_music1,snd_graph_music2,snd_graph_music3,snd_graph_music4,snd_graph_music5,snd_graph_music6))
 					for (var i = 0; i < 4; i++) {
 					    instance_create_depth(832,1120-20,depth-1,obj_but_graph_music);
 					}
@@ -173,6 +184,7 @@ switch(work)
 			if point_in_rectangle(mouse_x,mouse_y,room_width/2-126,1620-126,room_width/2+126,1620+126) 
 			{
 				if obj_global_controller.but_graph_show = 1 obj_global_controller.but_graph_show = 0 else obj_global_controller.but_graph_show = 1
+				scr_snd_menu(snd_menu_click_choose);
 			}	
 			
 			

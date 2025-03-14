@@ -6,6 +6,7 @@ if collision_point(mouse_x,mouse_y,self,true,false) {
         if obj_global_controller.page > 0 {
             instance_create_depth(0,0,0,obj_fade_screen);
             obj_global_controller.page --;
+			scr_snd_menu(snd_menu_click_choose)
         }
     }
 }

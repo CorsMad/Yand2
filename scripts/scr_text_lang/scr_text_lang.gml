@@ -45,3 +45,18 @@ function scr_faq5_text2(){
 	}	
 	return(text);
 }
+
+function scr_faq_overall(){
+	var text;
+	switch(obj_global_controller.lang)
+	{
+		case 0: text = "Help";break;
+		case 1: text = "Справка";break;
+		case 2: text = "Hilfe";break;
+		case 3: text = "Aide";break;
+		case 4: text = "Ayuda";break;
+		case 5: text = "Ajuda";break;
+		case 6: text = "Yardım";break;
+	}	
+	return(text);	
+}

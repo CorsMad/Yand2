@@ -135,4 +135,5 @@ if t > 850 {
 if mouse_check_button_pressed(mb_left) && 
 	point_in_rectangle(mouse_x,mouse_y,544-196,1376-84,544+196,1376+84) && pos = 1{
    pos = 2;
+   scr_snd_menu(snd_menu_click_choose);
 }

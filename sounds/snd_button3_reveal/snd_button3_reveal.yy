@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_button3_reveal",
+  "audioGroupId":{
+    "name":"ag_snd",
+    "path":"audiogroups/ag_snd",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.8,
+  "name":"snd_button3_reveal",
+  "parent":{
+    "name":"snd",
+    "path":"folders/Sounds/snd.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_button3_reveal.mp3",
+  "type":0,
+  "volume":1.0,
+}
