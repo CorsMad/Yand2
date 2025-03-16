@@ -13,7 +13,7 @@ switch (t) {
                         _b.exclude = irandom_range(3,4); //2
                         _b.button_tier = 0; //0
                         break;
-                    case 2:
+                    case 2:                        
                         _b.count = 16
                         _b.exclude = irandom_range(5,7); //2
                         _b.button_tier = 0; //0

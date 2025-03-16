@@ -10,6 +10,10 @@ if keyboard_check_pressed(ord("5")) obj_global_controller.lang = 4;
 if keyboard_check_pressed(ord("6")) obj_global_controller.lang = 5;
 if keyboard_check_pressed(ord("7")) obj_global_controller.lang = 6;
 
+if device_mouse_dbclick_enable(false) count = 0 else count = 1
+
+
+
 /*
 if mouse_check_button_pressed(mb_left)
 {

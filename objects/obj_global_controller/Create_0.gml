@@ -5,7 +5,7 @@ for (var i = 0; i < 24; i++) {
 	level_array[i] = 1;
 	//if i < 6 level_array[i] = 1; else level_array[i] = 0;   
 }
-
+device_mouse_dbclick_enable(false);
 level_current = 0;
 level_part_current = 0;
 level_part_max = 0;

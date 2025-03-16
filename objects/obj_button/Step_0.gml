@@ -23,17 +23,22 @@ switch(tier){
 		}
 
         // Вза1модействие
+		#region SHMERK
+			
 		
-		if my_touch == -1 
+		for (var q = 0; q < 10; q++) 
 		{
-			for (var q = 0; q < 10; q += 1) {
-			    if device_mouse_check_button_pressed(q,mb_any)
+		    if !touchEvent[q]
+			{
+				if device_mouse_check_button_pressed(q,mb_any)
 				{
-					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					if position_meeting(device_mouse_x(q),device_mouse_y(q),id)
 					{
-						my_touch = q;
-						if isworking  && bad = 0 && pressed = 0           
+						touchEvent[q] = true;	
+						if isworking  && bad = 0 && pressed = 0    
 						{
+							//instance_create_depth(mouse_x,mouse_y,depth-10000000,obj_debug_dot);
+							//obj_debug.count++;
 							#region КОД НАЖАТИЯ
 							pressed = 1;
 				            obj_global_controller.level_button_current++; 
@@ -89,6 +94,36 @@ switch(tier){
 					}
 				}
 			}
+			else 
+			{
+				if device_mouse_check_button_released(q,mb_any)
+				{
+					touchEvent[q] = false;	
+					
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+			
+			
+			
+		if my_touch == -1 
+		{
+			for (var q = 0; q < 10; q += 1) {
+			    if device_mouse_check_button_pressed(q,mb_any)
+				{
+					if position_meeting(device_mouse_x(q),device_mouse_y(q), id) 
+					{
+						my_touch = q;
+						       
+					}
+				}
+			}
 		} else 
 			{
 				if device_mouse_check_button_released(my_touch,mb_any)
@@ -96,7 +131,8 @@ switch(tier){
 					my_touch = -1;	
 				}
 			}	
-		
+			
+		#endregion
     break;
     
     case 1: // Обычные красные

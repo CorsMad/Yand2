@@ -254,6 +254,32 @@ function scr_button_create(){
                     }
                 }
                 break;                                
+            case 15:
+                var yglobal = 480;
+                var buttons2 = []; // создать массив с хорошими кнопками T2
+                for (var i = 0; i < array_length(button_array); i++) {
+                    if button_array[i] = 1 array_push(buttons2,i);
+                }
+                var buttons2shuffeled = array_shuffle(buttons2);
+                for (var i = 0; i < array_length(button_array); i++) {
+                    var div_count_y = i div 3;
+                    counter++;  
+                    if i mod 3 = 0 counter = 0;
+                    var k = instance_create_depth(room_width/2+counter*340-340,32+320*div_count_y+yglobal,0,obj_button);
+                    if button_array[i] = 1 {
+                        k.tier = button_tier;
+                        k.b_number = array_get_index(buttons2shuffeled,i);
+                        if room = GameRoomLadder
+						{
+							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                    } else {
+                        k.tier = 1;
+                        if button_tier = 2 k.t2_exists = 1;
+                        if button_tier = 3 k.t3_exists = 1;
+                    }
+                }
+                break; 
         }
     
 }
