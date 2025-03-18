@@ -37,7 +37,7 @@ free_score4 = 0;
 score_ladder = 0;
 score_ladder_total = 0;
 timer_ladder_work = 0;
-timer_ladder = 60*60;
+timer_ladder = 30*60;
 timer_ladder_add = 0;
 
 // ОБЩИЕ НАСТРОЙКИ

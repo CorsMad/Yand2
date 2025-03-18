@@ -55,10 +55,10 @@ function scr_button_t2_max(){
         return elm1 - elm2;
     });
     
-    for (var i = 0; i < array_length(buttons); ++i;)
-    {
-        if buttons[i].b_number = array_last(buttons_num) buttons[i].t2_end = 1;
-    }
+    //for (var i = 0; i < array_length(buttons); ++i;)
+    //{
+    //    if buttons[i].b_number = array_last(buttons_num) buttons[i].t2_end = 1;
+    //}
 
 
     show_debug_message(buttons_num);

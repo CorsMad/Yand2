@@ -6,7 +6,11 @@
 
 switch(win){
     case 0:
-	if obj_alpha = 0.05 scr_snd_menu(snd_lose);
+		if obj_alpha = 0.05 
+		{
+			scr_snd_menu(snd_lose);
+			instance_create_depth(0,0,depth-1,obj_level_progression)
+		}
         if obj_alpha < 1 obj_alpha+=0.05;
         if rect_alpha < 0.9 rect_alpha+=0.025;
 		rect_gameroom_width1 = room_width
@@ -46,8 +50,14 @@ switch(win){
         if room = GameRoom{
 			rect_gameroom_width1 = lerp(rect_gameroom_width1,room_width/2+8,0.1);
 			rect_gameroom_width2 = lerp(rect_gameroom_width2,room_width/2-8,0.1);
-			rect_alpha+=0.025;
-			if rect_alpha>=1 {
+			if rect_alpha < 1 rect_alpha+=0.025;
+			t++;
+			if t = 1 
+			{
+				var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
+				prog.stargraph = 1;	
+			}
+			if t>=120 {
 			    obj_global_controller.level_button_current = 0;
 			    obj_global_controller.b_number=0;
 			    if room = GameRoomLadder {
@@ -75,10 +85,17 @@ switch(win){
         }
         if room = GameRoomFree{
 			
-            rect_alpha+=0.05;
-            if rect_alpha>=1 {
+            if rect_alpha < 1 rect_alpha+=0.05;
+			t++;
+			if t = 1 
+			{
+				var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
+				prog.stargraph = 1;		
+			}
+			
+            if t=120 {
                 obj_global_controller.level_button_current = 0;
-                obj_global_controller.level_part_current++;
+                //obj_global_controller.level_part_current++;
                 if room = GameRoomLadder {
                     with(obj_global_controller){
                         if score_ladder > score_ladder_total score_ladder_total = score_ladder;
@@ -101,7 +118,13 @@ switch(win){
         }
 		rect_gameroom_width1 = room_width;
 		rect_gameroom_width2 = 0;
-		if obj_alpha = 0.05 scr_snd_menu(snd_win_big);
+		if obj_alpha = 0.05 
+		{
+			scr_snd_menu(snd_win_big);			
+			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
+			prog.stargraph = 1;	
+			
+		}
 		
         if obj_alpha < 1 obj_alpha+=0.05;
         if rect_alpha < 0.6 rect_alpha+=0.025;
@@ -118,6 +141,11 @@ switch(win){
         // ПРОДОЛЖИТЬ + НА ГЛАВНУЮ
         image_index = 1;
         if t < 170 t++;
+		if t = 1
+		{
+			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
+			prog.stargraph = 1;		
+		}
         switch(t){
             case 1:
                 scr_free_score_add();
@@ -210,7 +238,7 @@ switch(win){
                     room_restart();
                 }
             // на главную
-            if point_in_rectangle(mouse_x,mouse_y,896-126,160-126,896+126,160+126) &&
+            if point_in_rectangle(mouse_x,mouse_y,888-84,76,888+84,242) &&
                     mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 			!instance_exists(obj_collection_fade){
 						scr_snd_menu(snd_menu_click_back);
@@ -235,7 +263,7 @@ switch(win){
 			if t > 50  && t < 100
 			{
 				x_timer = lerp(x_timer,room_width/2,0.1);
-				y_timer = lerp(y_timer,room_height/2-256,0.1);
+				y_timer = lerp(y_timer,room_height/2-256+80,0.1);
 				if timer_add_alpha < 1 timer_add_alpha+=0.1;
 				//if timer_add_alpha < 1 timer_add_alpha+=0.05;
 				//y_timer_add = lerp(y_timer_add,room_height/2,0.05);
@@ -278,7 +306,7 @@ switch(win){
                             room_restart();
                         }
                     // на главную
-                    if point_in_rectangle(mouse_x,mouse_y,896-126,160-126,896+126,160+126) &&
+                    if point_in_rectangle(mouse_x,mouse_y,888-84,160-84,888+84,160+84) &&
                             mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
 								!instance_exists(obj_collection_fade){
 									scr_snd_menu(snd_menu_click_back);
@@ -292,4 +320,40 @@ switch(win){
                             }
 			}
             break;
+		case 5:
+			if obj_alpha = 0.05 
+			{
+				scr_snd_menu(snd_lose);
+				instance_create_depth(0,0,depth-1,obj_level_progression)
+			}
+	        if obj_alpha < 1 obj_alpha+=0.05;
+	        if rect_alpha < 0.9 rect_alpha+=0.025;
+			rect_gameroom_width1 = room_width
+		
+        // рестарт
+        if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
+            mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
+			!instance_exists(obj_collection_fade) {
+				scr_snd_menu(snd_menu_click_choose);
+                obj_global_controller.level_button_current = 0;
+                obj_global_controller.b_number=0;
+                obj_global_controller.timer_ladder = 2*60;
+                room_restart();
+            }
+        // на главную
+        if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
+                mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
+				!instance_exists(obj_collection_fade){
+					scr_snd_menu(snd_menu_click_back);
+                    obj_global_controller.level_button_current = 0;
+                    if room = GameRoomLadder {
+                        with(obj_global_controller){
+                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+                        }
+                        room_goto(LadderLevelPrepare)
+                    }					
+                    if room = GameRoomFree room_goto(FreeLevelSelect);
+                    if room = GameRoom room_goto(LevelSelect);
+                }
+			break;
 }

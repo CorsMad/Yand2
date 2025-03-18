@@ -22,8 +22,9 @@ tier = 0;
 t2_end = 0;
 t2_exists = 0;
 t3_exists = 0;
-image_xscale = 2.75;
-image_yscale = 2.75;
+
+image_xscale = 3.2 ;
+image_yscale = 3.2 ;
 
 
 sprite_index = spr_button;

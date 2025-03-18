@@ -3,7 +3,7 @@ function scr_ladder_list(){
         switch (level_ladder) {
 			#region 1-8
 				case 1:
-	                _b.count = 8;
+	                _b.count = 8;//8
 	                _b.exclude = 4; //2
 					_b.button_tier = 0; //0
 					obj_global_controller.star_col = c_lime;

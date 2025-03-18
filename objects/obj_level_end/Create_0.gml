@@ -35,3 +35,6 @@ w1 = 0;
 
 rect_gameroom_width1 = 0;
 rect_gameroom_width2 = room_width;
+
+
+

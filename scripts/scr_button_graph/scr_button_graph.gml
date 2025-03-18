@@ -61,3 +61,32 @@ function scr_button_graph(){
 			break;
 	}
 }
+	
+function scr_button_drawing(){
+	draw_sprite_ext(spr_button_bgr,0,x-8,y-8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+8,y-8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+8,y+8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-8,y+8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-5,y-5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+5,y-5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+5,y+5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x-5,y+5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x,y,    2.8,2.8,0,c_white,1);
+
+
+
+shader_set(sh_button);
+shader_set_uniform_f(uni_add_r,add_r);
+shader_set_uniform_f(uni_add_g,add_g);
+shader_set_uniform_f(uni_add_b,add_b);
+
+draw_self()
+
+shader_reset();
+
+draw_set_color(c_white);
+
+
+if tier = 2 && isworking scr_button_number(pressed);
+
+}

@@ -1,14 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_sprite_ext(spr_button_bgr,0,x-7,y-7,2.75,2.75,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x+7,y-7,2.75,2.75,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x+7,y+7,2.75,2.75,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x-7,y+7,2.75,2.75,0,c_black,1);
-draw_sprite_ext(spr_button_bgr,0,x-4,y-4,2.75,2.75,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x+4,y-4,2.75,2.75,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x+4,y+4,2.75,2.75,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x-4,y+4,2.75,2.75,0,c_silver,1);
-draw_sprite_ext(spr_button_bgr,0,x,y,    2.75,2.75,0,c_white,1);
+draw_sprite_ext(spr_button_bgr,0,x-8,y-8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+8,y-8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x+8,y+8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-8,y+8,2.8,2.8,0,c_black,1);
+draw_sprite_ext(spr_button_bgr,0,x-5,y-5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+5,y-5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x+5,y+5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x-5,y+5,2.8,2.8,0,c_silver,1);
+draw_sprite_ext(spr_button_bgr,0,x,y,    2.8,2.8,0,c_white,1);
 
 
 
@@ -48,8 +48,7 @@ switch(obj_global_controller.but_graph)
 }
 }
 
-//draw_text(x,y,string(b_number+1));
+//if tier = 2 && isworking scr_button_number(pressed);
 
-/*
-draw_text(x,y,string(b_number));
-draw_text(x,y+16,string(t2_end));
+
+

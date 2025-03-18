@@ -30,8 +30,18 @@ if room = LevelSelect
 	}
 }
 
-
-if timer_ladder_work
+if room = GameRoomLadder
 {
-	if timer_ladder > 0 timer_ladder--;
+	if timer_ladder_work && !instance_exists(obj_options_fade)
+	{
+		if timer_ladder > 0 timer_ladder--;
+		if timer_ladder = 0
+		{	
+			timer_ladder = -1;
+			scr_button_turn(0);
+			var lev_end = instance_create_depth(room_width/2,1500,-15999,obj_level_end);
+			lev_end.win = 5;
+			lev_end.image_index= 0;
+		}		
+	}
 }

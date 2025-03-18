@@ -10,9 +10,7 @@ draw_sprite_ext(spr_options_bgr,0,room_width/2,room_height/2,12,22,0,c_white,rec
 switch(page)
 {
 	case 0:
-		#region Стр 1
-				
-		//draw_sprite_ext(spr_extra,0,888,160,2,2,0,c_white,rect_alpha);
+		#region Стр 1					
 
 		draw_sprite_ext(spr_sound_onoff,msc,  384,600,2.5,2.5,0,c_white,rect_alpha);
 		draw_sprite_ext(spr_sound_onoff,obj_global_controller.sound_vol+2,704,600,2.5,2.5,0,c_white,rect_alpha);
@@ -315,32 +313,16 @@ switch(page)
 			draw_sprite_ext(spr_button,1,room_width/2,1620,3,3,0,c_white,rect_alpha);
 			draw_sprite_ext(spr_failed,0,room_width/2,1620-20,3,3,0,c_white,rect_alpha);
 		}
-		
-		
+				
 		#endregion
-		
-		
-		
-		//draw_sprite_ext(spr_button,    0,544,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,832,544 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,256,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,544,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,832,832 +but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,256,1120+but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,544,1120+but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-		//draw_sprite_ext(spr_button,    0,832,1120+but_y_offset, but_scale,but_scale,0,c_white,rect_alpha);
-	
-		
-		
-		#endregion
-		
-
+				
+		#endregion	
 		
 		#region Text
 		draw_set_halign(fa_center)
 		switch(obj_global_controller.lang)
 		{
-			case 0: scr_text(room_width/2,268,"Collection",  1,1,rect_alpha); break;
+			case 0: scr_text(room_width/2,268,"Collection",1,1,rect_alpha); break;
 			case 1: scr_text(room_width/2,268,"Коллекция" ,1,1,rect_alpha); break;
 			case 2: scr_text(room_width/2,268,"Sammlung"  ,1,1,rect_alpha); break;
 			case 3: scr_text(room_width/2,268,"Collection",1,1,rect_alpha); break;
@@ -355,3 +337,5 @@ switch(page)
 }
 
 draw_sprite_ext(spr_back,0,192,160,2,2,0,c_white,rect_alpha);
+if (room = GameRoom || room = GameRoomFree || room =  GameRoomLadder) draw_sprite_ext(spr_to_main,0,room_width-192,160,2,2,0,c_white,rect_alpha);
+

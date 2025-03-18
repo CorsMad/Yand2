@@ -19,10 +19,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -47,10 +47,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-						if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+						//if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                         
                     } else {
                         k.tier = 1;
@@ -87,10 +87,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -113,10 +113,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -150,10 +150,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -179,10 +179,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -216,10 +216,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;
@@ -243,10 +243,10 @@ function scr_button_create(){
                     if button_array[i] = 1 {
                         k.tier = button_tier;
                         k.b_number = array_get_index(buttons2shuffeled,i);
-                        if room = GameRoomLadder
-						{
-							k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
-						} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
+                        //if room = GameRoomLadder
+						//{
+						//	k.t2_s = 80+array_get_index(buttons2shuffeled,i)*60;	
+						//} else k.t2_s = array_get_index(buttons2shuffeled,i)*60;
                     } else {
                         k.tier = 1;
                         if button_tier = 2 k.t2_exists = 1;

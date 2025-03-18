@@ -17,22 +17,32 @@ switch(work)
 		#region СТРАНИЦА 1
 		
 		#region Назад
-		if point_in_rectangle(mouse_x,mouse_y,106,76,276,242) && mouse_check_button(mb_left)
+		if point_in_rectangle(mouse_x,mouse_y,106,76,276,242) 
+		&& mouse_check_button_pressed(mb_left)
 		{
 			scr_snd_menu(snd_menu_click_back);
 			work = 2;	
 		}
 		#endregion
 		
+		#region Выход
+		if mouse_check_button_pressed(mb_left) &&
+			point_in_rectangle(mouse_x,mouse_y,888-84,76,888+84,242) && (room = GameRoom || room = GameRoomFree || room =  GameRoomLadder) 
+		{
+			
+			scr_snd_menu(snd_menu_click_back);
+			switch(room)
+			{
+				case GameRoom:			room_goto(LevelSelect);break;
+				case GameRoomFree:		room_goto(FreeLevelSelect);break;
+				case GameRoomLadder:	room_goto(LadderLevelPrepare);break;
+			}
+		}
+		#endregion
+		
 		switch(page)
 		{
 			case 0:
-				//#region Переключение страницы
-				//if point_in_rectangle(mouse_x,mouse_y,888-84,160-84,888+84,160+84) && mouse_check_button_pressed(mb_left)
-				//{
-				//	page = 1;	
-				//}
-				//#endregion
 			
 				#region Звук музыка
 					if mouse_check_button_pressed(mb_left) && 
@@ -48,6 +58,7 @@ switch(work)
 						scr_snd_menu(snd_menu_click_choose);
 						
 					}
+					
 				#endregion
 		
 				#region Выбор языка
@@ -190,9 +201,7 @@ switch(work)
 			if point_in_rectangle(mouse_x,mouse_y,room_width/2-126,1620-126,room_width/2+126,1620+126) 
 			{
 				if obj_global_controller.but_graph_show = 1 obj_global_controller.but_graph_show = 0 else obj_global_controller.but_graph_show = 1
-			}	
-			
-			
+			}		
 		}
 		
 		#endregion
@@ -206,9 +215,13 @@ switch(work)
 		break;
 	case 2:
 		#region Выключение
-		rect_alpha-=0.05;
+		rect_alpha-=0.1;
 		if rect_alpha<=0 
 		{
+			if room = GameRoom || room = GameRoomFree || room = GameRoomLadder
+			{
+				instance_activate_region(0,0,room_width,room_height,true);
+			}
 			obj_options.work = 1;
 			instance_destroy();
 		}
