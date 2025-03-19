@@ -100,33 +100,33 @@ switch (t) {
                 break;
             // 4 СТРАНИЦА
             case 19:
-                _b.count = 8;
+                _b.count = 10;
                 _b.exclude = 5;
                 _b.button_tier = 2;
                 break;
             case 20:
-                _b.count = 10;
-                _b.exclude = 7;
+                _b.count = 12;
+                _b.exclude = 6;
                 _b.button_tier = 2;
                 break;
             case 21:
-                _b.count = 12;
-                _b.exclude = 8;
+                _b.count = 14;
+                _b.exclude = 7;
                 _b.button_tier = 2;
                 break;
             case 22:
-                _b.count = 14;
-                _b.exclude = 10;
+                _b.count = 16;
+                _b.exclude = 8;
                 _b.button_tier = 2;
                 break;
             case 23:
-                _b.count = 16;
-                _b.exclude = 11;
+                _b.count = 18;
+                _b.exclude = 9;
                 _b.button_tier = 2;
                 break;
             case 24:
-                _b.count = 18
-                _b.exclude = 13;
+                _b.count = 20
+                _b.exclude = 10;
                 _b.button_tier = 2;
                 break;
             case 999:

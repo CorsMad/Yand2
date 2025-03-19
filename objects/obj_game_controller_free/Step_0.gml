@@ -67,17 +67,17 @@ switch (t) {
             case 3:
                 switch(obj_global_controller.free_difficulty){
                     case 1:
-                        _b.count = 8;
+                        _b.count = 10;
                         _b.exclude = irandom_range(4,5); //2
                         _b.button_tier = 2; //0
                         break;
                     case 2:
-                        _b.count = 12;
+                        _b.count = 16;
                         _b.exclude = irandom_range(6,8); //2
                         _b.button_tier = 2; //0
                         break;
                     case 3:
-                        _b.count = 16
+                        _b.count = 20
                         _b.exclude = irandom_range(9,11); //2
                         _b.button_tier = 2; //0
                         break;

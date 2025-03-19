@@ -5,3 +5,8 @@ if (!audio_group_is_loaded(ag_snd))
 {
     audio_group_load(ag_snd);
 }
+
+if (!audio_group_is_loaded(ag_msc))
+{
+    audio_group_load(ag_msc);
+}

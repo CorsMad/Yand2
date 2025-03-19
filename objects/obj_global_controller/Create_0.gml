@@ -84,3 +84,4 @@ sound_vol = 1;
 music_vol = 1;
 
 audio_group_set_gain(ag_snd,sound_vol,0);
+audio_group_set_gain(ag_msc,sound_vol,0);

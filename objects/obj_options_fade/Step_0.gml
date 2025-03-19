@@ -47,8 +47,8 @@ switch(work)
 				#region Звук музыка
 					if mouse_check_button_pressed(mb_left) && 
 						point_in_rectangle(mouse_x,mouse_y,384-84,600-84,384+84,600+84) {
-						if msc = 0 msc = 1 else msc = 0
-						
+						if obj_global_controller.music_vol = 0 obj_global_controller.music_vol = 1 else obj_global_controller.music_vol = 0
+						scr_volume_msc();
 						scr_snd_menu(snd_menu_click_choose);
 					}
 					if mouse_check_button_pressed(mb_left) && 

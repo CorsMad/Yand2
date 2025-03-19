@@ -61,7 +61,8 @@ if win = 4 {
 	draw_sprite_ext(spr_star,0,235,451+148-128,1.5,1.5,0,c_yellow,1);
 	draw_set_halign(fa_right)
 	if instance_exists(obj_global_controller){    
-	    scr_text(900,405+92-128,string(obj_global_controller.score_ladder_total+1),1.5,1.5,1)
+	    //scr_text(900,405+92-128,string(obj_global_controller.score_ladder_total+1),1.5,1.5,1)
+	    scr_text(900,405+92-128,string(obj_global_controller.score_ladder),1.5,1.5,1)
 	}
 	
 	

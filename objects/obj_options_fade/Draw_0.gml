@@ -12,7 +12,7 @@ switch(page)
 	case 0:
 		#region Стр 1					
 
-		draw_sprite_ext(spr_sound_onoff,msc,  384,600,2.5,2.5,0,c_white,rect_alpha);
+		draw_sprite_ext(spr_sound_onoff,obj_global_controller.music_vol,  384,600,2.5,2.5,0,c_white,rect_alpha);
 		draw_sprite_ext(spr_sound_onoff,obj_global_controller.sound_vol+2,704,600,2.5,2.5,0,c_white,rect_alpha);
 
 		#region LANG

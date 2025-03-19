@@ -74,6 +74,9 @@ function scr_button_actions0(_butTier){
 					                    if room = GameRoomLadder{
 					                        lev_end.win = 4;
 					                        obj_global_controller.level_ladder++;
+											with(obj_global_controller){
+									            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+									        }
                             
 					                    }
 					                    obj_global_controller.level_part_current = 20;
@@ -83,7 +86,13 @@ function scr_button_actions0(_butTier){
 					                    lev_end.image_index= 1;
 					                    if room = GameRoom		 obj_global_controller.level_part_current++
 					                    if room = GameRoomFree   obj_global_controller.level_part_current++
-					                    if room = GameRoomLadder obj_global_controller.level_part_current++
+					                    if room = GameRoomLadder 
+										{
+											obj_global_controller.level_part_current++
+											with(obj_global_controller){
+									            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+									        }
+										}
                        
 					                }
                
@@ -238,6 +247,9 @@ function scr_button_actions0(_butTier){
 			                        if room = GameRoomLadder{
 			                            lev_end.win = 4;
 			                            obj_global_controller.level_ladder++;
+										with(obj_global_controller){
+									            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+									        }
                             
 			                        }
                         
@@ -249,7 +261,13 @@ function scr_button_actions0(_butTier){
 			                        lev_end.win = 1;
 			                        lev_end.image_index= 1;
 			                        if room = GameRoom obj_global_controller.level_part_current++
-			                        if room = GameRoomLadder obj_global_controller.level_part_current++
+			                        if room = GameRoomLadder 
+									{
+										obj_global_controller.level_part_current++
+										with(obj_global_controller){
+									        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+									    }
+									}
 			                        if room = GameRoomFree obj_global_controller.level_part_current++
 			                    }
                 
@@ -341,7 +359,9 @@ function scr_button_actions0(_butTier){
 	                    if room = GameRoomLadder{
 	                        lev_end.win = 4;
 	                        obj_global_controller.level_ladder++;
-                        
+							with(obj_global_controller){
+								if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+							}
 	                    }
 	                    obj_global_controller.level_part_current = 20;
 	                } else {
@@ -349,7 +369,13 @@ function scr_button_actions0(_butTier){
 	                    lev_end.win = 1;
 	                    lev_end.image_index= 1;
 	                    if room = GameRoom obj_global_controller.level_part_current++
-	                    if room = GameRoomLadder obj_global_controller.level_part_current++
+	                    if room = GameRoomLadder 
+						{
+							obj_global_controller.level_part_current++
+							with(obj_global_controller){
+								if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+							}
+						}
 	                    if room = GameRoomFree obj_global_controller.level_part_current++
 	                }
                 
@@ -447,6 +473,9 @@ function scr_button_actions0(_butTier){
 	                    if room = GameRoomLadder{
 	                        lev_end.win = 4;
 	                        obj_global_controller.level_ladder++;
+							with(obj_global_controller){
+								if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+							}
                         
 	                    }
 	                    obj_global_controller.level_part_current = 20;
@@ -455,7 +484,13 @@ function scr_button_actions0(_butTier){
 	                    lev_end.win = 1;
 	                    lev_end.image_index= 1;
 	                    if room = GameRoom obj_global_controller.level_part_current++
-	                    if room = GameRoomLadder obj_global_controller.level_part_current++
+	                    if room = GameRoomLadder 
+						{
+							obj_global_controller.level_part_current++
+							with(obj_global_controller){
+								if score_ladder > score_ladder_total score_ladder_total = score_ladder;
+							}
+						}
 	                    if room = GameRoomFree obj_global_controller.level_part_current++
 	                }
             

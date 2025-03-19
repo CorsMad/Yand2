@@ -22,10 +22,10 @@ function scr_ladder_list(){
 	                break;
 	            case 4:
 	                _b.count = 8;
-	                _b.exclude = 5; //2
+	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 300;
+					obj_global_controller.timer_ladder_add = 370;
                 break;
 			#endregion
             
@@ -50,10 +50,10 @@ function scr_ladder_list(){
 	                break;
 	            case 8:
 	                _b.count = 8;
-	                _b.exclude = 5; //2
+	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 310;
+					obj_global_controller.timer_ladder_add = 380;
                 break;
 			#endregion
 			
@@ -81,7 +81,7 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 330;
+					obj_global_controller.timer_ladder_add = 390;
                 break;
 			#endregion
 			
@@ -109,7 +109,7 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 340;
+					obj_global_controller.timer_ladder_add = 400;
                 break;
 			#endregion
 			
@@ -134,10 +134,10 @@ function scr_ladder_list(){
 	                break;
 	            case 20:
 	                _b.count = 10;
-	                _b.exclude = 7 
+	                _b.exclude = 6 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 330;
+					obj_global_controller.timer_ladder_add = 400;
                 break;
 			#endregion
 			
@@ -162,10 +162,10 @@ function scr_ladder_list(){
 	                break;
 	            case 24:
 	                _b.count = 10
-	                _b.exclude = 7; 
+	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 340;
+					obj_global_controller.timer_ladder_add = 420;
                 break;
 			#endregion
 			
@@ -190,10 +190,10 @@ function scr_ladder_list(){
 	                break;
 	            case 28:
 	                _b.count = 10;
-	                _b.exclude = 6; 
+	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 350;
+					obj_global_controller.timer_ladder_add = 420;
                 break;
 			#endregion
 			
@@ -218,10 +218,10 @@ function scr_ladder_list(){
 	                break;
 	            case 32:
 	                _b.count = 10;
-	                _b.exclude = 6; 
+	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 360;
+					obj_global_controller.timer_ladder_add = 430;
                 break;
 			#endregion
 			
@@ -246,10 +246,10 @@ function scr_ladder_list(){
 	                break;
 	            case 36:
 	                _b.count = 12;
-	                _b.exclude = 9; 
+	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 360;
+					obj_global_controller.timer_ladder_add = 440;
                 break;
 			#endregion
 			
@@ -274,10 +274,10 @@ function scr_ladder_list(){
 	                break;
 	            case 40:
 	                _b.count = 12;
-	                _b.exclude = 8; 
+	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 370;
+					obj_global_controller.timer_ladder_add = 440;
                 break;
 			#endregion
 			
@@ -302,10 +302,10 @@ function scr_ladder_list(){
 	                break;
 	            case 44:
 	                _b.count = 12;
-	                _b.exclude = 8; 
+	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 390;
+					obj_global_controller.timer_ladder_add = 460;
                 break;
 			#endregion
 			
@@ -330,10 +330,10 @@ function scr_ladder_list(){
 	                break;
 	            case 48:
 	                _b.count = 12;
-	                _b.exclude = 7; 
+	                _b.exclude = 6; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 400;
+					obj_global_controller.timer_ladder_add = 470;
                 break;
 			#endregion
 			
@@ -358,10 +358,10 @@ function scr_ladder_list(){
 	                break;
 	            case 52:
 	                _b.count = 14;
-	                _b.exclude = 10; 
+	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 410;
+					obj_global_controller.timer_ladder_add = 490;
                 break;
 			#endregion
 			
@@ -386,10 +386,10 @@ function scr_ladder_list(){
 	                break;
 	            case 56:
 	                _b.count = 14;
-	                _b.exclude = 10; 
+	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 410;
+					obj_global_controller.timer_ladder_add = 490;
                 break;
 			#endregion
 			
@@ -414,10 +414,10 @@ function scr_ladder_list(){
 	                break;
 	            case 60:
 	                _b.count = 14;
-	                _b.exclude = 10; 
+	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 420;
+					obj_global_controller.timer_ladder_add = 500;
                 break;
 			#endregion
 			
@@ -442,10 +442,10 @@ function scr_ladder_list(){
 	                break;
 	            case 64:
 	                _b.count = 14;
-	                _b.exclude = 9; 
+	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 440;
+					obj_global_controller.timer_ladder_add = 520;
                 break;
 			#endregion
 						
@@ -470,10 +470,10 @@ function scr_ladder_list(){
 	                break;
 	            case 68:
 	                _b.count = 16;
-	                _b.exclude = 11; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 450;
+					obj_global_controller.timer_ladder_add = 530;
                 break;
 			#endregion
 						
@@ -498,10 +498,10 @@ function scr_ladder_list(){
 	                break;
 	            case 72:
 	                _b.count = 16;
-	                _b.exclude = 11; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 450;
+					obj_global_controller.timer_ladder_add = 530;
                 break;
 			#endregion
 						
@@ -526,10 +526,10 @@ function scr_ladder_list(){
 	                break;
 	            case 76:
 	                _b.count = 16;
-	                _b.exclude = 11; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 460;
+					obj_global_controller.timer_ladder_add = 540;
                 break;
 			#endregion
 						
@@ -554,10 +554,10 @@ function scr_ladder_list(){
 	                break;
 	            case 80:
 	                _b.count = 16;
-	                _b.exclude = 10; 
+	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 480;
+					obj_global_controller.timer_ladder_add = 560;
                 break;
 			#endregion
 						
@@ -582,10 +582,10 @@ function scr_ladder_list(){
 	                break;
 	            case 84:
 	                _b.count = 18;
-	                _b.exclude = 13; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 490;
+					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
 						
@@ -610,10 +610,10 @@ function scr_ladder_list(){
 	                break;
 	            case 88:
 	                _b.count = 18;
-	                _b.exclude = 13; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 490;
+					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
 						
@@ -638,10 +638,10 @@ function scr_ladder_list(){
 	                break;
 	            case 92:
 	                _b.count = 18;
-	                _b.exclude = 13; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 490;
+					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
 									
@@ -666,10 +666,10 @@ function scr_ladder_list(){
 	                break;
 	            case 96:
 	                _b.count = 18;
-	                _b.exclude = 12; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 510;
+					obj_global_controller.timer_ladder_add = 590;
                 break;
 			#endregion
 									
@@ -694,10 +694,10 @@ function scr_ladder_list(){
 	                break;
 	            case 100:
 	                _b.count = 20;
-	                _b.exclude = 15; 
+	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 520;
+					obj_global_controller.timer_ladder_add = 620;
                 break;
 			#endregion
 									
@@ -722,10 +722,10 @@ function scr_ladder_list(){
 	                break;
 	            case 104:
 	                _b.count = 20;
-	                _b.exclude = 15; 
+	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 530;
+					obj_global_controller.timer_ladder_add = 630;
                 break;
 			#endregion
 									
@@ -750,10 +750,10 @@ function scr_ladder_list(){
 	                break;
 	            case 108:
 	                _b.count = 20;
-	                _b.exclude = 14; 
+	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 540;
+					obj_global_controller.timer_ladder_add = 630;
                 break;
 			#endregion
 									
@@ -778,10 +778,10 @@ function scr_ladder_list(){
 	                break;
 	            case 112:
 	                _b.count = 20;
-	                _b.exclude = 14; 
+	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 550;
+					obj_global_controller.timer_ladder_add = 640;
                 break;
 			#endregion
 									
@@ -806,10 +806,10 @@ function scr_ladder_list(){
 	                break;
 	            case 116:
 	                _b.count = 20;
-	                _b.exclude = 14; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 550;
+					obj_global_controller.timer_ladder_add = 650;
                 break;
 			#endregion
 									
@@ -834,10 +834,10 @@ function scr_ladder_list(){
 	                break;
 	            case 120:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 570;
+					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
 									
@@ -862,10 +862,10 @@ function scr_ladder_list(){
 	                break;
 	            case 124:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 10 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 580;
+					obj_global_controller.timer_ladder_add = 670;
                 break;
 			#endregion
 									
@@ -890,10 +890,10 @@ function scr_ladder_list(){
 	                break;
 	            case 128:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 580;
+					obj_global_controller.timer_ladder_add = 670;
                 break;
 			#endregion
 									
@@ -918,10 +918,10 @@ function scr_ladder_list(){
 	                break;
 	            case 132:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 580;
+					obj_global_controller.timer_ladder_add = 680;
                 break;
 			#endregion
 									
@@ -946,10 +946,10 @@ function scr_ladder_list(){
 	                break;
 	            case 136:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 590;
+					obj_global_controller.timer_ladder_add = 690;
                 break;
 			#endregion
 									
@@ -974,10 +974,10 @@ function scr_ladder_list(){
 	                break;
 	            case 140:
 	                _b.count = 20;
-	                _b.exclude = 13; 
+	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 600;
+					obj_global_controller.timer_ladder_add = 700;
                 break;
 			#endregion
 									
@@ -1002,10 +1002,10 @@ function scr_ladder_list(){
 	                break;
 	            case 144:
 	                _b.count = 20;
-	                _b.exclude = 12; 
+	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 620;
+					obj_global_controller.timer_ladder_add = 720;
                 break;
 			#endregion
         }

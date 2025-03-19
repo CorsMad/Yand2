@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"msc_main",
+  "audioGroupId":{
+    "name":"ag_msc",
+    "path":"audiogroups/ag_msc",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":128.02612,
+  "name":"msc_main",
+  "parent":{
+    "name":"msc",
+    "path":"folders/Sounds/msc.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"msc_main.mp3",
+  "type":0,
+  "volume":1.0,
+}
