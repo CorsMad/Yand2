@@ -1,5 +1,5 @@
 /// @description Вставьте описание здесь
 // Вы можете записать свой код в этом редакторе
-image_blend = c_green;
+image_blend = c_lime;
 t = 0;
 scale = 1;

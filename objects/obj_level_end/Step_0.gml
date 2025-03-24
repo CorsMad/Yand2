@@ -1,13 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
-
 switch(win){
     case 0:
 		if obj_alpha = 0.05 
 		{
+			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 			scr_snd_menu(snd_lose);
 			instance_create_depth(0,0,depth-1,obj_level_progression)
 		}
@@ -123,6 +121,7 @@ switch(win){
 			scr_snd_menu(snd_win_big);			
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;	
+			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 			
 		}
 		
@@ -145,6 +144,7 @@ switch(win){
 		{
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;		
+			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 		}
         switch(t){
             case 1:
@@ -271,6 +271,7 @@ switch(win){
 			if t = 130 
 			{
 				obj_global_controller.timer_ladder+=obj_global_controller.timer_ladder_add;	
+				scr_snd_menu(snd_timer_add);
 			}
 			
 			if t > 120 && t < 130
@@ -300,7 +301,7 @@ switch(win){
                             if room = GameRoomLadder {
                                 with(obj_global_controller){
                                     if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-									if obj_global_controller.level_ladder >= 144 obj_global_controller.level_ladder = 141;
+									if obj_global_controller.level_ladder >= 180 obj_global_controller.level_ladder = 177;
                                 }
                             }
                             room_restart();
@@ -324,7 +325,8 @@ switch(win){
 			if obj_alpha = 0.05 
 			{
 				scr_snd_menu(snd_lose);
-				instance_create_depth(0,0,depth-1,obj_level_progression)
+				instance_create_depth(0,0,depth-1,obj_level_progression);
+				instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 			}
 	        if obj_alpha < 1 obj_alpha+=0.05;
 	        if rect_alpha < 0.9 rect_alpha+=0.025;

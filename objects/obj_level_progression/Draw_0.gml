@@ -23,11 +23,11 @@ if room = GameRoomLadder{
 	
 	//таймер
 	draw_sprite_ext(spr_go1,0,room_width/2,    460,  3.5,2.25,0,c_white,1);
-	draw_sprite_ext(spr_go2,0,room_width/2-190,460-5,2.5,2.5,0,c_white,1);
 	draw_set_color(c_black);
 	draw_button(410,405,750,500,0);
 	draw_set_halign(fa_right)
 	scr_text(730,383,string(ceil((obj_global_controller.timer_ladder)/60)),1,1,1);
+	draw_sprite_ext(spr_go2,0,room_width/2-190,460-5,scale_timer,scale_timer,0,c_white,1);
 	//draw_text(96,200,string(ceil((obj_global_controller.timer_ladder)/60)));
 }
 

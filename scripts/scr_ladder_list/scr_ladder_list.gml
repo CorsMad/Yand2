@@ -856,7 +856,7 @@ function scr_ladder_list(){
 	                break;
 	            case 123:
 	                _b.count = 20;
-	                _b.exclude = 11;
+	                _b.exclude = 12;
 	                _b.button_tier = 3; 
 					obj_global_controller.star_col = c_aqua;
 	                break;
@@ -865,7 +865,7 @@ function scr_ladder_list(){
 	                _b.exclude = 10 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 670;
+					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
 									
@@ -884,7 +884,7 @@ function scr_ladder_list(){
 	                break;
 	            case 127:
 	                _b.count = 20;
-	                _b.exclude = 11;
+	                _b.exclude = 12;
 	                _b.button_tier = 3; 
 					obj_global_controller.star_col = c_aqua;
 	                break;
@@ -893,7 +893,7 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 670;
+					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
 									
@@ -906,7 +906,7 @@ function scr_ladder_list(){
                 break;
 	            case 130:
 	                _b.count = 20;
-	                _b.exclude = 13;
+	                _b.exclude = 12;
 	                _b.button_tier = 4;
 					obj_global_controller.star_col = c_fuchsia;
 	                break;
@@ -934,7 +934,7 @@ function scr_ladder_list(){
                 break;
 	            case 134:
 	                _b.count = 20;
-	                _b.exclude = 13;
+	                _b.exclude = 12;
 	                _b.button_tier = 4;
 					obj_global_controller.star_col = c_fuchsia;
 	                break;
@@ -968,7 +968,7 @@ function scr_ladder_list(){
 	                break;
 	            case 139:
 	                _b.count = 20;
-	                _b.exclude = 10;
+	                _b.exclude = 11;
 	                _b.button_tier = 3; 
 					obj_global_controller.star_col = c_aqua;
 	                break;
@@ -977,7 +977,7 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 700;
+					obj_global_controller.timer_ladder_add = 690;
                 break;
 			#endregion
 									
@@ -990,22 +990,274 @@ function scr_ladder_list(){
                 break;
 	            case 142:
 	                _b.count = 20;
-	                _b.exclude = 14;
+	                _b.exclude = 13;
 	                _b.button_tier = 4;
 					obj_global_controller.star_col = c_fuchsia;
 	                break;
 	            case 143:
 	                _b.count = 20;
-	                _b.exclude = 10;
+	                _b.exclude = 11;
 	                _b.button_tier = 3; 
 					obj_global_controller.star_col = c_aqua;
 	                break;
 	            case 144:
 	                _b.count = 20;
+	                _b.exclude = 9; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 700;
+                break;
+			#endregion
+			
+			#region 37-20
+				case 145:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 146:
+	                _b.count = 20;
+	                _b.exclude = 13;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 147:
+	                _b.count = 20;
+	                _b.exclude = 10;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 148:
+	                _b.count = 20;
+	                _b.exclude = 9; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 710;
+                break;
+			#endregion
+			
+			#region 38-20
+				case 149:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 150:
+	                _b.count = 20;
+	                _b.exclude = 13;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 151:
+	                _b.count = 20;
+	                _b.exclude = 10;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 152:
+	                _b.count = 20;
+	                _b.exclude = 9; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 710;
+                break;
+			#endregion
+			
+			#region 39-20
+				case 153:
+	                _b.count = 20;
+	                _b.exclude = 7; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 154:
+	                _b.count = 20;
+	                _b.exclude = 13;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 155:
+	                _b.count = 20;
+	                _b.exclude = 10;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 156:
+	                _b.count = 20;
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
-					obj_global_controller.timer_ladder_add = 720;
+					obj_global_controller.timer_ladder_add = 730;
+                break;
+			#endregion
+			
+			#region 40-20
+				case 157:
+	                _b.count = 20;
+	                _b.exclude = 7; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 158:
+	                _b.count = 20;
+	                _b.exclude = 14;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 159:
+	                _b.count = 20;
+	                _b.exclude = 10;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 160:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 730;
+                break;
+			#endregion
+			
+			#region 41-20
+				case 161:
+	                _b.count = 20;
+	                _b.exclude = 7; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 162:
+	                _b.count = 20;
+	                _b.exclude = 14;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 163:
+	                _b.count = 20;
+	                _b.exclude = 9;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 164:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 740;
+                break;
+			#endregion
+			
+			#region 42-20
+				case 165:
+	                _b.count = 20;
+	                _b.exclude = 6; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 166:
+	                _b.count = 20;
+	                _b.exclude = 14;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 167:
+	                _b.count = 20;
+	                _b.exclude = 9;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 168:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 750;
+                break;
+			#endregion
+			
+			#region 43-20
+				case 169:
+	                _b.count = 20;
+	                _b.exclude = 5; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 170:
+	                _b.count = 20;
+	                _b.exclude = 15;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 171:
+	                _b.count = 20;
+	                _b.exclude = 9;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 172:
+	                _b.count = 20;
+	                _b.exclude = 8; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 760;
+                break;
+			#endregion
+			
+			#region 44-20
+				case 173:
+	                _b.count = 20;
+	                _b.exclude = 5; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 174:
+	                _b.count = 20;
+	                _b.exclude = 15;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 175:
+	                _b.count = 20;
+	                _b.exclude = 9;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 176:
+	                _b.count = 20;
+	                _b.exclude = 7; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 770;
+                break;
+			#endregion
+			
+			#region 45-20
+				case 177:
+	                _b.count = 20;
+	                _b.exclude = 5; 
+					_b.button_tier = 0; 
+					obj_global_controller.star_col = c_lime
+                break;
+	            case 178:
+	                _b.count = 20;
+	                _b.exclude = 16;
+	                _b.button_tier = 4;
+					obj_global_controller.star_col = c_fuchsia;
+	                break;
+	            case 179:
+	                _b.count = 20;
+	                _b.exclude = 8;
+	                _b.button_tier = 3; 
+					obj_global_controller.star_col = c_aqua;
+	                break;
+	            case 180:
+	                _b.count = 20;
+	                _b.exclude = 7; 
+	                _b.button_tier = 2;
+					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.timer_ladder_add = 780;
                 break;
 			#endregion
         }
@@ -1023,10 +1275,10 @@ switch(obj_global_controller.free_button_tier){
                             obj_global_controller.free_score1++;
                             break;
                         case 2:
-                            obj_global_controller.free_score1+=2;
+                            obj_global_controller.free_score1+=4;
                             break;
                         case 3:
-                            obj_global_controller.free_score1+=5;
+                            obj_global_controller.free_score1+=10;
                             break;
                     }
                     break;
@@ -1036,10 +1288,10 @@ switch(obj_global_controller.free_button_tier){
                             obj_global_controller.free_score2++;
                             break;
                         case 2:
-                            obj_global_controller.free_score2+=2;
+                            obj_global_controller.free_score2+=4;
                             break;
                         case 3:
-                            obj_global_controller.free_score2+=5;
+                            obj_global_controller.free_score2+=10;
                             break;
                     }
                     break;
@@ -1049,10 +1301,10 @@ switch(obj_global_controller.free_button_tier){
                             obj_global_controller.free_score3++;
                             break;
                         case 2:
-                            obj_global_controller.free_score3+=2;
+                            obj_global_controller.free_score3+=4;
                             break;
                         case 3:
-                            obj_global_controller.free_score3+=5;
+                            obj_global_controller.free_score3+=10;
                             break;
                     }
                     break;

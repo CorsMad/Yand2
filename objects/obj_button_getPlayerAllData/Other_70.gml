@@ -12,6 +12,7 @@ if (not isMap(async_load)) {
             case YaGames_CallPlayerGetData:
                 // Player Data request success
 				var _data = json_parse(async_load[? "data"]);
+				scr_load_game_data(_data);
             break;
             case YaGames_CallPlayerGetDataError:
                 var errCode = async_load[? "code"];

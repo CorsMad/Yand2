@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script3",
+  "%Name":"scr_ladder_list",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script3",
+  "name":"scr_ladder_list",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

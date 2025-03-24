@@ -29,25 +29,24 @@ scr_text(room_width/2-400,1350,"5",0.75,0.75,rect_alpha);
 
 //ИГРОК
 draw_sprite_ext(spr_progress_bar,0,room_width/2+70,1600,1.5,2,0,c_white,rect_alpha);
-scr_text(room_width/2-400,1600,"515",0.75,0.75,rect_alpha);
+scr_text(room_width/2-400,1600,placePLayer,0.75,0.75,rect_alpha);
 
 // ИМЕНА ИГРОКОВ
 draw_set_halign(fa_left)
-scr_text(room_width/2-270,770, "Олег петрович",0.4,0.4,rect_alpha);
-scr_text(room_width/2-270,920 ,"Олег петрович",0.4,0.4,rect_alpha);
-scr_text(room_width/2-270,1070,"Олег петрович",0.4,0.4,rect_alpha);
-scr_text(room_width/2-270,1220,"Олег петрович",0.4,0.4,rect_alpha);
-scr_text(room_width/2-270,1370,"Олег петрович",0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,770, name1,0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,920 ,name2,0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,1070,name3,0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,1220,name4,0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,1370,name5,0.4,0.4,rect_alpha);
 
-scr_text(room_width/2-270,1620,"Старый Андрей",0.4,0.4,rect_alpha);
+scr_text(room_width/2-270,1620,namePlayer,0.4,0.4,rect_alpha);
 
 // ОЧКИ
 draw_set_halign(fa_right);
-scr_text(room_width/2+420,765,   "264246",0.5,0.5,rect_alpha);
-scr_text(room_width/2+420,920 -5,"264246",0.5,0.5,rect_alpha);
-scr_text(room_width/2+420,1070-5,"264246",0.5,0.5,rect_alpha);
-scr_text(room_width/2+420,1220-5,"264246",0.5,0.5,rect_alpha);
-scr_text(room_width/2+420,1370-5,"264246",0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,765,   score1,0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,920 -5,score2,0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,1070-5,score3,0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,1220-5,score4,0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,1370-5,score5,0.5,0.5,rect_alpha);
 
-
-scr_text(room_width/2+420,1620-5,string(obj_global_controller.score_ladder_total),0.5,0.5,rect_alpha);
+scr_text(room_width/2+420,1620-5,scorePlayer,0.5,0.5,rect_alpha);

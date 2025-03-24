@@ -33,11 +33,11 @@ function draw_progress(progress_alpha){
                 draw_sprite_ext(spr_progress_icon,_im4,room_width/2+400,160+yoffset,2,2,0,c_white,progress_alpha);
                 break;
             case 4:
-                draw_sprite_ext(spr_progress_icon,_im1,96 , 160+yoffset,1,1,0,c_white,progress_alpha);
-                draw_sprite_ext(spr_progress_icon,_im2,240,160+yoffset ,1,1,0,c_white,progress_alpha);
-                draw_sprite_ext(spr_progress_icon,_im3,384,160+yoffset ,1,1,0,c_white,progress_alpha);
-                draw_sprite_ext(spr_progress_icon,_im4,528,160+yoffset ,1,1,0,c_white,progress_alpha);
-                draw_sprite_ext(spr_progress_icon,_im5,672,160+yoffset ,1,1,0,c_white,progress_alpha);
+                draw_sprite_ext(spr_progress_icon,_im1,room_width/2-400,160+yoffset, 2,2,0,c_white,progress_alpha);
+                draw_sprite_ext(spr_progress_icon,_im2,room_width/2-200,160+yoffset ,2,2,0,c_white,progress_alpha);
+                draw_sprite_ext(spr_progress_icon,_im3,room_width/2    ,160+yoffset ,2,2,0,c_white,progress_alpha);
+                draw_sprite_ext(spr_progress_icon,_im4,room_width/2+200,160+yoffset ,2,2,0,c_white,progress_alpha);
+                draw_sprite_ext(spr_progress_icon,_im5,room_width/2+400,160+yoffset ,2,2,0,c_white,progress_alpha);
                 break;
             case 5:
                 draw_sprite(spr_progress_icon,_im1,96, 160+yoffset);

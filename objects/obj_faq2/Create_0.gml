@@ -22,3 +22,14 @@ c5 = c_dkgray;
 t1a = 0;
 t2a = 0;
 t3a = 0;
+
+b1c1 = c_aqua;
+b2c1 = c_aqua;
+b3c1 = c_aqua;
+b1c2 = c_red;
+b2c2 = c_red;
+b3c2 = c_red;
+
+_macrooffset1 = 18;
+_macrooffset2 = 18;
+_macrooffset3 = 18;

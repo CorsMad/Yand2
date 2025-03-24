@@ -202,6 +202,7 @@ switch(work)
 		if rect_alpha<=0 
 		{
 			obj_collection.work = 1;
+			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 			instance_destroy();
 		}
 		#endregion

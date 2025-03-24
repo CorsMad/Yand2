@@ -223,6 +223,9 @@ switch(work)
 				instance_activate_region(0,0,room_width,room_height,true);
 			}
 			obj_options.work = 1;
+			
+			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+			
 			instance_destroy();
 		}
 		#endregion

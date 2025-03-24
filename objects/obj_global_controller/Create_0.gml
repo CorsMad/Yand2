@@ -2,8 +2,7 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	level_array[i] = 1;
-	//if i < 6 level_array[i] = 1; else level_array[i] = 0;   
+	level_array[i] = 0;	 
 }
 device_mouse_dbclick_enable(false);
 level_current = 0;
@@ -28,6 +27,7 @@ t_offset = 30;
 // НАСТРОЙКИ FREE РЕЖИМА
 free_difficulty = 0;
 free_button_tier = 0;
+
 free_score1 = 0;
 free_score2 = 0;
 free_score3 = 0;
@@ -85,3 +85,23 @@ music_vol = 1;
 
 audio_group_set_gain(ag_snd,sound_vol,0);
 audio_group_set_gain(ag_msc,sound_vol,0);
+
+//LADDER NAMES
+name1 = "";
+name2 = "";
+name3 = "";
+name4 = "";
+name5 = "";
+namePlayer = "";
+
+score1 = "";
+score2 = "";
+score3 = "";
+score4 = "";
+score5 = "";
+scorePlayer = "";
+
+placePLayer = "";
+
+
+

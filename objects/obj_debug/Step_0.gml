@@ -12,6 +12,11 @@ if keyboard_check_pressed(ord("7")) obj_global_controller.lang = 6;
 
 if device_mouse_dbclick_enable(false) count = 0 else count = 1
 
+/*
+if mouse_check_button_pressed(mb_left)
+{
+	instance_create_depth(mouse_x,mouse_y,-1000000,obj_star_prog);	
+}
 
 
 /*

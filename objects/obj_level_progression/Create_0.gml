@@ -3,4 +3,6 @@
 work = 1;
 
 progress_alpha = 0;
-stargraph = 0;
+stargraph = 1;
+
+scale_timer = 2.5;
