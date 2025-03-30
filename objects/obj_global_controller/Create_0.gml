@@ -104,4 +104,7 @@ scorePlayer = "";
 placePLayer = "";
 
 
+// IsInit?
+playr_init = 0;
+
 

@@ -17,7 +17,7 @@
     "name":"obj_childrenPlayer_parent",
     "path":"objects/obj_childrenPlayer_parent/obj_childrenPlayer_parent.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button_short",
-    "path":"sprites/spr_button_short/spr_button_short.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

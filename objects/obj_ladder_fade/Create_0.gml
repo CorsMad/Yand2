@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //instance_create_depth(-10,-10,0,obj_button_getLeaderboardsPlayerEntry);
-instance_create_depth(-10,-10,0,obj_button_getPlayerName);
+
 
 work = 0;
 rect_alpha = 0;
@@ -22,6 +22,9 @@ score2 = "";
 score3 = "";
 score4 = "";
 score5 = "";
-scorePlayer = "";
-
+//scorePlayer = string(obj_global_controller.score_ladder_total);
+player_score = "";
 placePLayer = "";
+
+instance_create_depth(-10,-10,0,obj_button_getLeaderboardsPlayerEntry);
+instance_create_depth(-10,-10,0,obj_button_getLeaderboardsEntries);

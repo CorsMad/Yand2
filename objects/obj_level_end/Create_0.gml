@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-
+instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 image_speed = 0;
 win = 0;
 rect_alpha = 0;

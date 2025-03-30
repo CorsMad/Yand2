@@ -3,7 +3,7 @@
 //draw_text(32, 32, "FPS = " + string(fps));
 //scr_text(64,64,"27",1,1,1)
 
-draw_text(64,64,string(obj_global_controller.placePLayer))
+//draw_text(64,64,string(obj_global_controller.placePLayer))
 
 /*
 draw_set_color(c_white);

@@ -10,6 +10,10 @@ if keyboard_check_pressed(ord("5")) obj_global_controller.lang = 4;
 if keyboard_check_pressed(ord("6")) obj_global_controller.lang = 5;
 if keyboard_check_pressed(ord("7")) obj_global_controller.lang = 6;
 
+if keyboard_check_pressed(ord("S")) scr_save_game_data_delete();
+if keyboard_check_pressed(ord("L")) instance_create_depth(-10,-10,0,obj_button_getPlayerAllData)
+if keyboard_check_pressed(ord("M")) instance_create_depth(-10,-10,0,obj_button_getPlayerAllData)
+
 if device_mouse_dbclick_enable(false) count = 0 else count = 1
 
 /*

@@ -1,8 +1,8 @@
 function scr_snd_menu(snd_id){	
 	audio_play_sound(snd_id,10000,false,3);
 }
-function scr_msc_menu(msc_id){	
-	audio_play_sound(msc_id,10000,true,2);
+function scr_msc_menu(msc_id){		
+	audio_play_sound(msc_id,10000,true,2);	
 }
 
 

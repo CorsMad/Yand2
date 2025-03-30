@@ -250,6 +250,7 @@ function scr_button_actions0(_butTier){
 										with(obj_global_controller){
 									            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
 									        }
+										instance_create_depth(-10,10,0,obj_button_setLeaderboardsScore);
                             
 			                        }
                         

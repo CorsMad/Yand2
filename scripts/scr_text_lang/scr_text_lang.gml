@@ -60,3 +60,18 @@ function scr_faq_overall(){
 	}	
 	return(text);	
 }
+	
+function scr_ladder_text(){
+	var text;
+	switch(obj_global_controller.lang)
+	{
+		case 0: text = "Ranking";break;
+		case 1: text = "Рейтинг";break;
+		case 2: text = "Rangliste";break;
+		case 3: text = "Classement";break;
+		case 4: text = "Clasificación";break;
+		case 5: text = "Classificação";break;
+		case 6: text = "Sıralama";break;
+	}	
+	return(text);	
+}

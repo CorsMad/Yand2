@@ -5,7 +5,7 @@ switch(win){
     case 0:
 		if obj_alpha = 0.05 
 		{
-			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+			
 			scr_snd_menu(snd_lose);
 			instance_create_depth(0,0,depth-1,obj_level_progression)
 		}
@@ -121,7 +121,7 @@ switch(win){
 			scr_snd_menu(snd_win_big);			
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;	
-			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+			
 			
 		}
 		
@@ -144,7 +144,7 @@ switch(win){
 		{
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;		
-			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+			
 		}
         switch(t){
             case 1:
@@ -326,7 +326,7 @@ switch(win){
 			{
 				scr_snd_menu(snd_lose);
 				instance_create_depth(0,0,depth-1,obj_level_progression);
-				instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+				
 			}
 	        if obj_alpha < 1 obj_alpha+=0.05;
 	        if rect_alpha < 0.9 rect_alpha+=0.025;

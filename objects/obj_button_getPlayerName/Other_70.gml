@@ -13,24 +13,27 @@ if (not isMap(async_load)) {
                 // Player name request success
                 var _name = async_load[? "value"];
 				//log("Name: " + _name);
-				obj_global_controller.namePlayer = _name;
-				
+				//if _name! = ""
+				//{
+				//	instance_create_depth()	
+				//}
+				instance_destroy();
             break;
 			
             case YaGames_CallNotPlayerInitSDK:
                 // Player in SDK not initialized
-				
+				instance_destroy();
             break;
             case YaGames_CallNotInitSDK:
                 // SDK not initialized
-				
+				instance_destroy();
             break;
             case YaGames_CallRuntimeError:
                 var errCode = async_load[? "code"];
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];	
                 // SDK runtime error
-				
+				instance_destroy();
             break;
         }
    }

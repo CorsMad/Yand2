@@ -12,8 +12,10 @@ if (not isMap(async_load)) {
             case YaGames_CallLeaderboardsPlayerEntry:
                 // Leaderboard Player Entry initialization success
 				var _data = json_parse(async_load[? "data"]);
-				log("Score: " + string(_data.score));
-				obj_global_controller.namePlayer = string(_data.player.publicName);
+				//log("Score: " + string(_data.score));
+				obj_ladder_fade.namePlayer =   string(_data.player.publicName);
+				obj_ladder_fade.player_score = string(_data.score);
+				obj_ladder_fade.placePLayer =  string(_data.rank);
 				instance_destroy();
 				// _data.extraData
 				// _data.rank

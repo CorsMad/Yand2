@@ -224,8 +224,8 @@ switch(work)
 			}
 			obj_options.work = 1;
 			
-			instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
-			
+			instance_create_depth(10,10,0,obj_YAND_setPlayerData);
+			//scr_save_game_data();
 			instance_destroy();
 		}
 		#endregion
