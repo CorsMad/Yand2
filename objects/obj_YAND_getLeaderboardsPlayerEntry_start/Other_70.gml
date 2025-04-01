@@ -13,7 +13,8 @@ if (not isMap(async_load)) {
                 // Leaderboard Player Entry initialization success
 				var _data = json_parse(async_load[? "data"]);
 				//log("Score: " + string(_data.score));
-				obj_global_controller.score_ladder_total= _data.score;				
+				obj_global_controller.score_ladder_total= _data.score;		
+				//show_message("Score: " + string(_data.score));
 				// _data.extraData
 				// _data.rank
 				// _data.player.publicName

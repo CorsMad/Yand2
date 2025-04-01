@@ -76,7 +76,6 @@
     {"id":{"name":"obj_but_graph_rocket2_dust","path":"objects/obj_but_graph_rocket2_dust/obj_but_graph_rocket2_dust.yy",},},
     {"id":{"name":"obj_but_graph_rocket2","path":"objects/obj_but_graph_rocket2/obj_but_graph_rocket2.yy",},},
     {"id":{"name":"obj_but_graph_star1","path":"objects/obj_but_graph_star1/obj_but_graph_star1.yy",},},
-    {"id":{"name":"obj_button_BACKUP","path":"objects/obj_button_BACKUP/obj_button_BACKUP.yy",},},
     {"id":{"name":"obj_button_banner_getAdvStatus","path":"objects/obj_button_banner_getAdvStatus/obj_button_banner_getAdvStatus.yy",},},
     {"id":{"name":"obj_button_banner_hideAdv","path":"objects/obj_button_banner_hideAdv/obj_button_banner_hideAdv.yy",},},
     {"id":{"name":"obj_button_banner_showAdv","path":"objects/obj_button_banner_showAdv/obj_button_banner_showAdv.yy",},},
@@ -311,8 +310,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"GameStart","path":"rooms/GameStart/GameStart.yy",},},
-    {"roomId":{"name":"PreMainMenu","path":"rooms/PreMainMenu/PreMainMenu.yy",},},
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
+    {"roomId":{"name":"PreMainMenu","path":"rooms/PreMainMenu/PreMainMenu.yy",},},
     {"roomId":{"name":"LevelSelect","path":"rooms/LevelSelect/LevelSelect.yy",},},
     {"roomId":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
     {"roomId":{"name":"LadderLevelPrepare","path":"rooms/LadderLevelPrepare/LadderLevelPrepare.yy",},},

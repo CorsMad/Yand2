@@ -21,7 +21,7 @@ if (not isMap(async_load)) {
 				// _data.player.publicName
 				// _data.player.uniqueID
 				// _data.formattedScore
-				//show_message("Leaderboard Player Entry initialization success. SCORE: " + string(_data.score));
+				
 				
 				instance_destroy();
             break;

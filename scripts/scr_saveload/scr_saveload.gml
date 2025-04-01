@@ -26,12 +26,10 @@ function scr_save_game_data(){
 		_free_score1         :  obj_global_controller.free_score1,
 		_free_score2         :  obj_global_controller.free_score2,
 		_free_score3         :  obj_global_controller.free_score3,
-		_free_score4         :  obj_global_controller.free_score4,
+		_free_score4         :  obj_global_controller.free_score4
 		
 		// LADDER режим
 		
-		//очки
-		//_score_ladder_total  :   obj_global_controller.score_ladder_total
 	}
 	
 	var saved_data = json_stringify(_save_data);
@@ -41,26 +39,25 @@ function scr_save_game_data(){
 function scr_load_game_data(_data){
 	//json_parse(_data);
 		
-		      obj_global_controller.level_array			=	 _data._level_array		  
-		      obj_global_controller.collection_alert	=    _data._collection_alert   
-		      obj_global_controller.lang				=    _data._lang			      
-		      obj_global_controller.sound_vol			=    _data._sound_vol		  
-		      obj_global_controller.music_vol			=    _data._music_vol		  
-													       					 
-		      obj_global_controller.faq1_watch			=    _data._faq1_watch         
-		      obj_global_controller.faq2_watch			=    _data._faq2_watch         
-		      obj_global_controller.faq3_watch			=    _data._faq3_watch         
-		      obj_global_controller.faq4_watch			=    _data._faq4_watch         
-		      obj_global_controller.faq5_watch			=    _data._faq5_watch	      
-													   
-		      obj_global_controller.free_score1		    =    _data._free_score1        
-		      obj_global_controller.free_score2		    =    _data._free_score2        
-		      obj_global_controller.free_score3		    =    _data._free_score3        
-		      obj_global_controller.free_score4		    =    _data._free_score4        
-	    											     					 	  
-		      //obj_global_controller.score_ladder_total	=    _data._score_ladder_total 
-			  obj_global_controller.col_faq             =    _data._col_faq
-			  obj_global_controller.but_graph           =    _data._but_graph
+		      obj_global_controller.level_array			=	 _data._level_array		  ;
+		      obj_global_controller.collection_alert	=    _data._collection_alert  ; 
+		      obj_global_controller.lang				=    _data._lang			  ;    
+		      obj_global_controller.sound_vol			=    _data._sound_vol		  ;
+		      obj_global_controller.music_vol			=    _data._music_vol		  ;
+													       					 		  
+		      obj_global_controller.faq1_watch			=    _data._faq1_watch        ; 
+		      obj_global_controller.faq2_watch			=    _data._faq2_watch        ; 
+		      obj_global_controller.faq3_watch			=    _data._faq3_watch        ; 
+		      obj_global_controller.faq4_watch			=    _data._faq4_watch        ; 
+		      obj_global_controller.faq5_watch			=    _data._faq5_watch	      ;
+													   								  
+		      obj_global_controller.free_score1		    =    _data._free_score1       ; 
+		      obj_global_controller.free_score2		    =    _data._free_score2       ; 
+		      obj_global_controller.free_score3		    =    _data._free_score3       ; 
+		      obj_global_controller.free_score4		    =    _data._free_score4       ; 
+	    											     					 	  	  
+			  obj_global_controller.col_faq             =    _data._col_faq			  ;
+			  obj_global_controller.but_graph           =    _data._but_graph		  ;
 		
 }
 

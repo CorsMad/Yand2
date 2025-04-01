@@ -1,16 +1,3 @@
-event_inherited();
-text += @"Get
-Entries";
-//msg = -1;
-
-msg = get_string_async("Leaderboard Name","test");
-
-
-/*
-req_id = YaGames_Leaderboards_getEntries("spacebuttonstest");
-var result = ds_map_find_value(async_load, req_id)
-//DIALOGUE
-/*
 var i_d = ds_map_find_value(async_load, "id");
 if i_d == msg
 {

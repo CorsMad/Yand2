@@ -12,7 +12,7 @@ if (not isMap(async_load)) {
             case YaGames_CallPlayerSetData:
                 // Player Data set request success
 				
-				show_message("Player Data set request success");
+				//show_message("Player Data set request success");
 				instance_destroy();
             break;
             case YaGames_CallPlayerSetDataError:

@@ -121,8 +121,7 @@ switch(win){
 			scr_snd_menu(snd_win_big);			
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;	
-			
-			
+			instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);		
 		}
 		
         if obj_alpha < 1 obj_alpha+=0.05;
@@ -144,7 +143,7 @@ switch(win){
 		{
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;		
-			
+			instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);
 		}
         switch(t){
             case 1:

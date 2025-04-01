@@ -14,20 +14,21 @@ if work = 1 && room!=GameRoomLadder
 	}
 }
 if room = GameRoomLadder{
-    draw_sprite_ext(spr_go1,0,room_width/2,320,6,2.0,0,c_white,1);
-    draw_set_color(c_black)
-    draw_button(148,20+250,room_width-148,60+300,0);
-    draw_sprite_ext(spr_star,0,200,310,0.75,0.75,0,c_yellow,1);
-    draw_set_halign(fa_right);
-    scr_text(900,262,string(obj_global_controller.score_ladder),0.75,0.75,1);
+    //draw_sprite_ext(spr_go1,0,room_width/2,320,6,2.0,0,c_white,1);
+    //draw_set_color(c_black)
+    //draw_button(148,20+250,room_width-148,60+300,0);
+    //draw_sprite_ext(spr_star,0,200,310,0.75,0.75,0,c_yellow,1);
+    //draw_set_halign(fa_right);
+    //scr_text(900,262,string(obj_global_controller.score_ladder),0.75,0.75,1);
 	
 	//таймер
-	draw_sprite_ext(spr_go1,0,room_width/2,    460,  3.5,2.25,0,c_white,1);
+	var yoffset = 32;
+	draw_sprite_ext(spr_go1,0,room_width/2,    460-yoffset,  3.5,2.25,0,c_white,1);
 	draw_set_color(c_black);
-	draw_button(410,405,750,500,0);
+	draw_button(410,405-yoffset,750,500-yoffset,0);
 	draw_set_halign(fa_right)
-	scr_text(730,383,string(ceil((obj_global_controller.timer_ladder)/60)),1,1,1);
-	draw_sprite_ext(spr_go2,0,room_width/2-190,460-5,scale_timer,scale_timer,0,c_white,1);
+	scr_text(730,383-yoffset,string(ceil((obj_global_controller.timer_ladder)/60)),1,1,1);
+	draw_sprite_ext(spr_go2,0,room_width/2-190,460-5-yoffset,scale_timer,scale_timer,0,c_white,1);
 	//draw_text(96,200,string(ceil((obj_global_controller.timer_ladder)/60)));
 }
 
