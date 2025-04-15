@@ -1,3 +1,3 @@
 if (is_clicked) {
-	msg = get_string_async("Leaderboard Name","spacebuttonslb");
+	msg = get_string_async("Leaderboard Name","spacebuttonstestmain");
 };

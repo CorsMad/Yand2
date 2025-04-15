@@ -6,23 +6,23 @@ if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_presse
 	scr_snd_menu(snd_menu_click)
     switch(state){
         case 0:
-			if obj_global_controller.faq1_watch = 0 obj_global_controller.faq1_watch = 1
+			if obj_global_controller.faq1_watch = 0 {obj_global_controller.faq1_watch = 1;instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);}
             instance_create_depth(0,0,-16000,obj_faq1);
             break;
         case 1:
-			if obj_global_controller.faq2_watch = 0 obj_global_controller.faq2_watch = 1
+			if obj_global_controller.faq2_watch = 0 {obj_global_controller.faq2_watch = 1;instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);}
             instance_create_depth(0,0,-16000,obj_faq2);
             break;
         case 2:
-			if obj_global_controller.faq3_watch = 0 obj_global_controller.faq3_watch = 1
+			if obj_global_controller.faq3_watch = 0 {obj_global_controller.faq3_watch = 1;instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);}
             instance_create_depth(0,0,-16000,obj_faq3);
             break;
         case 3:
-			if obj_global_controller.faq4_watch = 0 obj_global_controller.faq4_watch = 1
+			if obj_global_controller.faq4_watch = 0 {obj_global_controller.faq4_watch = 1;instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);}
             instance_create_depth(0,0,-16000,obj_faq4);
             break;
         case 4:
-			if obj_global_controller.faq5_watch = 0 obj_global_controller.faq5_watch = 1
+			if obj_global_controller.faq5_watch = 0 {obj_global_controller.faq5_watch = 1;instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);}
             instance_create_depth(0,0,-16000,obj_faq5)
             break;
     }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	level_array[i] = 0;	 
+	level_array[i] = 1;	 
 }
 device_mouse_dbclick_enable(false);
 level_current = 0;
@@ -36,6 +36,7 @@ free_score4 = 0;
 // НАСТРОЙКА LADDER
 score_ladder = 0;
 score_ladder_total = 0;
+score_prev = 0;
 timer_ladder_work = 0;
 timer_ladder = 30*60;
 timer_ladder_add = 0;
@@ -83,6 +84,9 @@ faq5_watch = 0;
 sound_vol = 1;
 music_vol = 1;
 
+//audio_group_load(ag_msc)
+//audio_group_load(ag_snd)
+
 audio_group_set_gain(ag_snd,sound_vol,0);
 audio_group_set_gain(ag_msc,sound_vol,0);
 
@@ -106,5 +110,19 @@ placePLayer = "";
 
 // IsInit?
 playr_init = 0;
+
+//ScoreTimer
+score_timer = 0;
+score_ladder_add = 0;
+score_ladder_add_multiplier = 0;
+
+/*
+      =< 4    1.5
+> 4 x =< 5    1.4
+> 5 x =< 6    1.3
+> 6 x =< 7    1.2
+> 7 x =< 8    1.1
+> 8           1
+
 
 

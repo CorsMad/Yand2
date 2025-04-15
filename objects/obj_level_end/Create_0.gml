@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
+//instance_create_depth(-10,-10,0,obj_YAND_setPlayerData);
 image_speed = 0;
 win = 0;
 rect_alpha = 0;
@@ -16,7 +16,7 @@ if room = GameRoomLadder
 	obj_global_controller.timer_ladder_work	= 0;	
 }
 
-image_xscale = 3;
+image_xscale = 6;
 image_yscale = 3;
 
 // ТАЙМЕР ДОБАВ
@@ -37,6 +37,9 @@ w1 = 0;
 
 rect_gameroom_width1 = 0;
 rect_gameroom_width2 = room_width;
+
+score_show =obj_global_controller.score_prev;
+score_scale = 1.5;
 
 
 

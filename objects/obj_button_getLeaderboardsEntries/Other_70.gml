@@ -12,9 +12,6 @@ if (not isMap(async_load)) {
             case YaGames_CallLeaderboardsEntries:
                 // Leaderboard Entries initialization success
 				var _data = json_parse(async_load[? "data"]);
-				var oleg = async_load[? "data"];
-				var alex = json_parse(oleg);
-				var count = ds_map_size(_data);
 				
 				//log("UserRank: " + string(_data.userRank));
 				obj_ladder_fade.name1  = _data.entries[0].player.publicName;
@@ -27,10 +24,7 @@ if (not isMap(async_load)) {
 				obj_ladder_fade.score4 = _data.entries[3].score;
 				obj_ladder_fade.name5  = _data.entries[4].player.publicName;
 				obj_ladder_fade.score5 = _data.entries[4].score;	
-												
-												
-				show_debug_message(string(oleg));
-				show_debug_message(string(alex));
+
 				// _data.leaderboard.appID
 				// _data.leaderboard.dеfault
 				// _data.leaderboard.name
@@ -41,7 +35,7 @@ if (not isMap(async_load)) {
 				// _data.entries[0].rank
 				// _data.entries[0].player.publicName
 				// _data.entries[0].player.uniqueID
-				//instance_destroy();
+				instance_destroy();
 				
             break;
             case YaGames_CallLeaderboardsEntriesError:

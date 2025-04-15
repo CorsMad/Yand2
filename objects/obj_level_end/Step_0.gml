@@ -4,46 +4,30 @@
 switch(win){
     case 0:
 		if obj_alpha = 0.05 
-		{
-			
+		{			
 			scr_snd_menu(snd_lose);
 			instance_create_depth(0,0,depth-1,obj_level_progression)
+			if room = GameRoomLadder 
+			{
+				instance_create_depth(x-192,y,depth-1,obj_level_end_buttons_reward);
+			} else 
+			{
+				var b1 =instance_create_depth(x-192,y,depth-1,obj_level_end_buttons);
+				b1.sprite_index = spr_level_end_buttons;
+				b1.image_index = 1;
+				b1.win = 0;
+			}
+			var b2 =instance_create_depth(x+192,y,depth-1,obj_level_end_buttons);
+			b2.sprite_index = spr_level_end_buttons;
+			b2.image_index = 2;
+			b2.win = 1;
 		}
         if obj_alpha < 1 obj_alpha+=0.05;
         if rect_alpha < 0.9 rect_alpha+=0.025;
 		rect_gameroom_width1 = room_width
-		
-        // рестарт
-        if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
-            mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-			!instance_exists(obj_collection_fade) {
-				scr_snd_menu(snd_menu_click_choose);
-                obj_global_controller.level_button_current = 0;
-                obj_global_controller.b_number=0;
-                if room = GameRoomLadder {
-                    with(obj_global_controller){
-                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                    }
-                }
-                room_restart();
-            }
-        // на главную
-        if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
-                mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-				!instance_exists(obj_collection_fade){
-					scr_snd_menu(snd_menu_click_back);
-                    obj_global_controller.level_button_current = 0;
-                    if room = GameRoomLadder {
-                        with(obj_global_controller){
-                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                        }
-                        room_goto(LadderLevelPrepare)
-                    }					
-                    if room = GameRoomFree room_goto(FreeLevelSelect);
-                    if room = GameRoom room_goto(LevelSelect);
-                }
+	  
         break;
-        
+    
     case 1:         
         if room = GameRoom{
 			rect_gameroom_width1 = lerp(rect_gameroom_width1,room_width/2+8,0.1);
@@ -59,9 +43,7 @@ switch(win){
 			    obj_global_controller.level_button_current = 0;
 			    obj_global_controller.b_number=0;
 			    if room = GameRoomLadder {
-			        with(obj_global_controller){
-			            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-			        }
+			        
 			    }
 			    room_restart();
 			}   
@@ -74,9 +56,7 @@ switch(win){
                 obj_global_controller.level_button_current = 0;
                 obj_global_controller.level_ladder++;
                 if room = GameRoomLadder {
-                    with(obj_global_controller){
-                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                    }
+                    
                 }
                 room_restart();
             }
@@ -95,9 +75,7 @@ switch(win){
                 obj_global_controller.level_button_current = 0;
                 //obj_global_controller.level_part_current++;
                 if room = GameRoomLadder {
-                    with(obj_global_controller){
-                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                    }
+                    
                 }
                 room_restart();
             }
@@ -105,6 +83,7 @@ switch(win){
 		if rect_alpha = 0.05 scr_snd_menu(snd_win);
         break;
     case 2:
+		
         // на главную
         if t_star < 101  t_star++;
         if t_star mod 5 = 0 {
@@ -121,19 +100,17 @@ switch(win){
 			scr_snd_menu(snd_win_big);			
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;	
-			instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);		
+			instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);	
+			
+			var b2 =instance_create_depth(x,y,depth-1,obj_level_end_buttons);
+			b2.sprite_index = spr_level_end_buttons;
+			b2.image_index = 2;
+			b2.win = 1;
 		}
 		
         if obj_alpha < 1 obj_alpha+=0.05;
         if rect_alpha < 0.6 rect_alpha+=0.025;
-                
-        if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
-            mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-			!instance_exists(obj_collection_fade){
-                obj_global_controller.level_button_current = 0;
-                scr_snd_menu(snd_menu_click_back);
-                room_goto(LevelSelect);
-        }
+		
         break;
     case 3:
         // ПРОДОЛЖИТЬ + НА ГЛАВНУЮ
@@ -144,6 +121,18 @@ switch(win){
 			var prog = instance_create_depth(0,0,depth-1,obj_level_progression)
 			prog.stargraph = 1;		
 			instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);
+			
+			var b1 =instance_create_depth(x-192,y,depth-1,obj_level_end_buttons);
+			b1.sprite_index = spr_level_end_buttons;
+			b1.image_index = 0;
+			b1.win = 2;
+			
+			var b2 =instance_create_depth(x+192,y,depth-1,obj_level_end_buttons);
+			b2.sprite_index = spr_level_end_buttons;
+			b2.image_index = 2;
+			b2.win = 1;
+			
+			
 		}
         switch(t){
             case 1:
@@ -219,37 +208,7 @@ switch(win){
         if obj_alpha < 1 obj_alpha+=0.05;
         if rect_alpha < 0.8 rect_alpha+=0.025;
             
-        // ПРОДОЛЖИТЬ
-            if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
-                mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-			!instance_exists(obj_collection_fade){
-				scr_snd_menu(snd_menu_click_choose);
-                    //obj_global_controller.level_button_current = 0;
-                    obj_global_controller.b_number=0;
-                    obj_global_controller.level_button_current = 0;
-                    obj_global_controller.level_current = 0;
-                    obj_global_controller.level_part_current = 0;
-                    if room = GameRoomLadder {
-                        with(obj_global_controller){
-                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                        }
-                    }
-                    room_restart();
-                }
-            // на главную
-            if point_in_rectangle(mouse_x,mouse_y,888-84,76,888+84,242) &&
-                    mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-			!instance_exists(obj_collection_fade){
-						scr_snd_menu(snd_menu_click_back);
-                        obj_global_controller.level_button_current = 0;
-                        if room = GameRoomLadder {
-                            with(obj_global_controller){
-                                if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                            }
-                            room_goto(LadderLevelPrepare);
-                        }
-                        if room = GameRoomFree room_goto(FreeLevelSelect);
-                    }
+        
         break;
         case 4:
             //if obj_alpha < 1 obj_alpha+=0.05;
@@ -258,8 +217,21 @@ switch(win){
 			if rect_alpha = 0.025 scr_snd_menu(snd_win_big)
             image_index = 1;      
 			
-			if t < 200 t++;
-			if t > 50  && t < 100
+			if t < 300 t++;
+			
+			if t = 100 
+			{
+				score_show = obj_global_controller.score_ladder;
+				obj_global_controller.score_prev = obj_global_controller.score_ladder;
+				score_scale = 3;
+				scr_snd_menu(snd_timer_add);
+			}
+			if t > 100 && t < 200
+			{	
+				score_scale = lerp(score_scale,1.5,0.05);
+			}
+			
+			if t > 150  && t < 200
 			{
 				x_timer = lerp(x_timer,room_width/2,0.1);
 				y_timer = lerp(y_timer,room_height/2-256+80,0.1);
@@ -267,44 +239,32 @@ switch(win){
 				//if timer_add_alpha < 1 timer_add_alpha+=0.05;
 				//y_timer_add = lerp(y_timer_add,room_height/2,0.05);
 			}
-			if t = 130 
+			if t = 230 
 			{
+				
 				obj_global_controller.timer_ladder+=obj_global_controller.timer_ladder_add;	
 				scr_snd_menu(snd_timer_add);
+				var b1 =instance_create_depth(x,y,depth-1,obj_level_end_buttons);
+				b1.sprite_index = spr_level_end_buttons;
+				b1.image_index = 0;
+				b1.win = 3;	
 			}
 			
-			if t > 120 && t < 130
+			if t > 220 && t < 230
 			{
 				x_timer_scale +=0.25;
 				y_timer_scale +=0.25;	
 				obj_alpha+=0.1;
 			}
-			if t > 130 
+			if t > 230 
 			{
 				x_timer_scale = lerp(x_timer_scale,3,0.1);
 				y_timer_scale = lerp(y_timer_scale,3,0.1);		
 			}
 			
-			if t > 130 && t < 250 
+			if t > 230 && t < 350 
 			{
-                // ПРОДОЛЖИТЬ
-                    if point_in_rectangle(mouse_x,mouse_y,x-256,y,x+256,y+256) &&
-                        mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-							!instance_exists(obj_collection_fade){
-								scr_snd_menu(snd_menu_click_choose);
-                            //obj_global_controller.level_button_current = 0;
-                            obj_global_controller.b_number=0;
-                            obj_global_controller.level_button_current = 0;
-                            obj_global_controller.level_current = 0;
-                            obj_global_controller.level_part_current = 0;
-                            if room = GameRoomLadder {
-                                with(obj_global_controller){
-                                    if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-									if obj_global_controller.level_ladder >= 180 obj_global_controller.level_ladder = 177;
-                                }
-                            }
-                            room_restart();
-                        }
+               
                     // на главную
                     if point_in_rectangle(mouse_x,mouse_y,888-84,160-84,888+84,160+84) &&
                             mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
@@ -312,9 +272,7 @@ switch(win){
 									scr_snd_menu(snd_menu_click_back);
                                 obj_global_controller.level_button_current = 0;
                                 if room = GameRoomLadder {
-                                    with(obj_global_controller){
-                                        if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                                    }
+                                    
                                 }
                                 room_goto(LadderLevelPrepare);
                             }
@@ -325,36 +283,15 @@ switch(win){
 			{
 				scr_snd_menu(snd_lose);
 				instance_create_depth(0,0,depth-1,obj_level_progression);
-				
+				instance_create_depth(x-196,y,depth-1,obj_level_end_buttons_reward);
+				instance_create_depth(-20,-20,0,obj_YAND_setPlayerData);
+				var b2 =instance_create_depth(x+192,y,depth-1,obj_level_end_buttons);
+				b2.sprite_index = spr_level_end_buttons;
+				b2.image_index = 2;
+				b2.win = 1;
 			}
 	        if obj_alpha < 1 obj_alpha+=0.05;
 	        if rect_alpha < 0.9 rect_alpha+=0.025;
 			rect_gameroom_width1 = room_width
-		
-        // рестарт
-        if point_in_rectangle(mouse_x,mouse_y,x-256,y,x,y+256) &&
-            mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-			!instance_exists(obj_collection_fade) {
-				scr_snd_menu(snd_menu_click_choose);
-                obj_global_controller.level_button_current = 0;
-                obj_global_controller.b_number=0;
-                obj_global_controller.timer_ladder = 2*60;
-                room_restart();
-            }
-        // на главную
-        if point_in_rectangle(mouse_x,mouse_y,x,y,x+256,y+256) &&
-                mouse_check_button_pressed(mb_left) && !instance_exists(obj_options_fade) &&
-				!instance_exists(obj_collection_fade){
-					scr_snd_menu(snd_menu_click_back);
-                    obj_global_controller.level_button_current = 0;
-                    if room = GameRoomLadder {
-                        with(obj_global_controller){
-                            if score_ladder > score_ladder_total score_ladder_total = score_ladder;
-                        }
-                        room_goto(LadderLevelPrepare)
-                    }					
-                    if room = GameRoomFree room_goto(FreeLevelSelect);
-                    if room = GameRoom room_goto(LevelSelect);
-                }
 			break;
 }

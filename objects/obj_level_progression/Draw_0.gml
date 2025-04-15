@@ -13,7 +13,7 @@ if work = 1 && room!=GameRoomLadder
 		draw_text(400,260,obj_global_controller.level_timer div 60 );
 	}
 }
-if room = GameRoomLadder{
+if room = GameRoomLadder {
     //draw_sprite_ext(spr_go1,0,room_width/2,320,6,2.0,0,c_white,1);
     //draw_set_color(c_black)
     //draw_button(148,20+250,room_width-148,60+300,0);

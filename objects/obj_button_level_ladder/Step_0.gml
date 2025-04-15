@@ -16,7 +16,10 @@ if collision_point(mouse_x,mouse_y,self,true,false) && mouse_check_button_presse
             obj_global_controller.level_bonus = level_bonus;
             obj_global_controller.timer_ladder = 30*60;
             obj_global_controller.score_ladder = 0;
-            obj_global_controller.level_ladder = 1;
+            obj_global_controller.level_ladder = 1            
             obj_global_controller.timer_ladder_work = 0
+			obj_global_controller.score_timer = 0;
+			obj_global_controller.score_ladder_add = 0;
+			obj_global_controller.score_prev = 0;
             room_goto(GameRoomLadder);
         }

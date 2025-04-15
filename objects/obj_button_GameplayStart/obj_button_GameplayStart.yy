@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button_short",
-    "path":"sprites/spr_button_short/spr_button_short.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

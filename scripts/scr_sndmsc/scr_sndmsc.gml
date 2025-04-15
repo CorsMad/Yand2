@@ -1,8 +1,8 @@
 function scr_snd_menu(snd_id){	
-	audio_play_sound(snd_id,10000,false,3);
+	audio_play_sound(snd_id,10000,false,obj_global_controller.sound_vol*3);
 }
 function scr_msc_menu(msc_id){		
-	audio_play_sound(msc_id,10000,true,2);	
+	audio_play_sound(msc_id,10000,true,obj_global_controller.music_vol*2);	
 }
 
 

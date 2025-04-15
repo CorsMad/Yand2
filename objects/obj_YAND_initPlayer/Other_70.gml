@@ -19,6 +19,7 @@ if (not isMap(async_load)) {
                 var errName = async_load[? "name"];
                 var errMessage = async_load[? "message"];	
 				//instance_create_depth(-20,-20,0,obj_button_getPlayerName);
+				
 				instance_destroy();
 				
             break;

@@ -6,7 +6,8 @@ switch(button_tier){
         alpha = 0;
             t++;
             if t = 50 {                
-				scr_button_turn(1);                
+				scr_button_turn(1);   
+				instance_create_depth(-30,-30,0,obj_YAND_button_GameplayStart);
 				if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
 				var sr =instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
 				sr.tier = button_tier;
@@ -19,6 +20,7 @@ switch(button_tier){
             if t = 50
 			{
                 scr_button_turn(1);
+				instance_create_depth(-30,-30,0,obj_YAND_button_GameplayStart);
 				if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
 				var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
 				sr.tier = button_tier;
@@ -69,6 +71,7 @@ switch(button_tier){
             }
             			
             scr_button_turn(1);
+			instance_create_depth(-30,-30,0,obj_YAND_button_GameplayStart);
 			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
 			var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
 			sr.tier = button_tier;
@@ -80,6 +83,7 @@ switch(button_tier){
         t++;
         if t = 50 {
 			scr_button_turn(1);
+			instance_create_depth(-30,-30,0,obj_YAND_button_GameplayStart);
 			if room = GameRoomLadder obj_global_controller.timer_ladder_work = 1;
 			var sr = instance_create_depth(room_width/2,room_height/2,0,obj_start_round);
 			sr.tier = button_tier;

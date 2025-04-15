@@ -61,7 +61,7 @@ function scr_button_t2_max(){
     //}
 
 
-    show_debug_message(buttons_num);
+    //show_debug_message(buttons_num);
 }
 
 function scr_ladder_create(){

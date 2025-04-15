@@ -25,6 +25,8 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 19;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 370;
                 break;
 			#endregion
@@ -53,6 +55,8 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 20;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 380;
                 break;
 			#endregion
@@ -81,6 +85,8 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 21;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 390;
                 break;
 			#endregion
@@ -109,6 +115,8 @@ function scr_ladder_list(){
 	                _b.exclude = 4; //2
 	                _b.button_tier = 2; //0
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 22;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 400;
                 break;
 			#endregion
@@ -137,6 +145,8 @@ function scr_ladder_list(){
 	                _b.exclude = 6 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 22;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 400;
                 break;
 			#endregion
@@ -165,6 +175,8 @@ function scr_ladder_list(){
 	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 23;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 420;
                 break;
 			#endregion
@@ -193,6 +205,8 @@ function scr_ladder_list(){
 	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 24;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 420;
                 break;
 			#endregion
@@ -221,6 +235,8 @@ function scr_ladder_list(){
 	                _b.exclude = 5; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 25;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 430;
                 break;
 			#endregion
@@ -249,6 +265,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 26;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 440;
                 break;
 			#endregion
@@ -277,6 +295,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 26;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 440;
                 break;
 			#endregion
@@ -305,6 +325,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 28;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 460;
                 break;
 			#endregion
@@ -333,6 +355,8 @@ function scr_ladder_list(){
 	                _b.exclude = 6; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 29;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 470;
                 break;
 			#endregion
@@ -361,6 +385,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 31;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 490;
                 break;
 			#endregion
@@ -389,6 +415,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 31;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 490;
                 break;
 			#endregion
@@ -417,6 +445,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 32;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 500;
                 break;
 			#endregion
@@ -445,6 +475,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 34;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 520;
                 break;
 			#endregion
@@ -473,6 +505,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 35;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 530;
                 break;
 			#endregion
@@ -501,6 +535,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 35;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 530;
                 break;
 			#endregion
@@ -529,6 +565,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 36;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 540;
                 break;
 			#endregion
@@ -557,6 +595,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 38;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 560;
                 break;
 			#endregion
@@ -585,6 +625,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 40;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
@@ -613,6 +655,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 40;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
@@ -641,6 +685,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 40;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 580;
                 break;
 			#endregion
@@ -669,6 +715,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 41;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 590;
                 break;
 			#endregion
@@ -697,6 +745,8 @@ function scr_ladder_list(){
 	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 44;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 620;
                 break;
 			#endregion
@@ -725,6 +775,8 @@ function scr_ladder_list(){
 	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 45;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 630;
                 break;
 			#endregion
@@ -753,6 +805,8 @@ function scr_ladder_list(){
 	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 45;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 630;
                 break;
 			#endregion
@@ -781,6 +835,8 @@ function scr_ladder_list(){
 	                _b.exclude = 11; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 46;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 640;
                 break;
 			#endregion
@@ -809,6 +865,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 47;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 650;
                 break;
 			#endregion
@@ -837,6 +895,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 48;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
@@ -865,6 +925,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 48;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
@@ -893,6 +955,8 @@ function scr_ladder_list(){
 	                _b.exclude = 10; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 48;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 660;
                 break;
 			#endregion
@@ -921,6 +985,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 50;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 680;
                 break;
 			#endregion
@@ -949,6 +1015,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 51;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 690;
                 break;
 			#endregion
@@ -977,6 +1045,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 51;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 690;
                 break;
 			#endregion
@@ -1005,6 +1075,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 52;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 700;
                 break;
 			#endregion
@@ -1033,6 +1105,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 53;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;	
 					obj_global_controller.timer_ladder_add = 710;
                 break;
 			#endregion
@@ -1061,6 +1135,8 @@ function scr_ladder_list(){
 	                _b.exclude = 9; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 53;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 710;
                 break;
 			#endregion
@@ -1089,6 +1165,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 55;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 730;
                 break;
 			#endregion
@@ -1117,6 +1195,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 55;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 730;
                 break;
 			#endregion
@@ -1145,6 +1225,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 56;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 740;
                 break;
 			#endregion
@@ -1173,6 +1255,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 57;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 750;
                 break;
 			#endregion
@@ -1201,6 +1285,8 @@ function scr_ladder_list(){
 	                _b.exclude = 8; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 58;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 760;
                 break;
 			#endregion
@@ -1229,6 +1315,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 59;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 770;
                 break;
 			#endregion
@@ -1257,6 +1345,8 @@ function scr_ladder_list(){
 	                _b.exclude = 7; 
 	                _b.button_tier = 2;
 					obj_global_controller.star_col = c_yellow;
+					obj_global_controller.score_ladder_add = 60;
+					obj_global_controller.score_ladder_add_multiplier = (obj_global_controller.score_ladder_add*10)+120;
 					obj_global_controller.timer_ladder_add = 780;
                 break;
 			#endregion
@@ -1314,10 +1404,10 @@ switch(obj_global_controller.free_button_tier){
                             obj_global_controller.free_score4++;
                             break;
                         case 2:
-                            obj_global_controller.free_score4+=2;
+                            obj_global_controller.free_score4+=4;
                             break;
                         case 3:
-                            obj_global_controller.free_score4+=5;
+                            obj_global_controller.free_score4+=10;
                             break;
                     }
                     break;

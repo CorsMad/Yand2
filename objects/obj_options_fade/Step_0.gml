@@ -49,6 +49,7 @@ switch(work)
 						point_in_rectangle(mouse_x,mouse_y,384-84,600-84,384+84,600+84) {
 						if obj_global_controller.music_vol = 0 obj_global_controller.music_vol = 1 else obj_global_controller.music_vol = 0
 						scr_volume_msc();
+						if !audio_is_playing(msc_main) audio_play_sound(msc_main,10000,true,obj_global_controller.music_vol*2);							
 						scr_snd_menu(snd_menu_click_choose);
 					}
 					if mouse_check_button_pressed(mb_left) && 
@@ -226,6 +227,10 @@ switch(work)
 			
 			instance_create_depth(10,10,0,obj_YAND_setPlayerData);
 			//scr_save_game_data();
+			if room = GameRoom || room = GameRoomFree || room = GameRoomLadder 
+			{
+				instance_create_depth(-20,-20,0,obj_YAND_button_GameplayStart)	
+			}
 			instance_destroy();
 		}
 		#endregion

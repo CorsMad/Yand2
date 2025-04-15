@@ -27,4 +27,5 @@ player_score = "";
 placePLayer = "";
 
 instance_create_depth(-10,-10,0,obj_button_getLeaderboardsPlayerEntry);
-instance_create_depth(room_width/2,room_height/2,depth-1,obj_button_getLeaderboardsEntries);
+instance_create_depth(-10,-10,0,obj_button_getLeaderboardsEntries);
+//instance_create_depth(room_width/2,room_height/2,depth-1,obj_button_getLeaderboardsEntries);
