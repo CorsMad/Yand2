@@ -178,6 +178,7 @@
     {"id":{"name":"obj_YAND_initLeaderboards","path":"objects/obj_YAND_initLeaderboards/obj_YAND_initLeaderboards.yy",},},
     {"id":{"name":"obj_YAND_initPlayer","path":"objects/obj_YAND_initPlayer/obj_YAND_initPlayer.yy",},},
     {"id":{"name":"obj_YAND_setPlayerData","path":"objects/obj_YAND_setPlayerData/obj_YAND_setPlayerData.yy",},},
+    {"id":{"name":"obj_YAND_showFullscreenAds","path":"objects/obj_YAND_showFullscreenAds/obj_YAND_showFullscreenAds.yy",},},
     {"id":{"name":"FreeLevelSelect","path":"rooms/FreeLevelSelect/FreeLevelSelect.yy",},},
     {"id":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
     {"id":{"name":"GameRoomFree","path":"rooms/GameRoomFree/GameRoomFree.yy",},},

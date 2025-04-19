@@ -29,7 +29,8 @@ if (not isMap(async_load)) {
 						if obj_global_controller.star_col = c_aqua		obj_global_controller.level_ladder-=2;           	                
 						if obj_global_controller.star_col = c_yellow	obj_global_controller.level_ladder-=3;
 						obj_global_controller.timer_ladder = 30*60;
-						obj_global_controller.score_timer = 0;						
+						obj_global_controller.score_timer = 0;		
+						 obj_global_controller.level_button_current = 0;
 					#endregion
                 room_restart();
             break;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 star_col = c_white;
 for (var i = 0; i < 24; i++) {
-	level_array[i] = 1;	 
+	level_array[i] = 0;	 
 }
 device_mouse_dbclick_enable(false);
 level_current = 0;
@@ -115,14 +115,4 @@ playr_init = 0;
 score_timer = 0;
 score_ladder_add = 0;
 score_ladder_add_multiplier = 0;
-
-/*
-      =< 4    1.5
-> 4 x =< 5    1.4
-> 5 x =< 6    1.3
-> 6 x =< 7    1.2
-> 7 x =< 8    1.1
-> 8           1
-
-
 
