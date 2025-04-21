@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-bw = browser_width;
+var scale = room_width/room_height
 bh = browser_height;
+bw = scale*bh;
 
 
 
